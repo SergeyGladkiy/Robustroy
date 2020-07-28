@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EA24D0290800EB33CD /* AppDelegate.swift */; };
 		8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EC24D0290800EB33CD /* SceneDelegate.swift */; };
-		8284A5EF24D0290800EB33CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EE24D0290800EB33CD /* ViewController.swift */; };
+		8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */; };
 		8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8284A5F324D0290C00EB33CD /* Assets.xcassets */; };
 		8284A5F724D0290C00EB33CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8284A5F524D0290C00EB33CD /* LaunchScreen.storyboard */; };
-		8284A60224D0290D00EB33CD /* TrubaPND77Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A60124D0290D00EB33CD /* TrubaPND77Tests.swift */; };
+		8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		8284A5E724D0290800EB33CD /* TrubaPND77.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrubaPND77.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A5EA24D0290800EB33CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8284A5EC24D0290800EB33CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8284A5EE24D0290800EB33CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8284A5F324D0290C00EB33CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8284A5F624D0290C00EB33CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8284A5FD24D0290D00EB33CD /* TrubaPND77Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrubaPND77Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8284A60124D0290D00EB33CD /* TrubaPND77Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrubaPND77Tests.swift; sourceTree = "<group>"; };
 		8284A60324D0290D00EB33CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8284A61024D02B2400EB33CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrubaPND77Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 		8284A5E924D0290800EB33CD /* TrubaPND77 */ = {
 			isa = PBXGroup;
 			children = (
-				8284A5EE24D0290800EB33CD /* ViewController.swift */,
+				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 			);
 			path = TrubaPND77;
@@ -86,7 +86,7 @@
 		8284A60024D0290D00EB33CD /* TrubaPND77Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8284A60124D0290D00EB33CD /* TrubaPND77Tests.swift */,
+				8284A61224D0464C00EB33CD /* SupportingFilesTests */,
 				8284A60324D0290D00EB33CD /* Info.plist */,
 			);
 			path = TrubaPND77Tests;
@@ -102,6 +102,30 @@
 				8284A61024D02B2400EB33CD /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8284A61224D0464C00EB33CD /* SupportingFilesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */,
+			);
+			path = SupportingFilesTests;
+			sourceTree = "<group>";
+		};
+		8284A61324D0470200EB33CD /* ModuleMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8284A61424D0473D00EB33CD /* View */,
+			);
+			path = ModuleMainScreen;
+			sourceTree = "<group>";
+		};
+		8284A61424D0473D00EB33CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8284A5EF24D0290800EB33CD /* ViewController.swift in Sources */,
+				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 			);
@@ -214,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8284A60224D0290D00EB33CD /* TrubaPND77Tests.swift in Sources */,
+				8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
