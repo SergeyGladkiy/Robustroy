@@ -11,4 +11,5 @@ import Foundation
 protocol ModelMainScreenProtocol {
     var errorOccure: Observable<String> { get }
     func dataOfItem(number: Int) -> ItemMainScreen?
+    func numberOfItem() -> Int
 }

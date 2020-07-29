@@ -32,13 +32,17 @@ class ModelMainScreen {
 }
 
 extension ModelMainScreen: ModelMainScreenProtocol {
+    func numberOfItem() -> Int {
+        return dictionaryItems.count
+    }
+    
 
     func dataOfItem(number: Int) -> ItemMainScreen? {
         guard let info = dictionaryItems[number] else {
             errorOccure.observable = "нет информации"
             return nil
         }
-        
+
         return info
     }
 }
