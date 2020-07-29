@@ -20,6 +20,8 @@
 		8284A62524D1810D00EB33CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62424D1810D00EB33CD /* Observable.swift */; };
 		8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62624D181D400EB33CD /* ItemMainScreen.swift */; };
 		8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62A24D18C3B00EB33CD /* TestModelMainScreen.swift */; };
+		8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */; };
+		8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		8284A62424D1810D00EB33CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		8284A62624D181D400EB33CD /* ItemMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMainScreen.swift; sourceTree = "<group>"; };
 		8284A62A24D18C3B00EB33CD /* TestModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelMainScreen.swift; sourceTree = "<group>"; };
+		8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusableIdentifier.swift; sourceTree = "<group>"; };
+		8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelMainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
+				8284A62C24D19BCB00EB33CD /* Extensions */,
 			);
 			path = TrubaPND77;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			children = (
 				8284A61C24D1803600EB33CD /* Interface */,
 				8284A61A24D1801000EB33CD /* ViewModelMainScreen.swift */,
+				8284A63124D19DC000EB33CD /* CellViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +209,22 @@
 				8284A62A24D18C3B00EB33CD /* TestModelMainScreen.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8284A62C24D19BCB00EB33CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8284A63124D19DC000EB33CD /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */,
+			);
+			path = CellViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +334,10 @@
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
+				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
+				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

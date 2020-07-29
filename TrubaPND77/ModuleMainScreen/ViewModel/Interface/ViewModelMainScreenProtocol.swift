@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum ViewModelMainScreenState {
+    case initial
+    case errorOccure(String)
+}
+
 protocol ViewModelMainScreenProtocol {
+    var state: Observable<ViewModelMainScreenState> { get }
     
+    func numberOfRows() -> Int
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen?
 }

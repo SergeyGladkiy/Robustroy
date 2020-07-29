@@ -9,5 +9,35 @@
 import Foundation
 
 class ViewModelMainScreen {
+    private let model: ModelMainScreenProtocol
+    var state: Observable<ViewModelMainScreenState>
+    
+    init(state: Observable<ViewModelMainScreenState>, model: ModelMainScreenProtocol) {
+        self.state = state
+        self.model = model
+        twoWayDataBinding()
+    }
+    
+    private func twoWayDataBinding() {
+        model.errorOccure.bind { [weak self] (error) in
+            if error.isEmpty {
+                print(error.isEmpty)
+                return
+            }
+            
+            self?.state.observable = .errorOccure(error)
+        }
+    }
+}
+
+extension ViewModelMainScreen: ViewModelMainScreenProtocol {
+    func numberOfRows() -> Int {
+        4
+    }
+    
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen? {
+        nil
+    }
+    
     
 }
