@@ -22,6 +22,9 @@
 		8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62A24D18C3B00EB33CD /* TestModelMainScreen.swift */; };
 		8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */; };
 		8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */; };
+		8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */; };
+		8284A63724D1A7CF00EB33CD /* ModelMainScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */; };
+		8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63924D1A91000EB33CD /* EntityMocker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		8284A62A24D18C3B00EB33CD /* TestModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelMainScreen.swift; sourceTree = "<group>"; };
 		8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusableIdentifier.swift; sourceTree = "<group>"; };
 		8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelMainScreen.swift; sourceTree = "<group>"; };
+		8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelMainScreen.swift; sourceTree = "<group>"; };
+		8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMainScreenMock.swift; sourceTree = "<group>"; };
+		8284A63924D1A91000EB33CD /* EntityMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMocker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 		8284A61724D16F0F00EB33CD /* TestModuleMainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8284A63224D1A5A400EB33CD /* ViewModel */,
 				8284A62924D18C1E00EB33CD /* Model */,
 			);
 			path = TestModuleMainScreen;
@@ -225,6 +232,32 @@
 				8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */,
 			);
 			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		8284A63224D1A5A400EB33CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8284A63524D1A78F00EB33CD /* Mocks */,
+				8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8284A63524D1A78F00EB33CD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8284A63824D1A8FB00EB33CD /* Entities */,
+				8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8284A63824D1A8FB00EB33CD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8284A63924D1A91000EB33CD /* EntityMocker.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8284A63724D1A7CF00EB33CD /* ModelMainScreenMock.swift in Sources */,
 				8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */,
+				8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */,
+				8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */,
 				8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

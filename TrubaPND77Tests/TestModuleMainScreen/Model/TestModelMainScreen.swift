@@ -25,19 +25,19 @@ class TestModelMainScreen: XCTestCase {
 
     func testDataOfItemsEqualThreeSection() {
         //given
-        let quantityOfSections = 3
+        let quantityOfSections = EntityMocker.generateCorrectQuantitySections()
         
         //then
-        XCTAssert(quantityOfSections == sut.numberOfItem(), "Неверное количество секций")
+        XCTAssert(quantityOfSections == sut.numberOfItems(), "Неверное количество секций страницы")
     }
     
     func testErrorOccureAndResultIsNil() {
         //given
         let initialError = ""
-        let wrongNumberOfCountSections = 3
+        let nullNumberOfSection = 3
         
         //when
-        let result = sut.dataOfItem(number: wrongNumberOfCountSections)
+        let result = sut.dataOfItem(number: nullNumberOfSection)
         
         
         //then
@@ -48,10 +48,10 @@ class TestModelMainScreen: XCTestCase {
     
     func testResultDataOfItemIsNotNil() {
         //given
-        let rightNumberOfCountSections = 2
+        let existigNumberOfSection = 2
         
         //when
-        let result = sut.dataOfItem(number: rightNumberOfCountSections)
+        let result = sut.dataOfItem(number: existigNumberOfSection)
         
         //then
         XCTAssertNotNil(result, "Result is nil")

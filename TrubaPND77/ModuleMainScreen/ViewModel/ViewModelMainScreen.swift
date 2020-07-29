@@ -21,7 +21,6 @@ class ViewModelMainScreen {
     private func twoWayDataBinding() {
         model.errorOccure.bind { [weak self] (error) in
             if error.isEmpty {
-                print(error.isEmpty)
                 return
             }
             
@@ -32,11 +31,13 @@ class ViewModelMainScreen {
 
 extension ViewModelMainScreen: ViewModelMainScreenProtocol {
     func numberOfRows() -> Int {
-        4
+        return model.numberOfItems()
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen? {
-        nil
+        let data = model.dataOfItem(number: indexPath.item)
+        guard let model = data else { return nil }
+        return CellViewModelMainScreen(model: model)
     }
     
     

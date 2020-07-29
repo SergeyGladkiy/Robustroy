@@ -32,7 +32,7 @@ class ModelMainScreen {
 }
 
 extension ModelMainScreen: ModelMainScreenProtocol {
-    func numberOfItem() -> Int {
+    func numberOfItems() -> Int {
         return dictionaryItems.count
     }
     
