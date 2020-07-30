@@ -25,6 +25,8 @@
 		8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */; };
 		8284A63724D1A7CF00EB33CD /* ModelMainScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */; };
 		8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63924D1A91000EB33CD /* EntityMocker.swift */; };
+		8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */; };
+		8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8284A64424D2FB7300EB33CD /* DataMainScreen.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelMainScreen.swift; sourceTree = "<group>"; };
 		8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMainScreenMock.swift; sourceTree = "<group>"; };
 		8284A63924D1A91000EB33CD /* EntityMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMocker.swift; sourceTree = "<group>"; };
+		8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentItemMainScreen.swift; sourceTree = "<group>"; };
+		8284A64424D2FB7300EB33CD /* DataMainScreen.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataMainScreen.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +146,6 @@
 		8284A61324D0470200EB33CD /* ModuleMainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8284A62824D1845B00EB33CD /* Structs */,
 				8284A61424D0473D00EB33CD /* View */,
 				8284A61924D17FE600EB33CD /* ViewModel */,
 				8284A61824D17FD700EB33CD /* Model */,
@@ -170,8 +173,10 @@
 		8284A61824D17FD700EB33CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8284A62824D1845B00EB33CD /* Entities */,
 				8284A62124D180BA00EB33CD /* Interface */,
 				8284A61F24D180A100EB33CD /* ModelMainScreen.swift */,
+				8284A64424D2FB7300EB33CD /* DataMainScreen.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,12 +207,13 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		8284A62824D1845B00EB33CD /* Structs */ = {
+		8284A62824D1845B00EB33CD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				8284A62624D181D400EB33CD /* ItemMainScreen.swift */,
+				8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */,
 			);
-			path = Structs;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		8284A62924D18C1E00EB33CD /* Model */ = {
@@ -342,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8284A5F724D0290C00EB33CD /* LaunchScreen.storyboard in Resources */,
+				8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */,
 				8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +373,7 @@
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
+				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,

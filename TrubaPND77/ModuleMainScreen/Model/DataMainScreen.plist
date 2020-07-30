@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>sectionName</key>
+		<string>Каталог труб ПНД по назначению</string>
+		<key>description</key>
+		<string>Весь ассортимент всегда в наличии</string>
+		<key>attachments</key>
+		<array>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Газопроводная</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Водопроводная</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Техническая</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Дренажная</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Канализационная</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>sectionName</key>
+		<string>Производители труб</string>
+		<key>description</key>
+		<string>Вы можете найти трубу по бренду</string>
+		<key>attachments</key>
+		<array>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>MAGNUM</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>HYDRO</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Corex</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Корсис</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>sectionName</key>
+		<string>Схема работы</string>
+		<key>description</key>
+		<string>?????</string>
+		<key>attachments</key>
+		<array>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Позвоните нам</string>
+				<key>attechmentDescription</key>
+				<string>Нажмите &quot;оформить заказ&quot; или обратитесь
+к on-line консультанту</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Составляем договор</string>
+				<key>attechmentDescription</key>
+				<string>После того, как Вы определитесь с выбором, мы подготовим договор купли-продажи и счет</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Вы оплачиваете счет</string>
+				<key>attechmentDescription</key>
+				<string>Указываете адрес доставки товара</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>photo</string>
+				<key>attachmentTitle</key>
+				<string>Мы отправляем товар</string>
+				<key>attechmentDescription</key>
+				<string>По указанному Вами адресу. Мы доставляем по всей России</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

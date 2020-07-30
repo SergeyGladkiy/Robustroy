@@ -13,17 +13,19 @@ class ModelMainScreen {
     private var dictionaryItems = [Int: ItemMainScreen]()
     
     private func installingStaticInformation() {
-        let numberOfSection = 3
-        let info = [
-            ItemMainScreen(sectionName: "Каталог труб ПНД по назначению",
-                           description: "Весь ассортимент всегда в наличии"),
-            ItemMainScreen(sectionName: "Производители труб",
-                           description: "Вы можете найти трубу по бренду"),
-            ItemMainScreen(sectionName: "Как мы работаем",
-                           description: "Один день от заказа до получения товара")
-        ]
+        guard let path = Bundle.main.path(forResource: "DataMainScreen", ofType: "plist") else {
+            errorOccure.observable = "Неверный путь к файлу"
+            return
+        }
         
-        _ = (0..<numberOfSection).map { dictionaryItems[$0] = info[$0] }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: [])
+            let decoder = PropertyListDecoder()
+            let info = try decoder.decode([ItemMainScreen].self, from: data)
+            _ = (0..<info.count).map { dictionaryItems[$0] = info[$0] }
+        } catch {
+            errorOccure.observable = "Неверно декодированный элемент"
+        }
     }
     
     init() {

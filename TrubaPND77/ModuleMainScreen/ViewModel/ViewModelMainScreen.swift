@@ -39,6 +39,4 @@ extension ViewModelMainScreen: ViewModelMainScreenProtocol {
         guard let model = data else { return nil }
         return CellViewModelMainScreen(model: model)
     }
-    
-    
 }

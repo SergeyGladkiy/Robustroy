@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct ItemMainScreen {
+struct ItemMainScreen: Decodable {
     let sectionName: String
     let description: String
+    let attachments: [AttachmentItemMainScreen]
 }
