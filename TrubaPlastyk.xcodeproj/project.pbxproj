@@ -27,6 +27,13 @@
 		8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63924D1A91000EB33CD /* EntityMocker.swift */; };
 		8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */; };
 		8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8284A64424D2FB7300EB33CD /* DataMainScreen.plist */; };
+		8284A64C24D4301500EB33CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64B24D4301500EB33CD /* NetworkService.swift */; };
+		8284A65024D4335A00EB33CD /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64F24D4335A00EB33CD /* NetworkServiceProtocol.swift */; };
+		8284A65224D433B100EB33CD /* NetworkDataFetcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65124D433B100EB33CD /* NetworkDataFetcherProtocols.swift */; };
+		8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65324D433C100EB33CD /* NetworkDataFetcher.swift */; };
+		8284A65624D4393B00EB33CD /* MapperErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */; };
+		8284A65824D4397200EB33CD /* MapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65724D4397200EB33CD /* MapperError.swift */; };
+		8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65924D48A3000EB33CD /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,13 @@
 		8284A63924D1A91000EB33CD /* EntityMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMocker.swift; sourceTree = "<group>"; };
 		8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentItemMainScreen.swift; sourceTree = "<group>"; };
 		8284A64424D2FB7300EB33CD /* DataMainScreen.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataMainScreen.plist; sourceTree = "<group>"; };
+		8284A64B24D4301500EB33CD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8284A64F24D4335A00EB33CD /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		8284A65124D433B100EB33CD /* NetworkDataFetcherProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcherProtocols.swift; sourceTree = "<group>"; };
+		8284A65324D433C100EB33CD /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperErrorProtocol.swift; sourceTree = "<group>"; };
+		8284A65724D4397200EB33CD /* MapperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperError.swift; sourceTree = "<group>"; };
+		8284A65924D48A3000EB33CD /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +119,10 @@
 		8284A5E924D0290800EB33CD /* TrubaPlastyk */ = {
 			isa = PBXGroup;
 			children = (
+				8284A64A24D42E4900EB33CD /* NetworkService */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
-				8284A62C24D19BCB00EB33CD /* Extensions */,
+				8284A62C24D19BCB00EB33CD /* Helpers */,
 			);
 			path = TrubaPlastyk;
 			sourceTree = "<group>";
@@ -127,7 +142,6 @@
 			children = (
 				8284A5EA24D0290800EB33CD /* AppDelegate.swift */,
 				8284A5EC24D0290800EB33CD /* SceneDelegate.swift */,
-				8284A62424D1810D00EB33CD /* Observable.swift */,
 				8284A5F324D0290C00EB33CD /* Assets.xcassets */,
 				8284A5F524D0290C00EB33CD /* LaunchScreen.storyboard */,
 				8284A61024D02B2400EB33CD /* Info.plist */,
@@ -176,7 +190,6 @@
 				8284A62824D1845B00EB33CD /* Entities */,
 				8284A62124D180BA00EB33CD /* Interface */,
 				8284A61F24D180A100EB33CD /* ModelMainScreen.swift */,
-				8284A64424D2FB7300EB33CD /* DataMainScreen.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 		8284A62824D1845B00EB33CD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				8284A64424D2FB7300EB33CD /* DataMainScreen.plist */,
 				8284A62624D181D400EB33CD /* ItemMainScreen.swift */,
 				8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */,
 			);
@@ -224,12 +238,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8284A62C24D19BCB00EB33CD /* Extensions */ = {
+		8284A62C24D19BCB00EB33CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */,
+				8284A62424D1810D00EB33CD /* Observable.swift */,
+				8284A65924D48A3000EB33CD /* CustomError.swift */,
+				8284A64D24D432E100EB33CD /* Extensions */,
 			);
-			path = Extensions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8284A63124D19DC000EB33CD /* CellViewModel */ = {
@@ -264,6 +280,35 @@
 				8284A63924D1A91000EB33CD /* EntityMocker.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		8284A64A24D42E4900EB33CD /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8284A64E24D4334200EB33CD /* Interface */,
+				8284A64B24D4301500EB33CD /* NetworkService.swift */,
+				8284A65724D4397200EB33CD /* MapperError.swift */,
+				8284A65324D433C100EB33CD /* NetworkDataFetcher.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		8284A64D24D432E100EB33CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8284A64E24D4334200EB33CD /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8284A64F24D4335A00EB33CD /* NetworkServiceProtocol.swift */,
+				8284A65124D433B100EB33CD /* NetworkDataFetcherProtocols.swift */,
+				8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,17 +412,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8284A65224D433B100EB33CD /* NetworkDataFetcherProtocols.swift in Sources */,
 				8284A62524D1810D00EB33CD /* Observable.swift in Sources */,
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
 				8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */,
+				8284A65624D4393B00EB33CD /* MapperErrorProtocol.swift in Sources */,
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
+				8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */,
+				8284A65824D4397200EB33CD /* MapperError.swift in Sources */,
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
+				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
+				8284A65024D4335A00EB33CD /* NetworkServiceProtocol.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
+				8284A64C24D4301500EB33CD /* NetworkService.swift in Sources */,
 				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

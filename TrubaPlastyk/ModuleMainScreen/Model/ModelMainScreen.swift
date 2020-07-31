@@ -9,13 +9,16 @@
 import Foundation
 
 class ModelMainScreen {
-    var errorOccure: Observable<String> = Observable(observable: "")
+    private let fetcher: NetworkingMainScreen
+    
+    
+    var errorOccure: Observable<CustomError> = Observable(observable: .initial)
     private var dictionaryItems = [Int: ItemMainScreen]()
     
-    private func installingStaticInformation() {
+    private func installingStaticInformation() -> Bool {
         guard let path = Bundle.main.path(forResource: "DataMainScreen", ofType: "plist") else {
-            errorOccure.observable = "Неверный путь к файлу"
-            return
+            errorOccure.observable = .wrongFilePath
+            return false
         }
         
         do {
@@ -24,16 +27,33 @@ class ModelMainScreen {
             let info = try decoder.decode([ItemMainScreen].self, from: data)
             _ = (0..<info.count).map { dictionaryItems[$0] = info[$0] }
         } catch {
-            errorOccure.observable = "Неверно декодированный элемент"
+            errorOccure.observable = .notConnectedToInternet
+            return false
         }
+        return true
     }
     
-    init() {
-        installingStaticInformation()
+    init(networking: NetworkingMainScreen) {
+        self.fetcher = networking
     }
 }
 
 extension ModelMainScreen: ModelMainScreenProtocol {
+    func connectionCheck() {
+        fetcher.fetchInformationAboutServer { (result) in
+            switch result {
+            case .success(_):
+                let result = self.installingStaticInformation()
+                
+            case .failure(let error):
+                print(error)
+                if error == .notConnectedToInternet {
+                    self.errorOccure.observable = .notConnectedToInternet
+                }
+            }
+        }
+    }
+    
     func numberOfItems() -> Int {
         return dictionaryItems.count
     }
@@ -41,10 +61,9 @@ extension ModelMainScreen: ModelMainScreenProtocol {
 
     func dataOfItem(number: Int) -> ItemMainScreen? {
         guard let info = dictionaryItems[number] else {
-            errorOccure.observable = "нет информации"
+            errorOccure.observable = .showableError("Неизвестная ошибка 😫")
             return nil
         }
-
         return info
     }
 }

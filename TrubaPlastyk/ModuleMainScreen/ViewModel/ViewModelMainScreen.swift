@@ -20,11 +20,14 @@ class ViewModelMainScreen {
     
     private func twoWayDataBinding() {
         model.errorOccure.bind { [weak self] (error) in
-            if error.isEmpty {
+            switch error {
+            case .initial, .decodingError, .wrongFilePath, .unknown:
                 return
+            case .notConnectedToInternet:
+                self?.state.observable = .errorOccure("Нет соединения с интернетом")
+            case .showableError(let error):
+                self?.state.observable = .errorOccure(error)
             }
-            
-            self?.state.observable = .errorOccure(error)
         }
     }
 }

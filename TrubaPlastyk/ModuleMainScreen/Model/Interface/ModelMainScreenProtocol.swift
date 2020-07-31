@@ -9,7 +9,8 @@
 import Foundation
 
 protocol ModelMainScreenProtocol {
-    var errorOccure: Observable<String> { get }
+    var errorOccure: Observable<CustomError> { get }
     func dataOfItem(number: Int) -> ItemMainScreen?
     func numberOfItems() -> Int
+    func connectionCheck()
 }
