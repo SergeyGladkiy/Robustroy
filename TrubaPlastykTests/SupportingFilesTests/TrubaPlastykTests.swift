@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import TrubaPND77
+@testable import TrubaPlastyk
 
-class TrubaPND77Tests: XCTestCase {
+class TrubaPlastykTests: XCTestCase {
     
 
     override func setUpWithError() throws {

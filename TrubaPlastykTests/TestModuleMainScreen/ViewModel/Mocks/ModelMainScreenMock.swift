@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import TrubaPND77
+@testable import TrubaPlastyk
 
 class ModelMainScreenMock {
     var errorOccure: Observable<String> = Observable<String>(observable: "")

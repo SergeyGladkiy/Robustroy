@@ -11,9 +11,11 @@ import Foundation
 class CellViewModelMainScreen {
     let titleGroup: String
     let descriptionGroup: String
+    let attachmentsGroup: [AttachmentItemMainScreen]
     
     init(model: ItemMainScreen) {
         titleGroup = model.sectionName
         descriptionGroup = model.description
+        attachmentsGroup = model.attachments
     }
 }

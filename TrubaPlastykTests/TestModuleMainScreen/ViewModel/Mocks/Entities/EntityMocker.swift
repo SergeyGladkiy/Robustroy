@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import TrubaPND77
+@testable import TrubaPlastyk
 
 class EntityMocker {
     static func generateCorrectQuantitySections() -> Int {
@@ -16,7 +16,7 @@ class EntityMocker {
     
     static func generateItemMainScreenForFirstSection() -> ItemMainScreen {
         return ItemMainScreen(sectionName: "Производители труб",
-                              description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "MAGNUM")])
+                              description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "HYDRO")])
     }
     
     
