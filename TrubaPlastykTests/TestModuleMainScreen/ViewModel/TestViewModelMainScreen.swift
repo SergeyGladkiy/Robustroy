@@ -28,46 +28,71 @@ class TestViewModelMainScreen: XCTestCase {
     }
 
    
-    func testNumberOfItemsViewModelMainScreenIsThree() {
+    func testGeneratingItemsIsSuccessfulAndNumberOfRowsIsNotEmptyAndStateIsReadyToShowItems() {
         //given
-        let rightNumberOfQuantitySection = EntityMocker.generateCorrectQuantitySections()
-        
+        let itemsCount = EntityMocker.generateItem().count
+        var state = ViewModelMainScreenState.initial
+        var resutlCheckState = false
         
         //when
-        let result = sut.numberOfRows()
+        sut.generateItems()
+        sut.state.bind { (result) in
+            state = result
+        }
+        
+        switch state {
+        case .readyToShowItems:
+            resutlCheckState = true
+        default:
+            break
+        }
         
         //then
-        XCTAssertTrue(rightNumberOfQuantitySection == result, "Не верное количество секций страницы")
+        XCTAssert(itemsCount == sut.numberOfRows(), "Generating of items ended unsuccessfully")
+        XCTAssert(resutlCheckState, "state view model did not change")
+        
     }
     
-    func testCellViewModelForIndexPathIsFirsetAndIsNotNil() {
+    func testCellViewModelIsCreated() {
         //given
-        let indexPath = IndexPath(item: 1, section: 0)
-        let cellViewModel = EntityMocker.generateItemMainScreenForFirstSection()
+        guard let mockCellViewModel = EntityMocker.generateItem().first else {
+            XCTFail()
+            return
+        }
+        let indexPath = IndexPath(row: mockCellViewModel.key, section: 0)
         
         //when
+        sut.generateItems()
         let result = sut.cellViewModel(forIndexPath: indexPath)
         
         //then
         XCTAssertNotNil(result, "cellViewModel is nil")
-        XCTAssert(result!.titleGroup == cellViewModel.sectionName, "cellViewModel не для первой секции страницы")
     }
     
-    func testErrorOccureAndStateViewModelMainScreenWasChanged() {
+    func testStateIsErrorOccureAndDescriptionOfError() {
         //given
-        let error = "error"
+        var descriptionError = ""
+        let number = EntityMocker.wrongNumberOfItemsInDataBase()
+        var state = ViewModelMainScreenState.initial
+        var resutlCheckState = false
         
         //when
-        mockModel.errorOccure.observable = error
-        
-        sut.state.bind { state in
-            switch state {
-            case .initial:
-                XCTFail()
-            case .errorOccure(let message):
-                //then
-                XCTAssert(error == message, "Состояние не изменилось, ошибка не сработала")
-            }
+        sut.generateItems()
+        _ = sut.cellViewModel(forIndexPath: IndexPath(row: number, section: 0))
+        sut.state.bind { (result) in
+            state = result
         }
+        
+        switch state {
+        case .errorOccure(let error):
+            resutlCheckState = true
+            descriptionError = error
+        default:
+            break
+        }
+        
+        //then
+        XCTAssert(resutlCheckState, "state view model did not change")
+        XCTAssert(descriptionError == unknownError, "error description is not correct")
     }
 }

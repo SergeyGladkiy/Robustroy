@@ -13,3 +13,14 @@ struct ItemMainScreen: Decodable {
     let description: String
     let attachments: [AttachmentItemMainScreen]
 }
+
+extension ItemMainScreen: Equatable {
+    static func == (lhs: ItemMainScreen, rhs: ItemMainScreen) -> Bool {
+        if lhs.sectionName == rhs.sectionName,
+            lhs.description == rhs.description,
+            lhs.attachments == rhs.attachments {
+            return true
+        }
+        return false
+    }
+}

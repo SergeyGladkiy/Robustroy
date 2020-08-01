@@ -10,18 +10,13 @@ import Foundation
 @testable import TrubaPlastyk
 
 class ModelMainScreenMock {
-    var errorOccure: Observable<String> = Observable<String>(observable: "")
+    var errorOccure = Observable<CustomError>(observable: .initial)
+    var staticInfо = Observable<[Int : ItemMainScreen]>(observable: [:])
 }
 
 extension ModelMainScreenMock: ModelMainScreenProtocol {
-    
-    func dataOfItem(number: Int) -> ItemMainScreen? {
-        return EntityMocker.generateItemMainScreenForFirstSection()
+    func processingStaticInformation() {
+        staticInfо.observable = EntityMocker.generateItem()
     }
-    
-    func numberOfItems() -> Int {
-        return EntityMocker.generateCorrectQuantitySections()
-    }
-    
     
 }

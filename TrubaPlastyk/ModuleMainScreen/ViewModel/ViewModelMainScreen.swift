@@ -11,6 +11,7 @@ import Foundation
 class ViewModelMainScreen {
     private let model: ModelMainScreenProtocol
     var state: Observable<ViewModelMainScreenState>
+    private var dictionaryOfItems = [Int: ItemMainScreen]()
     
     init(state: Observable<ViewModelMainScreenState>, model: ModelMainScreenProtocol) {
         self.state = state
@@ -20,26 +21,34 @@ class ViewModelMainScreen {
     
     private func twoWayDataBinding() {
         model.errorOccure.bind { [weak self] (error) in
-            switch error {
-            case .initial, .decodingError, .wrongFilePath, .unknown:
-                return
-            case .notConnectedToInternet:
-                self?.state.observable = .errorOccure("Нет соединения с интернетом")
-            case .showableError(let error):
-                self?.state.observable = .errorOccure(error)
-            }
+            //MARK: to understand what the error is
+            print(error)
+            self?.state.observable = .errorOccure(unknownError)
+        }
+        
+        model.staticInfо.bind { [weak self] (dict) in
+            if dict.isEmpty { return }
+            self?.dictionaryOfItems = dict
+            self?.state.observable = .readyToShowItems
         }
     }
 }
 
 extension ViewModelMainScreen: ViewModelMainScreenProtocol {
+    func generateItems() {
+        model.processingStaticInformation()
+    }
+    
     func numberOfRows() -> Int {
-        return model.numberOfItems()
+        return dictionaryOfItems.count
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen? {
-        let data = model.dataOfItem(number: indexPath.item)
-        guard let model = data else { return nil }
+        let data = dictionaryOfItems[indexPath.row]
+        guard let model = data else {
+            state.observable = .errorOccure(unknownError)
+            return nil
+        }
         return CellViewModelMainScreen(model: model)
     }
 }

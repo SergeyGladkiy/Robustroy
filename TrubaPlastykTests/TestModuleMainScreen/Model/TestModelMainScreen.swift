@@ -23,37 +23,65 @@ class TestModelMainScreen: XCTestCase {
         super.tearDown()
     }
 
-    func testDataOfItemsEqualThreeSection() {
+    func testStaticInforamtionIsGeneratedAndBindingStaticInfoWorks() {
         //given
-        let quantityOfSections = EntityMocker.generateCorrectQuantitySections()
-        
-        //then
-        XCTAssert(quantityOfSections == sut.numberOfItems(), "Неверное количество секций страницы")
-    }
-    
-    func testErrorOccureAndResultIsNil() {
-        //given
-        let initialError = ""
-        let nullNumberOfSection = 3
+        var resultCheckStaticInfo = [Int: ItemMainScreen]()
         
         //when
-        let result = sut.dataOfItem(number: nullNumberOfSection)
-        
-        
+        sut.processingStaticInformation()
+        sut.staticInfо.bind { (data) in
+            resultCheckStaticInfo = data
+        }
         //then
-        XCTAssert(initialError != sut.errorOccure.observable, "Ошибка не сработала")
-        XCTAssertNil(result, "Возвращаемое значение не nil")
+        
+        XCTAssert(resultCheckStaticInfo == sut.staticInfо.observable, "Processing ended unsuccessfully")
+    }
+    
+    func testErrorOccureIsWrongFilePathAndBindingErrorOccureWorks() {
+        //MARK: rename file DataMainScreen.plist otherwise the path will be correct and the error will not work
+        
+        //given
+        var error = CustomError.initial
+        var resultCheckError = false
+        
+        //when
+        sut.errorOccure.bind { (customError) in
+            error = customError
+        }
+        sut.processingStaticInformation()
+        
+        switch error {
+        case .wrongFilePath:
+            resultCheckError = true
+        default:
+            break
+        }
+        //then
+        XCTAssert(resultCheckError, "Case CustomError is not .wrongFilePath")
         
     }
     
-    func testResultDataOfItemIsNotNil() {
+    func testErrorOccureIsDecodingErrorAndBindingErrorOccureWorks() {
+        //MARK: change some in properties list of file DataMainScreen.plist otherwise the path will be correct and the error will not work
+        
         //given
-        let existigNumberOfSection = 2
+        var error = CustomError.initial
+        var resultCheckError = false
         
         //when
-        let result = sut.dataOfItem(number: existigNumberOfSection)
+        sut.errorOccure.bind { (customError) in
+            error = customError
+        }
+        sut.processingStaticInformation()
+        
+        switch error {
+        case .decodingError:
+            resultCheckError = true
+        default:
+            break
+        }
         
         //then
-        XCTAssertNotNil(result, "Result is nil")
+        XCTAssert(resultCheckError, "Case CustomError is not .decodingError")
     }
 }

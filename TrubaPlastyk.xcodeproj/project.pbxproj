@@ -199,7 +199,7 @@
 			children = (
 				8284A61C24D1803600EB33CD /* Interface */,
 				8284A61A24D1801000EB33CD /* ViewModelMainScreen.swift */,
-				8284A63124D19DC000EB33CD /* CellViewModel */,
+				8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,14 +248,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		8284A63124D19DC000EB33CD /* CellViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */,
-			);
-			path = CellViewModel;
-			sourceTree = "<group>";
-		};
 		8284A63224D1A5A400EB33CD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +277,7 @@
 		8284A64A24D42E4900EB33CD /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				8284A64E24D4334200EB33CD /* Interface */,
+				8284A64E24D4334200EB33CD /* Interfaces */,
 				8284A64B24D4301500EB33CD /* NetworkService.swift */,
 				8284A65724D4397200EB33CD /* MapperError.swift */,
 				8284A65324D433C100EB33CD /* NetworkDataFetcher.swift */,
@@ -301,14 +293,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8284A64E24D4334200EB33CD /* Interface */ = {
+		8284A64E24D4334200EB33CD /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
 				8284A64F24D4335A00EB33CD /* NetworkServiceProtocol.swift */,
 				8284A65124D433B100EB33CD /* NetworkDataFetcherProtocols.swift */,
 				8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */,
 			);
-			path = Interface;
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

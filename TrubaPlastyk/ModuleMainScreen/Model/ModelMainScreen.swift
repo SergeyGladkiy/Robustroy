@@ -9,61 +9,27 @@
 import Foundation
 
 class ModelMainScreen {
-    private let fetcher: NetworkingMainScreen
+    var staticInfо = Observable<[Int: ItemMainScreen]>(observable: [:])
+    var errorOccure = Observable<CustomError>(observable: .initial)
+}
+
+extension ModelMainScreen: ModelMainScreenProtocol {
     
-    
-    var errorOccure: Observable<CustomError> = Observable(observable: .initial)
-    private var dictionaryItems = [Int: ItemMainScreen]()
-    
-    private func installingStaticInformation() -> Bool {
+    func processingStaticInformation() {
         guard let path = Bundle.main.path(forResource: "DataMainScreen", ofType: "plist") else {
             errorOccure.observable = .wrongFilePath
-            return false
+            return
         }
         
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: [])
             let decoder = PropertyListDecoder()
             let info = try decoder.decode([ItemMainScreen].self, from: data)
-            _ = (0..<info.count).map { dictionaryItems[$0] = info[$0] }
+            var dict = [Int: ItemMainScreen]()
+            _ = (0..<info.count).map { dict[$0] = info[$0] }
+            staticInfо.observable = dict
         } catch {
-            errorOccure.observable = .notConnectedToInternet
-            return false
+            errorOccure.observable = .decodingError
         }
-        return true
-    }
-    
-    init(networking: NetworkingMainScreen) {
-        self.fetcher = networking
-    }
-}
-
-extension ModelMainScreen: ModelMainScreenProtocol {
-    func connectionCheck() {
-        fetcher.fetchInformationAboutServer { (result) in
-            switch result {
-            case .success(_):
-                let result = self.installingStaticInformation()
-                
-            case .failure(let error):
-                print(error)
-                if error == .notConnectedToInternet {
-                    self.errorOccure.observable = .notConnectedToInternet
-                }
-            }
-        }
-    }
-    
-    func numberOfItems() -> Int {
-        return dictionaryItems.count
-    }
-    
-
-    func dataOfItem(number: Int) -> ItemMainScreen? {
-        guard let info = dictionaryItems[number] else {
-            errorOccure.observable = .showableError("Неизвестная ошибка 😫")
-            return nil
-        }
-        return info
     }
 }

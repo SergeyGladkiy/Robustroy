@@ -10,13 +10,13 @@ import Foundation
 @testable import TrubaPlastyk
 
 class EntityMocker {
-    static func generateCorrectQuantitySections() -> Int {
-        return 3
+    static func wrongNumberOfItemsInDataBase() -> Int {
+        return 4
     }
     
-    static func generateItemMainScreenForFirstSection() -> ItemMainScreen {
-        return ItemMainScreen(sectionName: "Производители труб",
-                              description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "HYDRO")])
+    static func generateItem() -> [Int: ItemMainScreen] {
+        return [1: ItemMainScreen(sectionName: "Производители труб",
+                              description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "HYDRO")])]
     }
     
     

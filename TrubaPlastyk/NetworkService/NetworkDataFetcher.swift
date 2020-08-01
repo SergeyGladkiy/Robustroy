@@ -10,11 +10,11 @@ import Foundation
 
 class NetworkDataFetcher {
     private let networkServece: NetworkServiceProtocol
-    private let mapperError: MapperErrorProtocol
+    private let mapper: MapperNetworkErrorProtocol
     
-    init(networking: NetworkServiceProtocol, mapper: MapperErrorProtocol) {
+    init(networking: NetworkServiceProtocol, mapper: MapperNetworkErrorProtocol) {
         networkServece = networking
-        mapperError = mapper
+        self.mapper = mapper
     }
 }
 
@@ -33,7 +33,7 @@ extension NetworkDataFetcher: NetworkingMainScreen {
             }
             
             if let error = error {
-                let customError = self.mapperError.parsingError(error: error as NSError)
+                let customError = self.mapper.parsingError(error: error as NSError)
                 completion(.failure(customError))
                 return
             }

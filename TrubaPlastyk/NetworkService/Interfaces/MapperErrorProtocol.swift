@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol MapperErrorProtocol {
+protocol MapperNetworkErrorProtocol {
     func parsingError(error: NSError) -> NSURLError
 }

@@ -35,7 +35,7 @@ enum NSURLError: Error {
     }
 }
 
-class MapperError: MapperErrorProtocol {
+class MapperNetworkError: MapperNetworkErrorProtocol {
     
     func parsingError(error: NSError) -> NSURLError {
         switch error.code {

@@ -8,6 +8,11 @@
 
 import Foundation
 
+var unknownError: String {
+    return "Неизвестная ошибка 😫"
+}
+
+
 enum CustomError {
     case initial
     case showableError(String)
@@ -17,11 +22,3 @@ enum CustomError {
     case unknown
 }
 
-//extension CustomError: Equatable {
-//    static func == (lhs: CustomError, rhs: CustomError) -> Bool {
-//        if lhs.self == rhs.self {
-//            return true
-//        }
-//        return false
-//    }
-//}
