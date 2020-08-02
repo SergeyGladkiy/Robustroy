@@ -12,7 +12,7 @@
 		8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */; };
 		8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8284A5F324D0290C00EB33CD /* Assets.xcassets */; };
 		8284A5F724D0290C00EB33CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8284A5F524D0290C00EB33CD /* LaunchScreen.storyboard */; };
-		8284A61624D0479F00EB33CD /* TrubaPlastykTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61524D0479F00EB33CD /* TrubaPlastykTests.swift */; };
+		8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */; };
 		8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61A24D1801000EB33CD /* ViewModelMainScreen.swift */; };
 		8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61D24D1805400EB33CD /* ViewModelMainScreenProtocol.swift */; };
 		8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A61F24D180A100EB33CD /* ModelMainScreen.swift */; };
@@ -47,16 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8284A5E724D0290800EB33CD /* TrubaPlastyk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrubaPlastyk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8284A5E724D0290800EB33CD /* TrubaPND77.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrubaPND77.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A5EA24D0290800EB33CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8284A5EC24D0290800EB33CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8284A5F324D0290C00EB33CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8284A5F624D0290C00EB33CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8284A5FD24D0290D00EB33CD /* TrubaPlastykTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrubaPlastykTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8284A5FD24D0290D00EB33CD /* TrubaPND77Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrubaPND77Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A60324D0290D00EB33CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8284A61024D02B2400EB33CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8284A61524D0479F00EB33CD /* TrubaPlastykTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrubaPlastykTests.swift; sourceTree = "<group>"; };
+		8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrubaPND77Tests.swift; sourceTree = "<group>"; };
 		8284A61A24D1801000EB33CD /* ViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMainScreen.swift; sourceTree = "<group>"; };
 		8284A61D24D1805400EB33CD /* ViewModelMainScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelMainScreenProtocol.swift; sourceTree = "<group>"; };
 		8284A61F24D180A100EB33CD /* ModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMainScreen.swift; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		8284A5DE24D0290800EB33CD = {
 			isa = PBXGroup;
 			children = (
-				8284A5E924D0290800EB33CD /* TrubaPlastyk */,
-				8284A60024D0290D00EB33CD /* TrubaPlastykTests */,
+				8284A5E924D0290800EB33CD /* TrubaPND77 */,
+				8284A60024D0290D00EB33CD /* TrubaPND77Tests */,
 				8284A5E824D0290800EB33CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,13 +110,13 @@
 		8284A5E824D0290800EB33CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8284A5E724D0290800EB33CD /* TrubaPlastyk.app */,
-				8284A5FD24D0290D00EB33CD /* TrubaPlastykTests.xctest */,
+				8284A5E724D0290800EB33CD /* TrubaPND77.app */,
+				8284A5FD24D0290D00EB33CD /* TrubaPND77Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8284A5E924D0290800EB33CD /* TrubaPlastyk */ = {
+		8284A5E924D0290800EB33CD /* TrubaPND77 */ = {
 			isa = PBXGroup;
 			children = (
 				8284A64A24D42E4900EB33CD /* NetworkService */,
@@ -124,17 +124,17 @@
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
 			);
-			path = TrubaPlastyk;
+			path = TrubaPND77;
 			sourceTree = "<group>";
 		};
-		8284A60024D0290D00EB33CD /* TrubaPlastykTests */ = {
+		8284A60024D0290D00EB33CD /* TrubaPND77Tests */ = {
 			isa = PBXGroup;
 			children = (
 				8284A61724D16F0F00EB33CD /* TestModuleMainScreen */,
 				8284A61224D0464C00EB33CD /* SupportingFilesTests */,
 				8284A60324D0290D00EB33CD /* Info.plist */,
 			);
-			path = TrubaPlastykTests;
+			path = TrubaPND77Tests;
 			sourceTree = "<group>";
 		};
 		8284A60C24D029D200EB33CD /* SupportingFiles */ = {
@@ -152,7 +152,7 @@
 		8284A61224D0464C00EB33CD /* SupportingFilesTests */ = {
 			isa = PBXGroup;
 			children = (
-				8284A61524D0479F00EB33CD /* TrubaPlastykTests.swift */,
+				8284A61524D0479F00EB33CD /* TrubaPND77Tests.swift */,
 			);
 			path = SupportingFilesTests;
 			sourceTree = "<group>";
@@ -306,9 +306,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8284A5E624D0290800EB33CD /* TrubaPlastyk */ = {
+		8284A5E624D0290800EB33CD /* TrubaPND77 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8284A60624D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPlastyk" */;
+			buildConfigurationList = 8284A60624D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77" */;
 			buildPhases = (
 				8284A5E324D0290800EB33CD /* Sources */,
 				8284A5E424D0290800EB33CD /* Frameworks */,
@@ -318,14 +318,14 @@
 			);
 			dependencies = (
 			);
-			name = TrubaPlastyk;
+			name = TrubaPND77;
 			productName = TrubaPND77;
-			productReference = 8284A5E724D0290800EB33CD /* TrubaPlastyk.app */;
+			productReference = 8284A5E724D0290800EB33CD /* TrubaPND77.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8284A5FC24D0290D00EB33CD /* TrubaPlastykTests */ = {
+		8284A5FC24D0290D00EB33CD /* TrubaPND77Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPlastykTests" */;
+			buildConfigurationList = 8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77Tests" */;
 			buildPhases = (
 				8284A5F924D0290D00EB33CD /* Sources */,
 				8284A5FA24D0290D00EB33CD /* Frameworks */,
@@ -336,9 +336,9 @@
 			dependencies = (
 				8284A5FF24D0290D00EB33CD /* PBXTargetDependency */,
 			);
-			name = TrubaPlastykTests;
+			name = TrubaPND77Tests;
 			productName = TrubaPND77Tests;
-			productReference = 8284A5FD24D0290D00EB33CD /* TrubaPlastykTests.xctest */;
+			productReference = 8284A5FD24D0290D00EB33CD /* TrubaPND77Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -360,7 +360,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8284A5E224D0290800EB33CD /* Build configuration list for PBXProject "TrubaPlastyk" */;
+			buildConfigurationList = 8284A5E224D0290800EB33CD /* Build configuration list for PBXProject "TrubaPND77" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -373,8 +373,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8284A5E624D0290800EB33CD /* TrubaPlastyk */,
-				8284A5FC24D0290D00EB33CD /* TrubaPlastykTests */,
+				8284A5E624D0290800EB33CD /* TrubaPND77 */,
+				8284A5FC24D0290D00EB33CD /* TrubaPND77Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -434,7 +434,7 @@
 				8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */,
 				8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */,
 				8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */,
-				8284A61624D0479F00EB33CD /* TrubaPlastykTests.swift in Sources */,
+				8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +443,7 @@
 /* Begin PBXTargetDependency section */
 		8284A5FF24D0290D00EB33CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8284A5E624D0290800EB33CD /* TrubaPlastyk */;
+			target = 8284A5E624D0290800EB33CD /* TrubaPND77 */;
 			targetProxy = 8284A5FE24D0290D00EB33CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -580,13 +580,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = "$(SRCROOT)/TrubaPlastyk/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPlastyk;
-				PRODUCT_NAME = TrubaPlastyk;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPND77;
+				PRODUCT_NAME = TrubaPND77;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -598,13 +598,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = "$(SRCROOT)/TrubaPlastyk/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPlastyk;
-				PRODUCT_NAME = TrubaPlastyk;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPND77;
+				PRODUCT_NAME = TrubaPND77;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -617,18 +617,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = TrubaPlastykTests/Info.plist;
+				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPlastykTests;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPND77Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrubaPlastyk.app/TrubaPlastyk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrubaPND77.app/TrubaPND77";
 			};
 			name = Debug;
 		};
@@ -639,25 +639,25 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = TrubaPlastykTests/Info.plist;
+				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPlastykTests;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyGladkiy.TrubaPND77Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrubaPlastyk.app/TrubaPlastyk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrubaPND77.app/TrubaPND77";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8284A5E224D0290800EB33CD /* Build configuration list for PBXProject "TrubaPlastyk" */ = {
+		8284A5E224D0290800EB33CD /* Build configuration list for PBXProject "TrubaPND77" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8284A60424D0290D00EB33CD /* Debug */,
@@ -666,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8284A60624D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPlastyk" */ = {
+		8284A60624D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8284A60724D0290D00EB33CD /* Debug */,
@@ -675,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPlastykTests" */ = {
+		8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8284A60A24D0290D00EB33CD /* Debug */,

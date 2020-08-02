@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import TrubaPlastyk
+@testable import TrubaPND77
 
 class EntityMocker {
     static func wrongNumberOfItemsInDataBase() -> Int {

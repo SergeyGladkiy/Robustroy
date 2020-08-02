@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TrubaPlastyk
+@testable import TrubaPND77
 
 class TestModelMainScreen: XCTestCase {
     
