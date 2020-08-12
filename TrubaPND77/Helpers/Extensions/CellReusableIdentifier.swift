@@ -13,7 +13,7 @@ protocol CellReusabelIdentifier {
     static var reuseIdentifier: String { get }
 }
 
-extension UICollectionViewCell: CellReusabelIdentifier {
+extension UICollectionReusableView: CellReusabelIdentifier {
     static var reuseIdentifier: String {
         return String(describing: self)
     }

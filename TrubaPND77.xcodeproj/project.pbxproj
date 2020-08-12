@@ -34,6 +34,11 @@
 		8284A65624D4393B00EB33CD /* MapperErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */; };
 		8284A65824D4397200EB33CD /* MapperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65724D4397200EB33CD /* MapperError.swift */; };
 		8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65924D48A3000EB33CD /* CustomError.swift */; };
+		8284A65D24D7290600EB33CD /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65C24D7290600EB33CD /* StretchyHeaderLayout.swift */; };
+		8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */; };
+		8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */; };
+		8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */; };
+		82EBC80E24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperErrorProtocol.swift; sourceTree = "<group>"; };
 		8284A65724D4397200EB33CD /* MapperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperError.swift; sourceTree = "<group>"; };
 		8284A65924D48A3000EB33CD /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		8284A65C24D7290600EB33CD /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCellMainScreen.swift; sourceTree = "<group>"; };
+		8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchor.swift; sourceTree = "<group>"; };
+		8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCell.swift; sourceTree = "<group>"; };
+		82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +180,11 @@
 		8284A61424D0473D00EB33CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8284A65B24D7249F00EB33CD /* CustomFlowLayout */,
 				8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */,
+				8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */,
+				8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */,
+				82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				8284A62D24D19C7F00EB33CD /* CellReusableIdentifier.swift */,
+				8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +316,14 @@
 				8284A65524D4393B00EB33CD /* MapperErrorProtocol.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		8284A65B24D7249F00EB33CD /* CustomFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8284A65C24D7290600EB33CD /* StretchyHeaderLayout.swift */,
+			);
+			path = CustomFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +430,7 @@
 				8284A65224D433B100EB33CD /* NetworkDataFetcherProtocols.swift in Sources */,
 				8284A62524D1810D00EB33CD /* Observable.swift in Sources */,
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
+				8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */,
 				8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */,
 				8284A65624D4393B00EB33CD /* MapperErrorProtocol.swift in Sources */,
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
@@ -417,11 +441,15 @@
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
+				8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */,
 				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 				8284A65024D4335A00EB33CD /* NetworkServiceProtocol.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
 				8284A64C24D4301500EB33CD /* NetworkService.swift in Sources */,
+				8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */,
+				82EBC80E24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift in Sources */,
+				8284A65D24D7290600EB33CD /* StretchyHeaderLayout.swift in Sources */,
 				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,6 +628,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

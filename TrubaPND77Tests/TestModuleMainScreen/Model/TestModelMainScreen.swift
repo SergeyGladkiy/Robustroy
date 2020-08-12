@@ -13,6 +13,10 @@ class TestModelMainScreen: XCTestCase {
     
     var sut: ModelMainScreen!
     
+    //given
+    var error = CustomError.initial
+    var resultCheckError = false
+    
     override func setUp() {
         super.setUp()
         sut = ModelMainScreen()
@@ -21,6 +25,13 @@ class TestModelMainScreen: XCTestCase {
     override func tearDown() {
         sut = nil
         super.tearDown()
+    }
+    
+    private func settingFunctionalityOfTestingModel() {
+        sut.errorOccure.bind { [weak self] (customError) in
+            guard let self = self else { return }
+            self.error = customError
+        }
     }
 
     func testStaticInforamtionIsGeneratedAndBindingStaticInfoWorks() {
@@ -40,14 +51,8 @@ class TestModelMainScreen: XCTestCase {
     func testErrorOccureIsWrongFilePathAndBindingErrorOccureWorks() {
         //MARK: rename file DataMainScreen.plist otherwise the path will be correct and the error will not work
         
-        //given
-        var error = CustomError.initial
-        var resultCheckError = false
-        
         //when
-        sut.errorOccure.bind { (customError) in
-            error = customError
-        }
+        settingFunctionalityOfTestingModel()
         sut.processingStaticInformation()
         
         switch error {
@@ -64,14 +69,8 @@ class TestModelMainScreen: XCTestCase {
     func testErrorOccureIsDecodingErrorAndBindingErrorOccureWorks() {
         //MARK: change some in properties list of file DataMainScreen.plist otherwise the path will be correct and the error will not work
         
-        //given
-        var error = CustomError.initial
-        var resultCheckError = false
-        
         //when
-        sut.errorOccure.bind { (customError) in
-            error = customError
-        }
+        settingFunctionalityOfTestingModel()
         sut.processingStaticInformation()
         
         switch error {

@@ -18,23 +18,38 @@ class ViewModelMainScreen {
         self.model = model
         twoWayDataBinding()
     }
-    
-    private func twoWayDataBinding() {
-        model.errorOccure.bind { [weak self] (error) in
-            //MARK: to understand what the error is
-            print(error)
-            self?.state.observable = .errorOccure(unknownError)
-        }
-        
-        model.staticInfо.bind { [weak self] (dict) in
-            if dict.isEmpty { return }
-            self?.dictionaryOfItems = dict
-            self?.state.observable = .readyToShowItems
-        }
-    }
 }
 
 extension ViewModelMainScreen: ViewModelMainScreenProtocol {
+    func twoWayDataBinding() {
+        model.errorOccure.bind { [weak self] (error) in
+            guard let self = self else {
+                print("ViewModelMainScreen deinited")
+                return
+            }
+            
+            switch error {
+            case .initial:
+                return
+            default:
+                //MARK: to understand what the error is
+                print(error)
+                self.state.observable = .errorOccure(unknownError)
+            }
+        }
+        
+        model.staticInfо.bind { [weak self] (dict) in
+            guard let self = self else {
+                print("ViewModelMainScreen deinited")
+                return
+            }
+            
+            if dict.isEmpty { return }
+            self.dictionaryOfItems = dict
+            self.state.observable = .readyToShowItems
+        }
+    }
+    
     func generateItems() {
         model.processingStaticInformation()
     }
@@ -46,6 +61,7 @@ extension ViewModelMainScreen: ViewModelMainScreenProtocol {
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen? {
         let data = dictionaryOfItems[indexPath.row]
         guard let model = data else {
+            objectDescription(self, function: #function)
             state.observable = .errorOccure(unknownError)
             return nil
         }

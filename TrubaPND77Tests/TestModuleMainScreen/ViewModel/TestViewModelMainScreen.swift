@@ -14,6 +14,10 @@ class TestViewModelMainScreen: XCTestCase {
     var sut: ViewModelMainScreen!
     var mockModel: ModelMainScreenMock!
     
+    //given
+    var state = ViewModelMainScreenState.initial
+    var resutlCheckState = false
+    
     override func setUp() {
         super.setUp()
         mockModel = ModelMainScreenMock()
@@ -26,20 +30,25 @@ class TestViewModelMainScreen: XCTestCase {
         mockModel = nil
         super.tearDown()
     }
-
+    
+    private func settingFunctionalityOfTestingViewModel() {
+        sut.state.bind { [weak self] (result) in
+            guard let self = self else {
+                XCTFail()
+                return
+            }
+            self.state = result
+        }
+    }
    
     func testGeneratingItemsIsSuccessfulAndNumberOfRowsIsNotEmptyAndStateIsReadyToShowItems() {
         //given
         let itemsCount = EntityMocker.generateItem().count
-        var state = ViewModelMainScreenState.initial
-        var resutlCheckState = false
         
         //when
         sut.generateItems()
-        sut.state.bind { (result) in
-            state = result
-        }
-        
+        settingFunctionalityOfTestingViewModel()
+
         switch state {
         case .readyToShowItems:
             resutlCheckState = true
@@ -73,15 +82,12 @@ class TestViewModelMainScreen: XCTestCase {
         //given
         var descriptionError = ""
         let number = EntityMocker.wrongNumberOfItemsInDataBase()
-        var state = ViewModelMainScreenState.initial
-        var resutlCheckState = false
+        
         
         //when
         sut.generateItems()
         _ = sut.cellViewModel(forIndexPath: IndexPath(row: number, section: 0))
-        sut.state.bind { (result) in
-            state = result
-        }
+        settingFunctionalityOfTestingViewModel()
         
         switch state {
         case .errorOccure(let error):
@@ -94,5 +100,70 @@ class TestViewModelMainScreen: XCTestCase {
         //then
         XCTAssert(resutlCheckState, "state view model did not change")
         XCTAssert(descriptionError == unknownError, "error description is not correct")
+    }
+    
+    func testTwoWayDataBindingMockModelErrorOccureAndChangeStateViewModel() {
+        //given
+        let decodingError = CustomError.decodingError
+        
+        //when
+        sut.twoWayDataBinding()
+        mockModel.errorOccure.observable = decodingError
+        settingFunctionalityOfTestingViewModel()
+        
+        switch state {
+        case .errorOccure(_):
+            resutlCheckState = true
+        default:
+            break
+        }
+        
+        //then
+        XCTAssert(resutlCheckState, "state view model did not change")
+    }
+    
+    func testTwoWayDataBindingMockModelStaticInformationAndChangeStateViewModelAndQuantityOfDictionaryOfItemsIsNotZero() {
+        //given
+        let item = EntityMocker.generateItem()
+        
+        //when
+        sut.twoWayDataBinding()
+        mockModel.staticInfо.observable = item
+        settingFunctionalityOfTestingViewModel()
+        
+        switch state {
+        case .readyToShowItems:
+            resutlCheckState = true
+        default:
+            break
+        }
+        
+        //then
+        XCTAssert(resutlCheckState, "state view model did not change")
+        XCTAssert(item.count == sut.numberOfRows(), "The data is not edded in dectionaryOfItems")
+    }
+    
+    func testTwoWayDataBindingAfterDeinitializationViewModelStateIsNotChanged() {
+        //given
+        let error = CustomError.decodingError
+        let item = EntityMocker.generateItem()
+        
+        //when
+        sut.twoWayDataBinding()
+        settingFunctionalityOfTestingViewModel()
+        sut = nil
+        mockModel.staticInfо.observable = item
+        mockModel.errorOccure.observable = error
+        
+        switch state {
+        case .initial:
+            resutlCheckState = true
+        default:
+            break
+        }
+        
+        //then
+        XCTAssert(resutlCheckState, "state view model did not change")
+        
     }
 }

@@ -17,6 +17,7 @@ extension ModelMainScreen: ModelMainScreenProtocol {
     
     func processingStaticInformation() {
         guard let path = Bundle.main.path(forResource: "DataMainScreen", ofType: "plist") else {
+            objectDescription(self, function: #function)
             errorOccure.observable = .wrongFilePath
             return
         }
@@ -29,6 +30,7 @@ extension ModelMainScreen: ModelMainScreenProtocol {
             _ = (0..<info.count).map { dict[$0] = info[$0] }
             staticInfо.observable = dict
         } catch {
+            objectDescription(self, function: #function)
             errorOccure.observable = .decodingError
         }
     }

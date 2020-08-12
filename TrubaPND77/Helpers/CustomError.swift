@@ -8,6 +8,10 @@
 
 import Foundation
 
+func objectDescription(_ subject: AnyObject, function: String) {
+    print(String(describing: subject) + " " + function)
+}
+
 var unknownError: String {
     return "Неизвестная ошибка 😫"
 }
@@ -22,3 +26,13 @@ enum CustomError {
     case unknown
 }
 
+//MARK: study equatable protocol for connecting params of enum
+//extension CustomError: Equatable {
+//    static func == (lhs: CustomError, rhs: CustomError) -> Bool {
+//        let error = "error"
+//        if lhs == .showableError(error)  {
+//            return true
+//        }
+//        return false
+//    }
+//}

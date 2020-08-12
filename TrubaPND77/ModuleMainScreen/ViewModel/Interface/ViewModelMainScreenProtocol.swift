@@ -19,4 +19,5 @@ protocol ViewModelMainScreenProtocol {
     func generateItems()
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen?
+    func twoWayDataBinding()
 }
