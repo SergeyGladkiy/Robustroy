@@ -3,28 +3,50 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>sectionName</key>
-		<string>Каталог продукции</string>
+		<key>group</key>
+		<integer>0</integer>
+		<key>groupName</key>
+		<string>Каталог труб ПНД</string>
 		<key>description</key>
 		<string>Весь ассортимент всегда в наличии</string>
 		<key>attachments</key>
 		<array>
 			<dict>
 				<key>imageName</key>
-				<string>truba</string>
+				<string>vodoprovodnaya</string>
 				<key>attachmentTitle</key>
-				<string>Трубы</string>
+				<string>Водопроводная</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
-				<string>fiting</string>
+				<string>gazoprovodnaya</string>
 				<key>attachmentTitle</key>
-				<string>Фитинги</string>
+				<string>Газопроводная</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>technicheskie</string>
+				<key>attachmentTitle</key>
+				<string>Техническая</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>drenazhnaya</string>
+				<key>attachmentTitle</key>
+				<string>Дренажная</string>
+			</dict>
+			<dict>
+				<key>imageName</key>
+				<string>dlya-kanalizacii</string>
+				<key>attachmentTitle</key>
+				<string>Канализационная</string>
 			</dict>
 		</array>
 	</dict>
 	<dict>
-		<key>sectionName</key>
+		<key>group</key>
+		<integer>1</integer>
+		<key>groupName</key>
 		<string>Производители труб</string>
 		<key>description</key>
 		<string>Вы можете найти трубу по бренду</string>
@@ -57,7 +79,9 @@
 		</array>
 	</dict>
 	<dict>
-		<key>sectionName</key>
+		<key>group</key>
+		<integer>2</integer>
+		<key>groupName</key>
 		<string>Как мы работаем</string>
 		<key>description</key>
 		<string>Один день от заказа до получения товара</string>
@@ -69,32 +93,31 @@
 				<key>attachmentTitle</key>
 				<string>Позвоните нам</string>
 				<key>attechmentDescription</key>
-				<string>Нажмите &quot;оформить заказ&quot; или обратитесь или обратитесь к on-line консультанту
-к on-line консультанту</string>
+				<string>Нажмите &quot;оформить заказ&quot; или обратитесь к on-line консультанту</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>how2</string>
 				<key>attachmentTitle</key>
-				<string>Составляем договор</string>
+				<string>Договор</string>
 				<key>attechmentDescription</key>
-				<string>После того, как Вы определитесь с выбором, мы подготовим договор купли-продажи и счет</string>
+				<string>Вы выбрали товар, мы подготовим договор купли-продажи и счет</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>how3</string>
 				<key>attachmentTitle</key>
-				<string>Вы оплачиваете счет</string>
+				<string>Оплата товара</string>
 				<key>attechmentDescription</key>
-				<string>Указываете адрес доставки товара</string>
+				<string>Вы оплачиваете счет и указываете адрес доставки товара</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>how4</string>
 				<key>attachmentTitle</key>
-				<string>Мы отправляем товар</string>
+				<string>Доставка</string>
 				<key>attechmentDescription</key>
-				<string>По указанному Вами адресу. Мы доставляем по всей России</string>
+				<string>По указанному Вами адресу. Мы осуществляем доставку по всей России</string>
 			</dict>
 		</array>
 	</dict>

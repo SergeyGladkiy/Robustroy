@@ -38,6 +38,7 @@
 		8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */; };
 		8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */; };
 		8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */; };
+		82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */; };
 		82EBC80E24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCellMainScreen.swift; sourceTree = "<group>"; };
 		8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchor.swift; sourceTree = "<group>"; };
 		8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCell.swift; sourceTree = "<group>"; };
+		82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
 		82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 		8284A5E924D0290800EB33CD /* TrubaPND77 */ = {
 			isa = PBXGroup;
 			children = (
+				82DFDAD924EBEB3A005877B7 /* Dependency Injection */,
 				8284A64A24D42E4900EB33CD /* NetworkService */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
@@ -326,6 +329,38 @@
 			path = CustomFlowLayout;
 			sourceTree = "<group>";
 		};
+		82DFDAD924EBEB3A005877B7 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */,
+				82DFDADC24EBEC51005877B7 /* Assamblies */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		82DFDADC24EBEC51005877B7 /* Assamblies */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDADD24EBEC8E005877B7 /* Services */,
+				82DFDADE24EBECA5005877B7 /* Presentations */,
+			);
+			path = Assamblies;
+			sourceTree = "<group>";
+		};
+		82DFDADD24EBEC8E005877B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82DFDADE24EBECA5005877B7 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,6 +476,7 @@
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
+				82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */,
 				8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */,
 				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,

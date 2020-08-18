@@ -14,21 +14,36 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
     private weak var imageViewCategory: UIImageView!
     private weak var titleCategory: UILabel!
     private weak var descriptionCategory: UILabel!
+    private weak var heightAnchorImage: NSLayoutConstraint!
     private var padding: CGFloat = 10
     
     var viewModel: AttachmentItemMainScreen! {
         didSet {
             imageViewCategory.image = UIImage(named: viewModel.imageName)
             titleCategory.text = viewModel.attachmentTitle
-            guard let descriptionText = viewModel.attechmentDescription else {
+            guard let descriptionText = viewModel.attechmentDescription
+                else {
                 descriptionCategory.isHidden = true
-                return }
+                return
+            }
+            
+            //MARK: for 3th group
+            heightAnchorImage.constant = self.frame.height/2 - 1*padding
             descriptionCategory.text = descriptionText
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if traitCollection.horizontalSizeClass == .regular {
+            titleCategory.font = .boldSystemFont(ofSize: 21)
+            descriptionCategory.font = .systemFont(ofSize: 14)
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        customizingLayerShadow()
         layoutCell()
     }
     
@@ -36,49 +51,65 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func layoutCell() {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageViewCategory.image = nil
+    }
+    
+    private func customizingLayerShadow() {
+        self.backgroundView = UIView()
+        addSubview(self.backgroundView!)
+        self.backgroundView?.fillSuperview()
+        self.backgroundView?.backgroundColor = .white
+        self.backgroundView?.layer.cornerRadius = 16
+
+        self.backgroundView?.layer.shadowOpacity = 0.2
+        self.backgroundView?.layer.shadowRadius = 7
+        self.backgroundView?.layer.shadowOffset = .init(width: 0, height: 5)
         
+        //MARK: чтобы при скролинге не было заеданий
+        self.backgroundView?.layer.shouldRasterize = true
+    }
+    
+    private func layoutCell() {
+
         let imageView = UIImageView()
         imageView.image = UIImage(named: "truba")
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         self.imageViewCategory = imageView
         imageViewCategory.backgroundColor = .white
-        imageViewCategory.heightAnchor.constraint(equalToConstant: self.frame.height/2).isActive = true
+        let heightImage = imageViewCategory.heightAnchor.constraint(equalToConstant: self.frame.height/2 + 1*padding)
+        self.heightAnchorImage = heightImage
+        self.heightAnchorImage.isActive = true
 
         let label = UILabel()
         label.text = "Category"
-        label.font = .boldSystemFont(ofSize: 27)
-        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 18)
+        label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
+        label.textColor = .black
         self.titleCategory = label
-        titleCategory.backgroundColor = .blue
+        //titleCategory.backgroundColor = .blue
         
         let description = UILabel()
         description.text = "Description"
-        description.font = .systemFont(ofSize: 18)
-        description.adjustsFontSizeToFitWidth = true
+        description.font = .systemFont(ofSize: 10)
         description.numberOfLines = 0
         description.textAlignment = .center
+        description.textColor = .black
+        description.adjustsFontSizeToFitWidth = true
         self.descriptionCategory = description
-        descriptionCategory.backgroundColor = .green
+        //descriptionCategory.backgroundColor = .green
         
         let stackView = UIStackView(arrangedSubviews: [
             imageViewCategory, titleCategory, descriptionCategory
         ])
         
         stackView.axis = .vertical
-        stackView.spacing = 4
-        stackView.distribution = .fillProportionally
         addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
-        //stackView.isLayoutMarginsRelativeArrangement = true
-        //stackView.layoutMargins = UIEdgeInsets(top: 24, left: 24, bottom: 24, right: 24)
+        let paddingStack: CGFloat = 4
+        stackView.fillSuperview(padding: .init(top: paddingStack, left: paddingStack, bottom: paddingStack, right: paddingStack))
     }
 }

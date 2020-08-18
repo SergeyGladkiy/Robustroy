@@ -9,14 +9,16 @@
 import Foundation
 
 struct ItemMainScreen: Decodable {
-    let sectionName: String
+    let group: Int
+    let groupName: String
     let description: String
     let attachments: [AttachmentItemMainScreen]
 }
 
 extension ItemMainScreen: Equatable {
     static func == (lhs: ItemMainScreen, rhs: ItemMainScreen) -> Bool {
-        if lhs.sectionName == rhs.sectionName,
+        if lhs.group == rhs.group,
+            lhs.groupName == rhs.groupName,
             lhs.description == rhs.description,
             lhs.attachments == rhs.attachments {
             return true

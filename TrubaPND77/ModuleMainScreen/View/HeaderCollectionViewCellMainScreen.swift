@@ -16,12 +16,11 @@ protocol AnimatedViewMainScreenInterface: class {
 class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedViewMainScreenInterface {
 
     private weak var imageView: UIImageView!
-    //private weak var blurLabel: UILabel!
     private weak var stackGradientLayer: CAGradientLayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = #colorLiteral(red: 0.9098039216, green: 0.8901960784, blue: 0.8235294118, alpha: 1)
+        backgroundColor = .white//#colorLiteral(red: 0.9098039216, green: 0.8901960784, blue: 0.8235294118, alpha: 1)
 //        layer.shadowOffset = CGSize(width: 0, height: 10)
 //        layer.shadowOpacity = 0.7
 //        layer.shadowRadius = 7
@@ -37,7 +36,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     
     private func settingLayout() {
         let iv = UIImageView()
-        iv.image = applySepiaFilter(#imageLiteral(resourceName: "headerMainScreen"))
+        iv.image = #imageLiteral(resourceName: "headerMainScreen")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         self.imageView = iv
@@ -77,7 +76,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         let headerTitle = UILabel()
         headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 25)
-        headerTitle.text = "Производство и продажа трубопроводных систем ПНД"
+        headerTitle.text = "ТРУБА ПНД 77"
         
         headerTitle.numberOfLines = 0
         headerTitle.textColor = .white
@@ -87,14 +86,18 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         imagePhone.widthAnchor.constraint(equalToConstant: 20).isActive = true
         imagePhone.clipsToBounds = true
         
-        let labelTelephone = UILabel()
-        labelTelephone.text = "+7(495)645-13-06"
-        labelTelephone.font = .systemFont(ofSize: 20, weight: .bold)
-        labelTelephone.textColor = .white
-        labelTelephone.numberOfLines = 0
+        let buttonTelephone = UIButton()
+        buttonTelephone.setTitle("+7(495)645-13-06", for: .normal)
+        buttonTelephone.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        buttonTelephone.contentHorizontalAlignment = .leading
+        buttonTelephone.setTitleColor(.white, for: .normal)
+        
+        //MARK: processing call
+        let selector = NSSelectorFromString("phoneNumberWasPressedWithSender:")
+        buttonTelephone.addTarget(nil, action: selector, for: .touchUpInside)
         
         let telephoneInfoStackView = UIStackView(arrangedSubviews: [
-            imagePhone, labelTelephone
+            imagePhone, buttonTelephone, UIView()
         ])
         
         telephoneInfoStackView.spacing = 8
@@ -105,39 +108,11 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         ])
         
         verticalStackView.axis = .vertical
-        verticalStackView.spacing = 8
         
         addSubview(verticalStackView)
         
-        verticalStackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16))
+        verticalStackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 16, bottom: 8, right: 16))
         
-    }
-    
-    func applySepiaFilter(_ image: UIImage) -> UIImage? {
-        guard let data = image.pngData() else {
-            objectDescription(self, function: #function)
-            return nil
-        }
-        let inputImage = CIImage(data: data)
-        
-        let context = CIContext(options: nil)
-        
-        guard let filter = CIFilter(name: "CISepiaTone") else {
-            objectDescription(self, function: #function)
-            return nil
-        }
-        filter.setValue(inputImage, forKey: kCIInputImageKey)
-        filter.setValue(0.8, forKey: "inputIntensity")
-        
-        guard
-            let outputImage = filter.outputImage,
-            let outImage = context.createCGImage(outputImage, from: outputImage.extent)
-            else {
-                objectDescription(self, function: #function)
-                return nil
-        }
-        
-        return UIImage(cgImage: outImage)
     }
     
     var animator: UIViewPropertyAnimator?

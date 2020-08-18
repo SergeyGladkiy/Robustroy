@@ -15,7 +15,8 @@ class EntityMocker {
     }
     
     static func generateItem() -> [Int: ItemMainScreen] {
-        return [1: ItemMainScreen(sectionName: "Производители труб",
+        return [1: ItemMainScreen(group: 1,
+                                  groupName: "Производители труб",
                               description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "HYDRO")])]
     }
     

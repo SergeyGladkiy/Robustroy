@@ -47,20 +47,30 @@ class MainScreenViewController: UICollectionViewController {
     }
     
     private func settingLayoutCollectionView() {
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.showsVerticalScrollIndicator = false
         
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionInset = .init(top: padding, left: 0, bottom: padding, right: 0)
+            layout.sectionInset = .init(top: padding, left: 0, bottom: 2*padding, right: 0)
         }
         
         collectionView.register(MainScreenGroupCell.self, forCellWithReuseIdentifier: MainScreenGroupCell.reuseIdentifier)
         collectionView.register(HeaderCollectionViewCellMainScreen.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionViewCellMainScreen.reuseIdentifier)
     }
     
-    private func showError(description: String) {
-        print(description)
+    private func settingAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
+    
+    private func showError(description: String) {
+        settingAlert(title: "Error", message: description)
+    }
+    
+    
     
     //MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,7 +97,25 @@ class MainScreenViewController: UICollectionViewController {
         return header
     }
     
-    //MARK: UIScrollViewDelegate
+    //MARK: call by number
+    @objc private func phoneNumberWasPressed(sender: UIButton) {
+        guard
+            let phoneNumber = sender.titleLabel?.text,
+            let url = URL(string: "tel://\(phoneNumber)"),
+            UIApplication.shared.canOpenURL(url)
+            else {
+            objectDescription(self, function: #function)
+            return
+        }
+
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    //MARK: UIScrollViewDelegate, processing blur
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let animator = animatedView.animator else {
             objectDescription(self, function: #function)
@@ -101,17 +129,25 @@ class MainScreenViewController: UICollectionViewController {
 
 extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height: CGFloat = indexPath.row == 2 ? 220 : 210
         if view.traitCollection.horizontalSizeClass == .regular {
-            return .init(width: view.frame.width, height: 300)
+            return .init(width: view.frame.width, height: height + 50)
         }
-        return .init(width: view.frame.width, height: 250)
+        return .init(width: view.frame.width, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if view.traitCollection.horizontalSizeClass == .regular {
             return .init(width: view.frame.width, height: 500)
         }
-        return .init(width: view.frame.width, height: 340)
+        return .init(width: view.frame.width, height: 260)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if view.traitCollection.horizontalSizeClass == .regular {
+            return 40
+        }
+        return 20
     }
 }
 
