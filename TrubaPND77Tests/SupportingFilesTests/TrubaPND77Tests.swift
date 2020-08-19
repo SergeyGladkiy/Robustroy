@@ -20,11 +20,24 @@ class TrubaPND77Tests: XCTestCase {
         
     }
 
-    func testRootViewControllerIsMainScreenViewController() throws {
-        guard let sut = UIApplication.shared.windows.first else { return }
-        let rootViewController = sut.rootViewController
+    func testRootViewControllerIsMainScreenViewController() {
+        guard let sut = UIApplication.shared.windows.first else {
+            XCTFail()
+            return
+        }
         
+        let rootViewController = sut.rootViewController
         XCTAssertTrue(rootViewController is MainScreenViewController)
+    }
+    
+    func testLayoutRootControllerIsFlowLayout() {
+        guard let sut = UIApplication.shared.windows.first else {
+            XCTFail()
+            return
+        }
+        
+        let rootViewController = sut.rootViewController as! MainScreenViewController
+        XCTAssertTrue(rootViewController.collectionViewLayout is UICollectionViewFlowLayout)
     }
 
 }
