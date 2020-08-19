@@ -9,7 +9,7 @@
 import Foundation
 
 class ViewModelMainScreen {
-    private let model: ModelMainScreenProtocol
+    private var model: ModelMainScreenProtocol
     var state: Observable<ViewModelMainScreenState>
     private var dictionaryOfItems = [Int: ItemMainScreen]()
     

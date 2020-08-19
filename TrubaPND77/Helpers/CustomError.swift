@@ -9,7 +9,7 @@
 import Foundation
 
 func objectDescription(_ subject: AnyObject, function: String) {
-    print(String(describing: subject) + " " + function)
+    print("ERROR" + String(describing: subject) + " " + function)
 }
 
 var unknownError: String {

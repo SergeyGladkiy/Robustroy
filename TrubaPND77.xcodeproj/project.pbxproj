@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01882A7AC7A0308ACBDB94DD /* Pods_TrubaPND77Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C6A187829F6148F28D2C27 /* Pods_TrubaPND77Tests.framework */; };
 		8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EA24D0290800EB33CD /* AppDelegate.swift */; };
 		8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EC24D0290800EB33CD /* SceneDelegate.swift */; };
 		8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */; };
@@ -39,7 +40,15 @@
 		8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */; };
 		8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */; };
 		82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */; };
+		82DFDAE024EBF047005877B7 /* AppCoordinatorAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */; };
+		82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */; };
+		82DFDAE624EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAE524EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift */; };
+		82DFDAE824EC02F6005877B7 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAE724EC02F6005877B7 /* MainScreenAssembly.swift */; };
+		82DFDAEA24EC07F4005877B7 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAE924EC07F4005877B7 /* MainScreenCoordinator.swift */; };
+		82DFDAEC24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAEB24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift */; };
+		82DFDAF024EC0C4F005877B7 /* MainScreenCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAEF24EC0C4F005877B7 /* MainScreenCoordinatorProtocol.swift */; };
 		82EBC80E24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */; };
+		BE60427F40382C6B57A35AC0 /* Pods_TrubaPND77.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C47AD068A8ECDF97A9B2C7 /* Pods_TrubaPND77.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B4C0AE71C977827CC334B10 /* Pods-TrubaPND77.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77.release.xcconfig"; sourceTree = "<group>"; };
+		27C47AD068A8ECDF97A9B2C7 /* Pods_TrubaPND77.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrubaPND77.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A5E724D0290800EB33CD /* TrubaPND77.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrubaPND77.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A5EA24D0290800EB33CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8284A5EC24D0290800EB33CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +100,18 @@
 		8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchor.swift; sourceTree = "<group>"; };
 		8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCell.swift; sourceTree = "<group>"; };
 		82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
+		82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssambly.swift; sourceTree = "<group>"; };
+		82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		82DFDAE524EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		82DFDAE724EC02F6005877B7 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		82DFDAE924EC07F4005877B7 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		82DFDAEB24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRoutingCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		82DFDAEF24EC0C4F005877B7 /* MainScreenCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		82EBC80D24E3043B00EB8D36 /* MainScreenHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		83C6A187829F6148F28D2C27 /* Pods_TrubaPND77Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrubaPND77Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FE9BD3F007F4C4DB7FB9BE6C /* Pods-TrubaPND77.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE60427F40382C6B57A35AC0 /* Pods_TrubaPND77.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,18 +127,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01882A7AC7A0308ACBDB94DD /* Pods_TrubaPND77Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4EB16F591427D89D7EB555 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE9BD3F007F4C4DB7FB9BE6C /* Pods-TrubaPND77.debug.xcconfig */,
+				1B4C0AE71C977827CC334B10 /* Pods-TrubaPND77.release.xcconfig */,
+				D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */,
+				EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8284A5DE24D0290800EB33CD = {
 			isa = PBXGroup;
 			children = (
 				8284A5E924D0290800EB33CD /* TrubaPND77 */,
 				8284A60024D0290D00EB33CD /* TrubaPND77Tests */,
 				8284A5E824D0290800EB33CD /* Products */,
+				3E4EB16F591427D89D7EB555 /* Pods */,
+				E0A903A51D4798C7832FC918 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +170,7 @@
 			children = (
 				82DFDAD924EBEB3A005877B7 /* Dependency Injection */,
 				8284A64A24D42E4900EB33CD /* NetworkService */,
+				82DFDAE124EBF904005877B7 /* AppCoordinator */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
@@ -357,8 +395,55 @@
 		82DFDADE24EBECA5005877B7 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */,
+				82DFDAE724EC02F6005877B7 /* MainScreenAssembly.swift */,
 			);
 			path = Presentations;
+			sourceTree = "<group>";
+		};
+		82DFDAE124EBF904005877B7 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDAE424EBF96E005877B7 /* Interfaces */,
+				82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */,
+				82DFDAED24EC0C17005877B7 /* MainScreenCoordinator */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		82DFDAE424EBF96E005877B7 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDAE524EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift */,
+				82DFDAEB24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		82DFDAED24EC0C17005877B7 /* MainScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDAEE24EC0C31005877B7 /* Interface */,
+				82DFDAE924EC07F4005877B7 /* MainScreenCoordinator.swift */,
+			);
+			path = MainScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		82DFDAEE24EC0C31005877B7 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDAEF24EC0C4F005877B7 /* MainScreenCoordinatorProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		E0A903A51D4798C7832FC918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C47AD068A8ECDF97A9B2C7 /* Pods_TrubaPND77.framework */,
+				83C6A187829F6148F28D2C27 /* Pods_TrubaPND77Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,9 +453,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8284A60624D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77" */;
 			buildPhases = (
+				213BEE0A8E0A74EA4907AEB5 /* [CP] Check Pods Manifest.lock */,
 				8284A5E324D0290800EB33CD /* Sources */,
 				8284A5E424D0290800EB33CD /* Frameworks */,
 				8284A5E524D0290800EB33CD /* Resources */,
+				7DE05DCC2CDCF331B984B60B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +472,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "TrubaPND77Tests" */;
 			buildPhases = (
+				E70F22A15D1585F7E135B15B /* [CP] Check Pods Manifest.lock */,
 				8284A5F924D0290D00EB33CD /* Sources */,
 				8284A5FA24D0290D00EB33CD /* Frameworks */,
 				8284A5FB24D0290D00EB33CD /* Resources */,
@@ -457,17 +545,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		213BEE0A8E0A74EA4907AEB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrubaPND77-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE05DCC2CDCF331B984B60B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E70F22A15D1585F7E135B15B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrubaPND77Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8284A5E324D0290800EB33CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8284A65224D433B100EB33CD /* NetworkDataFetcherProtocols.swift in Sources */,
+				82DFDAE624EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift in Sources */,
 				8284A62524D1810D00EB33CD /* Observable.swift in Sources */,
+				82DFDAE024EBF047005877B7 /* AppCoordinatorAssambly.swift in Sources */,
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
 				8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */,
+				82DFDAE824EC02F6005877B7 /* MainScreenAssembly.swift in Sources */,
 				8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */,
 				8284A65624D4393B00EB33CD /* MapperErrorProtocol.swift in Sources */,
+				82DFDAF024EC0C4F005877B7 /* MainScreenCoordinatorProtocol.swift in Sources */,
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
 				8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */,
@@ -475,10 +631,13 @@
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
+				82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
 				82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */,
 				8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */,
 				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
+				82DFDAEC24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift in Sources */,
+				82DFDAEA24EC07F4005877B7 /* MainScreenCoordinator.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 				8284A65024D4335A00EB33CD /* NetworkServiceProtocol.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
@@ -640,6 +799,7 @@
 		};
 		8284A60724D0290D00EB33CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE9BD3F007F4C4DB7FB9BE6C /* Pods-TrubaPND77.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -659,6 +819,7 @@
 		};
 		8284A60824D0290D00EB33CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4C0AE71C977827CC334B10 /* Pods-TrubaPND77.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -678,6 +839,7 @@
 		};
 		8284A60A24D0290D00EB33CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -700,6 +862,7 @@
 		};
 		8284A60B24D0290D00EB33CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

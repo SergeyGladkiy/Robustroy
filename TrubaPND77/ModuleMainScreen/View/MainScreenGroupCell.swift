@@ -59,7 +59,7 @@ class MainScreenGroupCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.text = "App Section"
         label.font = .boldSystemFont(ofSize: 23)
-        label.textColor = .black
+        //label.textColor = .black
         self.titleLabel = label
         addSubview(titleLabel)
         //titleLabel.backgroundColor = .lightGray
@@ -69,7 +69,7 @@ class MainScreenGroupCell: UICollectionViewCell {
         description.text = "Description"
         description.font = .systemFont(ofSize: 15)
         description.numberOfLines = 0
-        description.textColor = .black
+        //description.textColor = .black
         self.descriptionLabel = description
         addSubview(descriptionLabel)
         //descriptionLabel.backgroundColor = .lightGray
@@ -81,7 +81,7 @@ class MainScreenGroupCell: UICollectionViewCell {
         self.horizontalCollectionView = collectionView
         
         //MARK: setting for lyaout of horizontal collection view
-        horizontalCollectionView.backgroundColor = .white
+        horizontalCollectionView.backgroundColor = .systemBackground
         horizontalCollectionView.showsHorizontalScrollIndicator = false
         horizontalCollectionView.dataSource = self
         horizontalCollectionView.delegate = self

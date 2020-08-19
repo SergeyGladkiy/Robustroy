@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import Swinject
+
+class DependenceProvider {
+    private static let assembler = Assembler([AppCoordinatorAssambly(), MainScreenAssembly()])
+    
+    static func resolve<T>() -> T? {
+        return DependenceProvider.assembler.resolver.resolve(T.self)
+    }
+}

@@ -20,7 +20,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white//#colorLiteral(red: 0.9098039216, green: 0.8901960784, blue: 0.8235294118, alpha: 1)
+        //MARK: Shadow
 //        layer.shadowOffset = CGSize(width: 0, height: 10)
 //        layer.shadowOpacity = 0.7
 //        layer.shadowRadius = 7

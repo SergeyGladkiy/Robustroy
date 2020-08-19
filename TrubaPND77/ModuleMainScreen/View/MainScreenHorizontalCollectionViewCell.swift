@@ -72,13 +72,10 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
     }
     
     private func layoutCell() {
-
         let imageView = UIImageView()
         imageView.image = UIImage(named: "truba")
-        imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         self.imageViewCategory = imageView
-        imageViewCategory.backgroundColor = .white
         let heightImage = imageViewCategory.heightAnchor.constraint(equalToConstant: self.frame.height/2 + 1*padding)
         self.heightAnchorImage = heightImage
         self.heightAnchorImage.isActive = true
@@ -86,12 +83,10 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Category"
         label.font = .boldSystemFont(ofSize: 18)
-        label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
         label.textColor = .black
         self.titleCategory = label
-        //titleCategory.backgroundColor = .blue
         
         let description = UILabel()
         description.text = "Description"
@@ -101,7 +96,6 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         description.textColor = .black
         description.adjustsFontSizeToFitWidth = true
         self.descriptionCategory = description
-        //descriptionCategory.backgroundColor = .green
         
         let stackView = UIStackView(arrangedSubviews: [
             imageViewCategory, titleCategory, descriptionCategory

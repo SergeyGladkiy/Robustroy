@@ -11,19 +11,26 @@ import UIKit
 class MainScreenViewController: UICollectionViewController {
     
     private let viewModel: ViewModelMainScreenProtocol
+    private let router: MainScreenCoordinatorProtocol
+    
     //MARK: for blur effect
     private weak var animatedView: AnimatedViewMainScreenInterface!
+    
     private let padding: CGFloat = 16
     
-    init(viewModel: ViewModelMainScreenProtocol, layout: UICollectionViewLayout) {
+    init(viewModel: ViewModelMainScreenProtocol, router: MainScreenCoordinatorProtocol, layout: UICollectionViewLayout) {
         self.viewModel = viewModel
+        self.router = router
         super.init(collectionViewLayout: layout)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        
     }
+    
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .darkContent
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +54,19 @@ class MainScreenViewController: UICollectionViewController {
     }
     
     private func settingLayoutCollectionView() {
-        collectionView.backgroundColor = .white
+        navigationController?.isNavigationBarHidden = true
+        
+        collectionView.backgroundColor = .systemBackground
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.showsVerticalScrollIndicator = false
         
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionInset = .init(top: padding, left: 0, bottom: 2*padding, right: 0)
-        }
+//        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+//            print(self.tabBarController?.tabBar.frame.height)
+//            let heighTabBar = self.tabBarController?.tabBar.frame.height ?? 49
+//            let index: CGFloat = heighTabBar == 49 ? 4 : 6
+//
+//            layout.sectionInset = .init(top: padding, left: 0, bottom: index*padding, right: 0)
+//        }
         
         collectionView.register(MainScreenGroupCell.self, forCellWithReuseIdentifier: MainScreenGroupCell.reuseIdentifier)
         collectionView.register(HeaderCollectionViewCellMainScreen.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionViewCellMainScreen.reuseIdentifier)
@@ -148,6 +161,14 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
             return 40
         }
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let heighTabBar = self.tabBarController?.tabBar.frame.height ?? 49
+        let index: CGFloat = heighTabBar == 49 ? 4 : 6
+        
+        return .init(top: padding, left: 0, bottom: index*padding, right: 0)
     }
 }
 

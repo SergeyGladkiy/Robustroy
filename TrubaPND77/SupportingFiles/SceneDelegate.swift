@@ -15,14 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        let model: ModelMainScreenProtocol = ModelMainScreen()
-        let stateViewModel = Observable<ViewModelMainScreenState>(observable: .initial)
-        let viewModel: ViewModelMainScreenProtocol = ViewModelMainScreen(state: stateViewModel, model: model)
-        let layout = StretchyHeaderLayout()
-        window?.rootViewController = MainScreenViewController(viewModel: viewModel, layout: layout)
-        window?.makeKeyAndVisible()
+        guard
+            let windowScene = (scene as? UIWindowScene),
+            let appCoordinator: ApplicationCoordinatorProtocol? = DependenceProvider.resolve()
+            else {
+                objectDescription(self, function: #function)
+                return
+        }
+        
+        window = appCoordinator?.prepareWindow(with: windowScene)
     }
 
     @available(iOS 13.0, *)
