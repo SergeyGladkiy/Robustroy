@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
+class MainScreenGroupCollectionViewCell: UICollectionViewCell {
     
     private weak var imageViewCategory: UIImageView!
     private weak var titleCategory: UILabel!
@@ -21,6 +21,7 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         didSet {
             imageViewCategory.image = UIImage(named: viewModel.imageName)
             titleCategory.text = viewModel.attachmentTitle
+            //print(viewModel.linkHref)
             guard let descriptionText = viewModel.attechmentDescription
                 else {
                 descriptionCategory.isHidden = true
@@ -28,6 +29,7 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
             }
             
             //MARK: for 3th group
+            imageViewCategory.backgroundColor = .clear
             heightAnchorImage.constant = self.frame.height/2 - 1*padding
             descriptionCategory.text = descriptionText
         }
@@ -35,6 +37,12 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        if #available(iOS 13.0, *) {
+            self.backgroundView?.backgroundColor = traitCollection.userInterfaceStyle == .dark ? .secondarySystemBackground : .white
+        } else {
+            self.backgroundView?.backgroundColor = .white
+        }
+        
         if traitCollection.horizontalSizeClass == .regular {
             titleCategory.font = .boldSystemFont(ofSize: 21)
             descriptionCategory.font = .systemFont(ofSize: 14)
@@ -61,19 +69,23 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         addSubview(self.backgroundView!)
         self.backgroundView?.fillSuperview()
         self.backgroundView?.backgroundColor = .white
+        
         self.backgroundView?.layer.cornerRadius = 16
-
         self.backgroundView?.layer.shadowOpacity = 0.2
         self.backgroundView?.layer.shadowRadius = 7
         self.backgroundView?.layer.shadowOffset = .init(width: 0, height: 5)
         
         //MARK: чтобы при скролинге не было заеданий
         self.backgroundView?.layer.shouldRasterize = true
+        
     }
     
     private func layoutCell() {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "truba")
+        imageView.backgroundColor = .white
+        imageView.layer.cornerRadius = 16
+        imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
         self.imageViewCategory = imageView
         let heightImage = imageViewCategory.heightAnchor.constraint(equalToConstant: self.frame.height/2 + 1*padding)
@@ -85,15 +97,15 @@ class MainScreenHorizontalCollectionViewCell: UICollectionViewCell {
         label.font = .boldSystemFont(ofSize: 18)
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
-        label.textColor = .black
+        //label.textColor = .black
         self.titleCategory = label
         
         let description = UILabel()
         description.text = "Description"
-        description.font = .systemFont(ofSize: 10)
+        description.font = .systemFont(ofSize: 12)
         description.numberOfLines = 0
         description.textAlignment = .center
-        description.textColor = .black
+        //description.textColor = .black
         description.adjustsFontSizeToFitWidth = true
         self.descriptionCategory = description
         

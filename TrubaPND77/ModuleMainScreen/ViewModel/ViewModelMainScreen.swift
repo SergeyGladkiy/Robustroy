@@ -18,13 +18,11 @@ class ViewModelMainScreen {
         self.model = model
         twoWayDataBinding()
     }
-}
-
-extension ViewModelMainScreen: ViewModelMainScreenProtocol {
-    func twoWayDataBinding() {
+    
+    private func twoWayDataBinding() {
         model.errorOccure.bind { [weak self] (error) in
             guard let self = self else {
-                print("ViewModelMainScreen deinited")
+                print("ViewModelMainScreen is deinitialized")
                 return
             }
             
@@ -40,7 +38,7 @@ extension ViewModelMainScreen: ViewModelMainScreenProtocol {
         
         model.staticInfо.bind { [weak self] (dict) in
             guard let self = self else {
-                print("ViewModelMainScreen deinited")
+                print("ViewModelMainScreen is deinitialized")
                 return
             }
             
@@ -49,7 +47,9 @@ extension ViewModelMainScreen: ViewModelMainScreenProtocol {
             self.state.observable = .readyToShowItems
         }
     }
-    
+}
+
+extension ViewModelMainScreen: ViewModelMainScreenProtocol {
     func generateItems() {
         model.processingStaticInformation()
     }
