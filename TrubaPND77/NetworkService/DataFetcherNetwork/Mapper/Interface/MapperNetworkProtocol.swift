@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol MapperNetworkErrorProtocol {
+protocol MapperNetworkProtocol {
     func parsingError(error: NSError) -> NSURLError
+    func parseHtml(_ data: Data, complition: RepresentItemsCompletion)
 }

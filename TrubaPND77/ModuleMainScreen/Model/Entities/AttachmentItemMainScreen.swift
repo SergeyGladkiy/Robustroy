@@ -12,13 +12,15 @@ struct AttachmentItemMainScreen: Decodable {
     let imageName: String
     let attachmentTitle: String
     var attechmentDescription: String?
+    var linkHref: String?
 }
 
 extension AttachmentItemMainScreen: Equatable {
     static func == (lhs: AttachmentItemMainScreen, rhs: AttachmentItemMainScreen) -> Bool {
         if lhs.imageName == rhs.imageName,
             lhs.attachmentTitle == rhs.attachmentTitle,
-            lhs.attechmentDescription == rhs.attechmentDescription {
+            lhs.attechmentDescription == rhs.attechmentDescription,
+            lhs.linkHref == rhs.linkHref {
             return true
         }
         return false

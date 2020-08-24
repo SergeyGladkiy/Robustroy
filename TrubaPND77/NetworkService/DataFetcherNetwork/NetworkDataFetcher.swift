@@ -9,23 +9,25 @@
 import Foundation
 
 class NetworkDataFetcher {
-    private let networkServece: NetworkServiceProtocol
-    private let mapper: MapperNetworkErrorProtocol
+    private let networkServece: NetworkingProtocol
+    private let mapper: MapperNetworkProtocol
     
-    init(networking: NetworkServiceProtocol, mapper: MapperNetworkErrorProtocol) {
+    init(networking: NetworkingProtocol, mapper: MapperNetworkProtocol) {
         networkServece = networking
         self.mapper = mapper
     }
+    
 }
 
-extension NetworkDataFetcher: NetworkingMainScreen {
-    func fetchInformationAboutServer(completion: @escaping ServerConnectionCheckCompletion) {
+extension NetworkDataFetcher: NetworkProtocolAssignmentModule {
+    func fetchRepresentItems(completion: @escaping RepresentItemsCompletion) {
+        let stringUrl = API.scheme + API.host + API.path
         
-        let path = "http://www.trubaplastyk.ru"
-        guard let url = URL(string: path) else {
+        guard let url = URL(string: stringUrl) else {
             completion(.failure(.badURL))
             return
         }
+        
         networkServece.request(with: url) { [weak self] (data, error) in
             guard let self = self else {
                 print("self (network data fetcher) is nil")
@@ -42,8 +44,8 @@ extension NetworkDataFetcher: NetworkingMainScreen {
                 completion(.failure(.unknown))
                 return
             }
-            print(data)
-            completion(.success(data))
+            
+            self.mapper.parseHtml(data, complition: completion)
             
         }
     }

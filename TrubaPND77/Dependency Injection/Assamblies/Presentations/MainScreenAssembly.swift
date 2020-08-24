@@ -13,7 +13,7 @@ class MainScreenAssembly: Assembly {
     func assemble(container: Container) {
         container.register(MainScreenViewController.self) { (resolver) in
             let viewModel = resolver.resolve(ViewModelMainScreenProtocol.self)!
-            let router = resolver.resolve(MainScreenCoordinatorProtocol.self)!
+            let router = resolver.resolve(MainScreenRouterInput.self)!
             let layout = StretchyHeaderLayout()
             return MainScreenViewController(viewModel: viewModel, router: router, layout: layout)
         }
@@ -27,10 +27,12 @@ class MainScreenAssembly: Assembly {
             ModelMainScreen()
         }
         
-        container.register(MainScreenCoordinatorProtocol.self) { _ in
-            MainScreenCoodinator()
+        //MARK: assign several protocols 
+        container.register(MainScreenRouterInput.self) { _ in
+            MainTabCoordinator()
         }
-        .implements(BasicRoutingCoordinatorProtocol.self)
+        .implements(BasicRoutingCoordinatorProtocol.self,
+                    AssignmentScreenRouterInput.self)
         .inObjectScope(.container)
     }
 }
