@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol MainScreenCoordinatorProtocol {
-    
+protocol MainScreenRouterInput {
+    func transitionToAssignmentScreen(link: String, title: String)
 }

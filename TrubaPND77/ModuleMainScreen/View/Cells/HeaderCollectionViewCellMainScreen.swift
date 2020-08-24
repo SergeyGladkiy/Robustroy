@@ -36,7 +36,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     
     private func settingLayout() {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "headerMainScreen")
+        iv.image = #imageLiteral(resourceName: "titulMainNew")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         self.imageView = iv
@@ -57,9 +57,12 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         imageView.fillSuperview()
         setupVisualEffectBlur()
+        
     }
     
     private func settingGradientLayer() {
+        let sizeiPad = traitCollection.horizontalSizeClass == .regular
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.5, 1]
@@ -71,13 +74,12 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         gradientContainerView.layer.addSublayer(gradientLayer)
         
         gradientLayer.frame = self.bounds
-        
         gradientLayer.frame.origin.y -= bounds.height
         
         let headerTitle = UILabel()
-        headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 25)
+        let sizeForHeaderTitle: CGFloat = sizeiPad ? 45 : 25
+        headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: sizeForHeaderTitle)
         headerTitle.text = "ТРУБА ПНД 77"
-        
         headerTitle.numberOfLines = 0
         headerTitle.textColor = .white
         
@@ -88,7 +90,8 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         let buttonTelephone = UIButton()
         buttonTelephone.setTitle("+7(495)645-13-06", for: .normal)
-        buttonTelephone.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        let sizeTitleTelephone: CGFloat = sizeiPad ? 30 : 20
+        buttonTelephone.titleLabel?.font = .systemFont(ofSize: sizeTitleTelephone, weight: .bold)
         buttonTelephone.contentHorizontalAlignment = .leading
         buttonTelephone.setTitleColor(.white, for: .normal)
         
@@ -113,6 +116,8 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         verticalStackView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 16, bottom: 8, right: 16))
         
+        //MARK: for rid the warning height ambigues
+        //gradientContainerView.heightAnchor.constraint(equalToConstant: verticalStackView.frame.height).isActive = true
     }
     
     var animator: UIViewPropertyAnimator?
@@ -125,12 +130,29 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         animator = UIViewPropertyAnimator(duration: 3, curve: .linear) { //MARK: captcher ??? [visualEffectView] in
             visualEffectView.effect = UIBlurEffect(style: .regular)
         }
-        
-        guard let animator = animator else {
-            objectDescription(self, function: #function)
-            return
-        }
-        
-        animator.fractionComplete = 0
+        animator?.pausesOnCompletion = true
+        animator?.fractionComplete = 0
+    }
+    
+    func applySepiaFilter(_ image: UIImage) -> UIImage? {
+        guard let data = image.pngData() else { return nil }
+      let inputImage = CIImage(data: data)
+      
+      let context = CIContext(options: nil)
+      
+      guard let filter = CIFilter(name: "CIColorPosterize") else { return nil }
+      filter.setValue(inputImage, forKey: kCIInputImageKey)
+      //filter.setValue(0.8, forKey: "inputIntensity")
+        filter.setValue(2.7, forKey: "inputLevels")
+      
+      guard
+        let outputImage = filter.outputImage,
+        let outImage = context.createCGImage(outputImage, from: outputImage.extent)
+      else {
+        return nil
+      }
+      
+      return UIImage(cgImage: outImage)
     }
 }
+

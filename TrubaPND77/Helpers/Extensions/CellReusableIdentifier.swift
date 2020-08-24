@@ -18,3 +18,4 @@ extension UICollectionReusableView: CellReusabelIdentifier {
         return String(describing: self)
     }
 }
+

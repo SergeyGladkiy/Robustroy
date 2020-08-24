@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
 protocol ApplicationCoordinatorProtocol{
+    func prepareWindow() -> UIWindow
+    
+    @available(iOS 13.0, *)
     func prepareWindow(with scene: UIWindowScene) -> UIWindow
 }

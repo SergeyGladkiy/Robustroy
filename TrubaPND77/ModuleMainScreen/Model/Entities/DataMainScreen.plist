@@ -16,30 +16,40 @@
 				<string>vodoprovodnaya</string>
 				<key>attachmentTitle</key>
 				<string>Водопроводная</string>
+				<key>linkHref</key>
+				<string>/truba/pnd/vodoprovodnaya/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>gazoprovodnaya</string>
 				<key>attachmentTitle</key>
 				<string>Газопроводная</string>
+				<key>linkHref</key>
+				<string>/truba/pnd/gazoprovodnaya/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>technicheskie</string>
 				<key>attachmentTitle</key>
 				<string>Техническая</string>
+				<key>linkHref</key>
+				<string>/truba/pnd/technicheskie/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>drenazhnaya</string>
 				<key>attachmentTitle</key>
 				<string>Дренажная</string>
+				<key>linkHref</key>
+				<string>/truba/pnd/drenazhnaya/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>dlya-kanalizacii</string>
 				<key>attachmentTitle</key>
 				<string>Канализационная</string>
+				<key>linkHref</key>
+				<string>/truba/pnd/dlya-kanalizacii/</string>
 			</dict>
 		</array>
 	</dict>
@@ -57,24 +67,32 @@
 				<string>magnum</string>
 				<key>attachmentTitle</key>
 				<string>Трубы Magnum</string>
+				<key>linkHref</key>
+				<string>/truba/magnum/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>hydro</string>
 				<key>attachmentTitle</key>
 				<string>Трубы Hydro</string>
+				<key>linkHref</key>
+				<string>/truba/hydro/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>corex</string>
 				<key>attachmentTitle</key>
 				<string>Трубы Corex</string>
+				<key>linkHref</key>
+				<string>/truba/corex/</string>
 			</dict>
 			<dict>
 				<key>imageName</key>
 				<string>korsys</string>
 				<key>attachmentTitle</key>
 				<string>Трубы Корсис</string>
+				<key>linkHref</key>
+				<string>/truba/korsis/</string>
 			</dict>
 		</array>
 	</dict>

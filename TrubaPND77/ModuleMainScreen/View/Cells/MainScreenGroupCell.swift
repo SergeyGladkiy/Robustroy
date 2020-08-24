@@ -17,6 +17,7 @@ class MainScreenGroupCell: UICollectionViewCell {
     
     private let padding: CGFloat = 16
     
+    private let titleItems = TitlesNavigationItem()
     private var attachments = [AttachmentItemMainScreen]()
     private var indexGroup: Int!
     
@@ -28,6 +29,8 @@ class MainScreenGroupCell: UICollectionViewCell {
             attachments = viewModel.attachmentsGroup
         }
     }
+    
+    var handlerTapOnCell: ((String, String)->())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,20 +62,16 @@ class MainScreenGroupCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.text = "App Section"
         label.font = .boldSystemFont(ofSize: 23)
-        //label.textColor = .black
         self.titleLabel = label
         addSubview(titleLabel)
-        //titleLabel.backgroundColor = .lightGray
         titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: 0, right: padding))
         
         let description = UILabel()
         description.text = "Description"
         description.font = .systemFont(ofSize: 15)
         description.numberOfLines = 0
-        //description.textColor = .black
         self.descriptionLabel = description
         addSubview(descriptionLabel)
-        //descriptionLabel.backgroundColor = .lightGray
         descriptionLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: 0, right: padding))
         
         let layout = UICollectionViewFlowLayout()
@@ -81,11 +80,15 @@ class MainScreenGroupCell: UICollectionViewCell {
         self.horizontalCollectionView = collectionView
         
         //MARK: setting for lyaout of horizontal collection view
-        horizontalCollectionView.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            horizontalCollectionView.backgroundColor = .systemBackground
+        } else {
+            horizontalCollectionView.backgroundColor = .white
+        }
         horizontalCollectionView.showsHorizontalScrollIndicator = false
         horizontalCollectionView.dataSource = self
         horizontalCollectionView.delegate = self
-        horizontalCollectionView.register(MainScreenHorizontalCollectionViewCell.self, forCellWithReuseIdentifier: MainScreenHorizontalCollectionViewCell.reuseIdentifier)
+        horizontalCollectionView.register(MainScreenGroupCollectionViewCell.self, forCellWithReuseIdentifier: MainScreenGroupCollectionViewCell.reuseIdentifier)
         addSubview(horizontalCollectionView)
         horizontalCollectionView.anchor(top: descriptionLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
@@ -97,11 +100,24 @@ extension MainScreenGroupCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenHorizontalCollectionViewCell.reuseIdentifier, for: indexPath) as? MainScreenHorizontalCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenGroupCollectionViewCell.reuseIdentifier, for: indexPath) as? MainScreenGroupCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.viewModel = attachments[indexPath.row]
         return cell
+    }
+}
+
+extension MainScreenGroupCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexGroup != 2 {
+            guard let handler = handlerTapOnCell,
+                let link = attachments[indexPath.row].linkHref  else {
+                objectDescription(self, function: #function)
+                return }
+            let title = titleItems.data[indexGroup]![indexPath.row]
+            handler(link, title)
+        }
     }
 }
 

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
+protocol NetworkingProtocol {
     func request(with url: URL, completion: @escaping (Data?, Error?) -> Void)
 }
