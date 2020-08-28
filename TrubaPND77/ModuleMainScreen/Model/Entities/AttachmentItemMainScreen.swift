@@ -11,8 +11,8 @@ import Foundation
 struct AttachmentItemMainScreen: Decodable {
     let imageName: String
     let attachmentTitle: String
-    var attechmentDescription: String?
     var linkHref: String?
+    var attechmentDescription: String?
 }
 
 extension AttachmentItemMainScreen: Equatable {

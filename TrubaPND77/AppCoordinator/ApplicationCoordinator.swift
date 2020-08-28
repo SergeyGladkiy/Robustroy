@@ -11,7 +11,7 @@ import UIKit
 
 class ApplicationCoordinator {
     
-    fileprivate func createTabBarController() -> UITabBarController? {
+    fileprivate func createTabBarController() -> UIViewController? {
         let mainCoordinator: MainScreenRouterInput? = DependenceProvider.resolve()
         
         guard let mainTabController = (mainCoordinator as? BasicRoutingCoordinatorProtocol)?.start() else {

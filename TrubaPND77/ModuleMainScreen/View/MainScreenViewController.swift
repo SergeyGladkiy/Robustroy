@@ -46,7 +46,7 @@ class MainScreenViewController: UICollectionViewController {
                 return
             case .readyToShowItems:
                 self.collectionView.reloadData()
-            case .errorOccure(let unknownError):
+            case .errorOccured(let unknownError):
                 self.showError(description: unknownError)
             }
         }

@@ -15,6 +15,16 @@
 		821FDCE524F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE424F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift */; };
 		821FDCE824F1644500B7AFCD /* MapperModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE724F1644500B7AFCD /* MapperModelAssignmentScreen.swift */; };
 		821FDCEA24F1656D00B7AFCD /* NetworkAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE924F1656D00B7AFCD /* NetworkAssambly.swift */; };
+		8257D12524F7C49000F2A6B4 /* TestModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12424F7C49000F2A6B4 /* TestModelAssignmentScreen.swift */; };
+		8257D12724F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12624F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift */; };
+		8257D12B24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12A24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift */; };
+		8257D12D24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12C24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift */; };
+		8257D13124F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D13024F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift */; };
+		8257D13424F81B2E00F2A6B4 /* ModelAssignmentScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D13324F81B2E00F2A6B4 /* ModelAssignmentScreenMock.swift */; };
+		8257D13824F9385400F2A6B4 /* TestNetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D13724F9385400F2A6B4 /* TestNetworkDataFetcher.swift */; };
+		8257D13D24F939CB00F2A6B4 /* EntityMockerNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D13C24F939CB00F2A6B4 /* EntityMockerNetworkService.swift */; };
+		8257D14024F939E100F2A6B4 /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D13F24F939E100F2A6B4 /* NetworkingMock.swift */; };
+		8257D14224F93A6000F2A6B4 /* MapperNetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D14124F93A6000F2A6B4 /* MapperNetworkMock.swift */; };
 		8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EA24D0290800EB33CD /* AppDelegate.swift */; };
 		8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EC24D0290800EB33CD /* SceneDelegate.swift */; };
 		8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A5EE24D0290800EB33CD /* MainScreenViewController.swift */; };
@@ -32,7 +42,7 @@
 		8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */; };
 		8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */; };
 		8284A63724D1A7CF00EB33CD /* ModelMainScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */; };
-		8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63924D1A91000EB33CD /* EntityMocker.swift */; };
+		8284A63A24D1A91000EB33CD /* EntityMockerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A63924D1A91000EB33CD /* EntityMockerMainScreen.swift */; };
 		8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */; };
 		8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8284A64424D2FB7300EB33CD /* DataMainScreen.plist */; };
 		8284A64C24D4301500EB33CD /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A64B24D4301500EB33CD /* Networking.swift */; };
@@ -89,6 +99,16 @@
 		821FDCE424F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperProtocolModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		821FDCE724F1644500B7AFCD /* MapperModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		821FDCE924F1656D00B7AFCD /* NetworkAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssambly.swift; sourceTree = "<group>"; };
+		8257D12424F7C49000F2A6B4 /* TestModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelAssignmentScreen.swift; sourceTree = "<group>"; };
+		8257D12624F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssignmentScreenMock.swift; sourceTree = "<group>"; };
+		8257D12A24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerAssignmentScreen.swift; sourceTree = "<group>"; };
+		8257D12C24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperAssignmentScreenMock.swift; sourceTree = "<group>"; };
+		8257D13024F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
+		8257D13324F81B2E00F2A6B4 /* ModelAssignmentScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAssignmentScreenMock.swift; sourceTree = "<group>"; };
+		8257D13724F9385400F2A6B4 /* TestNetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkDataFetcher.swift; sourceTree = "<group>"; };
+		8257D13C24F939CB00F2A6B4 /* EntityMockerNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerNetworkService.swift; sourceTree = "<group>"; };
+		8257D13F24F939E100F2A6B4 /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
+		8257D14124F93A6000F2A6B4 /* MapperNetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperNetworkMock.swift; sourceTree = "<group>"; };
 		8284A5E724D0290800EB33CD /* TrubaPND77.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrubaPND77.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284A5EA24D0290800EB33CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8284A5EC24D0290800EB33CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +130,7 @@
 		8284A62F24D19D4A00EB33CD /* CellViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelMainScreen.swift; sourceTree = "<group>"; };
 		8284A63324D1A5DE00EB33CD /* TestViewModelMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelMainScreen.swift; sourceTree = "<group>"; };
 		8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMainScreenMock.swift; sourceTree = "<group>"; };
-		8284A63924D1A91000EB33CD /* EntityMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMocker.swift; sourceTree = "<group>"; };
+		8284A63924D1A91000EB33CD /* EntityMockerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerMainScreen.swift; sourceTree = "<group>"; };
 		8284A64224D2EB7D00EB33CD /* AttachmentItemMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentItemMainScreen.swift; sourceTree = "<group>"; };
 		8284A64424D2FB7300EB33CD /* DataMainScreen.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataMainScreen.plist; sourceTree = "<group>"; };
 		8284A64B24D4301500EB33CD /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -214,6 +234,110 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		8257D12124F7C1CE00F2A6B4 /* TestModuleAssignmentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8257D12F24F8109500F2A6B4 /* ViewModel */,
+				8257D12324F7C47600F2A6B4 /* Model */,
+			);
+			path = TestModuleAssignmentScreen;
+			sourceTree = "<group>";
+		};
+		8257D12224F7C43E00F2A6B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8284A64A24D42E4900EB33CD /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8257D12324F7C47600F2A6B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8257D12824F7C8D300F2A6B4 /* Mocks */,
+				8257D12424F7C49000F2A6B4 /* TestModelAssignmentScreen.swift */,
+				8257D12924F7C8E400F2A6B4 /* EntityMocker */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8257D12824F7C8D300F2A6B4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8257D12624F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift */,
+				8257D12C24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8257D12924F7C8E400F2A6B4 /* EntityMocker */ = {
+			isa = PBXGroup;
+			children = (
+				8257D12A24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift */,
+			);
+			path = EntityMocker;
+			sourceTree = "<group>";
+		};
+		8257D12F24F8109500F2A6B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13224F81B0A00F2A6B4 /* Mocks */,
+				8257D13024F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8257D13224F81B0A00F2A6B4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13324F81B2E00F2A6B4 /* ModelAssignmentScreenMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8257D13524F9381B00F2A6B4 /* TestServices */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13624F9382E00F2A6B4 /* TestNetworkService */,
+			);
+			path = TestServices;
+			sourceTree = "<group>";
+		};
+		8257D13624F9382E00F2A6B4 /* TestNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13A24F9399500F2A6B4 /* TestNetworkDataFetcher */,
+				8257D13B24F939AA00F2A6B4 /* EntityMocker */,
+			);
+			path = TestNetworkService;
+			sourceTree = "<group>";
+		};
+		8257D13A24F9399500F2A6B4 /* TestNetworkDataFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13E24F939D600F2A6B4 /* Mocks */,
+				8257D13724F9385400F2A6B4 /* TestNetworkDataFetcher.swift */,
+			);
+			path = TestNetworkDataFetcher;
+			sourceTree = "<group>";
+		};
+		8257D13B24F939AA00F2A6B4 /* EntityMocker */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13C24F939CB00F2A6B4 /* EntityMockerNetworkService.swift */,
+			);
+			path = EntityMocker;
+			sourceTree = "<group>";
+		};
+		8257D13E24F939D600F2A6B4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8257D13F24F939E100F2A6B4 /* NetworkingMock.swift */,
+				8257D14124F93A6000F2A6B4 /* MapperNetworkMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		8284A5DE24D0290800EB33CD = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				82DFDAD924EBEB3A005877B7 /* Dependency Injection */,
-				8284A64A24D42E4900EB33CD /* NetworkService */,
+				8257D12224F7C43E00F2A6B4 /* Services */,
 				82DFDAE124EBF904005877B7 /* AppCoordinator */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				82DFDAF124ED5E5B005877B7 /* ModuleAssignmentScreen */,
@@ -251,7 +375,9 @@
 		8284A60024D0290D00EB33CD /* TrubaPND77Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8257D13524F9381B00F2A6B4 /* TestServices */,
 				8284A61724D16F0F00EB33CD /* TestModuleMainScreen */,
+				8257D12124F7C1CE00F2A6B4 /* TestModuleAssignmentScreen */,
 				8284A61224D0464C00EB33CD /* SupportingFilesTests */,
 				8284A60324D0290D00EB33CD /* Info.plist */,
 			);
@@ -303,6 +429,7 @@
 			children = (
 				8284A63224D1A5A400EB33CD /* ViewModel */,
 				8284A62924D18C1E00EB33CD /* Model */,
+				8284A63824D1A8FB00EB33CD /* EntityMocker */,
 			);
 			path = TestModuleMainScreen;
 			sourceTree = "<group>";
@@ -385,18 +512,17 @@
 		8284A63524D1A78F00EB33CD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				8284A63824D1A8FB00EB33CD /* Entities */,
 				8284A63624D1A7CF00EB33CD /* ModelMainScreenMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		8284A63824D1A8FB00EB33CD /* Entities */ = {
+		8284A63824D1A8FB00EB33CD /* EntityMocker */ = {
 			isa = PBXGroup;
 			children = (
-				8284A63924D1A91000EB33CD /* EntityMocker.swift */,
+				8284A63924D1A91000EB33CD /* EntityMockerMainScreen.swift */,
 			);
-			path = Entities;
+			path = EntityMocker;
 			sourceTree = "<group>";
 		};
 		8284A64A24D42E4900EB33CD /* NetworkService */ = {
@@ -877,10 +1003,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8257D13424F81B2E00F2A6B4 /* ModelAssignmentScreenMock.swift in Sources */,
 				8284A63724D1A7CF00EB33CD /* ModelMainScreenMock.swift in Sources */,
+				8257D14224F93A6000F2A6B4 /* MapperNetworkMock.swift in Sources */,
+				8257D13824F9385400F2A6B4 /* TestNetworkDataFetcher.swift in Sources */,
 				8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */,
-				8284A63A24D1A91000EB33CD /* EntityMocker.swift in Sources */,
+				8257D12724F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift in Sources */,
+				8257D13124F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift in Sources */,
+				8284A63A24D1A91000EB33CD /* EntityMockerMainScreen.swift in Sources */,
+				8257D12B24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift in Sources */,
+				8257D12D24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift in Sources */,
+				8257D14024F939E100F2A6B4 /* NetworkingMock.swift in Sources */,
 				8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */,
+				8257D12524F7C49000F2A6B4 /* TestModelAssignmentScreen.swift in Sources */,
+				8257D13D24F939CB00F2A6B4 /* EntityMockerNetworkService.swift in Sources */,
 				8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -957,7 +1093,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1011,7 +1147,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1070,7 +1206,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1093,7 +1229,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

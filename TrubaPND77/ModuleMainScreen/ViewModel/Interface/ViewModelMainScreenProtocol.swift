@@ -11,7 +11,7 @@ import Foundation
 enum ViewModelMainScreenState {
     case initial
     case readyToShowItems
-    case errorOccure(String)
+    case errorOccured(String)
 }
 
 protocol ViewModelMainScreenProtocol {

@@ -10,7 +10,7 @@ import Foundation
 
 class ModelAssignmentScreen {
     var dataSource = Observable<[ItemAssignmentScreen]>(observable: [ItemAssignmentScreen]())
-    var errorOccure = Observable<CustomError>(observable: .initial)
+    var errorOccured = Observable<CustomError>(observable: .initial)
     
     private let networking: NetworkProtocolAssignmentModule
     private let mapper: MapperProtocolModelAssignmentScreen
@@ -36,7 +36,7 @@ extension ModelAssignmentScreen: ModelAssignmentScreenProtocol {
                 print(array.count)
             case .failure(let error):
                 let resultCheck = self.mapper.errorCheckingForInternetConnection(error)
-                self.errorOccure.observable = resultCheck ? .notConnectedToInternet : .unknown
+                self.errorOccured.observable = resultCheck ? .notConnectedToInternet : .unknown
             }
         }
     }

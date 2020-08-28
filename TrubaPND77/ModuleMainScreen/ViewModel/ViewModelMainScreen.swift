@@ -20,7 +20,7 @@ class ViewModelMainScreen {
     }
     
     private func twoWayDataBinding() {
-        model.errorOccure.bind { [weak self] (error) in
+        model.errorOccured.bind { [weak self] (error) in
             guard let self = self else {
                 print("ViewModelMainScreen is deinitialized")
                 return
@@ -32,7 +32,7 @@ class ViewModelMainScreen {
             default:
                 //MARK: to understand what the error is
                 print(error)
-                self.state.observable = .errorOccure(unknownError)
+                self.state.observable = .errorOccured(unknownError)
             }
         }
         
@@ -62,7 +62,7 @@ extension ViewModelMainScreen: ViewModelMainScreenProtocol {
         let data = dictionaryOfItems[indexPath.row]
         guard let model = data else {
             objectDescription(self, function: #function)
-            state.observable = .errorOccure(unknownError)
+            state.observable = .errorOccured(unknownError)
             return nil
         }
         return CellViewModelMainScreen(model: model)

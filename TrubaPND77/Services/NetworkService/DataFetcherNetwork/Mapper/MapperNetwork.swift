@@ -100,9 +100,8 @@ extension MapperNetwork: MapperNetworkProtocol {
                     
 //                    let м.п. = try element.getElementsByClass("pri").first()?.child(0).text()
                     let urlString = API.scheme + API.host + linkHrefPath
-                    let priceWithMeasure = price + " м.п."
                     
-                    let item = RepresentativableItem(name: description, price: priceWithMeasure, urlImage: imageUrlString, linkToDescription: urlString)
+                    let item = RepresentativableItem(name: description, price: price, urlImage: imageUrlString, linkToDescription: urlString)
                         
                     downloadingArray.append(item)
                     

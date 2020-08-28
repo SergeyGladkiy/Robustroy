@@ -12,7 +12,7 @@ enum ViewModelAssignmentScreenState {
     case initial
     case readyToShowItems
     case showLoader
-    case errorOccure(String)
+    case errorOccured(String)
 }
 
 class ViewModelAssignmentScreen {
@@ -28,7 +28,7 @@ class ViewModelAssignmentScreen {
     }
     
     private func twoWayDataBinding() {
-        model.errorOccure.bind { [weak self] (error) in
+        model.errorOccured.bind { [weak self] (error) in
             guard let self = self else {
                 print("ViewModelMainScreen is deinitialized")
                 return
@@ -38,11 +38,11 @@ class ViewModelAssignmentScreen {
             case .initial:
                 return
             case .notConnectedToInternet:
-                self.state.observable = .errorOccure("Нет соединения с интернетом")
+                self.state.observable = .errorOccured("Нет соединения с интернетом")
             default:
                 //MARK: to understand what the error is
                 print(error)
-                self.state.observable = .errorOccure(unknownError)
+                self.state.observable = .errorOccured(unknownError)
             }
         }
         

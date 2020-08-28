@@ -28,27 +28,29 @@ class TestModelMainScreen: XCTestCase {
     }
     
     private func settingFunctionalityOfTestingModel() {
-        sut.errorOccure.bind { [weak self] (customError) in
+        sut.errorOccured.bind { [weak self] (customError) in
             guard let self = self else { return }
+            //MARK: not check on .initial
             self.error = customError
         }
     }
 
     func testStaticInforamtionIsGeneratedAndBindingStaticInfoWorks() {
         //given
-        var resultCheckStaticInfo = [Int: ItemMainScreen]()
+        var resultCheckStaticInfo = EntityMockerMainScreen.generateStaticInfromation()
         
         //when
         sut.processingStaticInformation()
         sut.staticInfо.bind { (data) in
+            if data.isEmpty { return }
             resultCheckStaticInfo = data
         }
-        //then
         
+        //then
         XCTAssert(resultCheckStaticInfo == sut.staticInfо.observable, "Processing ended unsuccessfully")
     }
     
-    func testErrorOccureIsWrongFilePathAndBindingErrorOccureWorks() {
+    func testErrorOccuredIsWrongFilePathAndBindingErrorOccuredWorks() {
         //MARK: rename file DataMainScreen.plist otherwise the path will be correct and the error will not work
         
         //when
@@ -66,7 +68,7 @@ class TestModelMainScreen: XCTestCase {
         
     }
     
-    func testErrorOccureIsDecodingErrorAndBindingErrorOccureWorks() {
+    func testErrorOccuredIsDecodingErrorAndBindingErrorOccuredWorks() {
         //MARK: change some in properties list of file DataMainScreen.plist otherwise the path will be correct and the error will not work
         
         //when

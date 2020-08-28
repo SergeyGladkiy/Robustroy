@@ -50,7 +50,7 @@ class AssignmentScreenViewController: UICollectionViewController {
             case .readyToShowItems:
                 self.collectionView.reloadData()
                 self.cancelLoader()
-            case .errorOccure(let error):
+            case .errorOccured(let error):
                 self.cancelLoader()
                 self.showError(description: error)
             }

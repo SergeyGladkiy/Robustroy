@@ -15,6 +15,7 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
     private weak var imageView: UIImageView!
     private weak var titleLabel: UILabel!
     private weak var priceLabel: UILabel!
+    private weak var measureLabel: UILabel!
     
     //??????!!!!!!
     private var link = ""
@@ -48,17 +49,14 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         if traitCollection.horizontalSizeClass == .regular {
-            titleLabel.font = .systemFont(ofSize: 15)
-            priceLabel.font = .systemFont(ofSize: 20)
+            titleLabel.font = .systemFont(ofSize: 17)
+            priceLabel.font = .boldSystemFont(ofSize: 20)
+            measureLabel.font = .systemFont(ofSize: 15)
         }
     }
     
     override func updateConstraints() {
         super.updateConstraints()
-        titleLabel.setContentHuggingPriority(.init(rawValue: 251), for: .vertical)
-        titleLabel.setContentHuggingPriority(.init(rawValue: 251), for: .horizontal)
-        priceLabel.setContentHuggingPriority(.init(rawValue: 250), for: .vertical)
-        priceLabel.setContentHuggingPriority(.init(rawValue: 251), for: .horizontal)
         imageView.setContentCompressionResistancePriority(.init(rawValue: 749), for: .vertical)
     }
 
@@ -72,26 +70,34 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
         image.contentMode = .scaleAspectFit
         self.imageView = image
         addSubview(imageView)
-        imageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
+        imageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: padding/2, left: padding, bottom: 0, right: padding))
         
         let title = UILabel()
         title.text = "Труба 16т (стенка: 2)"
         //title.text = "Труба SDR26 PN 6,3 (DN 90) стенка: 3,5 газ"
-        title.font = .systemFont(ofSize: 12)
+        title.font = .systemFont(ofSize: 14)
         title.textColor = .black
         title.numberOfLines = 0
         self.titleLabel = title
         addSubview(titleLabel)
-        titleLabel.anchor(top: imageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: 0, right: padding))
+        titleLabel.anchor(top: imageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: padding/2, left: padding, bottom: 0, right: padding))
 
         let price = UILabel()
-        price.text = "8.6 руб. м.п."
+        price.text = "8.6 руб. "
         //price.text = "27203.75 руб. м.п."
-        price.font = .systemFont(ofSize: 16)
+        price.font = .boldSystemFont(ofSize: 16)
         price.textColor = .black
         price.numberOfLines = 0
         self.priceLabel = price
         addSubview(priceLabel)
-        priceLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: padding, right: padding))
+        priceLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: padding/2, left: padding, bottom: 0, right: padding))
+        
+        let measure = UILabel()
+        measure.text = "м.п."
+        measure.textColor = .black
+        measure.font = .systemFont(ofSize: 12)
+        self.measureLabel = measure
+        addSubview(measureLabel)
+        measureLabel.anchor(top: priceLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: padding/2, right: padding))
     }
 }
