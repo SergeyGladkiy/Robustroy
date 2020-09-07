@@ -26,6 +26,10 @@ class AssignmentScreenViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("Deinit - \(String(describing: self))")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -112,7 +116,8 @@ class AssignmentScreenViewController: UICollectionViewController {
     
     //MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router.transitionToProductScreen()
+        let data = viewModel.getCredentialFor(item: indexPath)
+        router.transitionToProductScreen(with: data)
     }
 }
 

@@ -15,7 +15,8 @@ class NetworkAssembly: Assembly {
             let networking = r.resolve(NetworkingProtocol.self)!
             let mapper = r.resolve(MapperNetworkProtocol.self)!
             return NetworkDataFetcher(networking: networking, mapper: mapper)
-        }
+        }.implements(NetworkProtocolProductModule.self)
+        .inObjectScope(.container)
         
         container.register(NetworkingProtocol.self) { _ in
             Networking()

@@ -18,7 +18,7 @@ extension MapperNetworkMock: MapperNetworkProtocol {
         return .unknown
     }
     
-    func parseHtml(_ data: Data, complition: (Result<[RepresentativableItem], NSURLError>) -> Void) {
+    func parseHtmlForRepresentItems(_ data: Data, complition: (Result<[RepresentativableItem], NSURLError>) -> Void) {
         if EntityMockerNetworkService.isMapperParseHtmlCompletionWithRepresentItems {
             let items = EntityMockerNetworkService.generateRepresentItems()
             complition(.success(items))

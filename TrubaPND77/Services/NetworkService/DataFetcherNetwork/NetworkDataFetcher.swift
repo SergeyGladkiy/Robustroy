@@ -45,9 +45,40 @@ extension NetworkDataFetcher: NetworkProtocolAssignmentModule {
                 return
             }
             
-            self.mapper.parseHtml(data, complition: completion)
+            self.mapper.parseHtmlForRepresentItems(data, completion: completion)
             
         }
     }
-    
+}
+
+extension NetworkDataFetcher: NetworkProtocolProductModule {
+    func fetchItemInformation(completion: @escaping ItemInfoCompletion) {
+        let stringUrl = API.scheme + API.host + API.path
+        
+        guard let url = URL(string: stringUrl) else {
+            completion(.failure(.badURL))
+            return
+        }
+        
+        networkServece.request(with: url) { [weak self] (data, error) in
+            guard let self = self else {
+                print("self (network data fetcher) is nil")
+                return
+            }
+            
+            if let error = error {
+                let customError = self.mapper.parsingError(error: error as NSError)
+                completion(.failure(customError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.unknown))
+                return
+            }
+            
+            self.mapper.parseHtmlForItemInformation(data, completion: completion)
+            
+        }
+    }
 }

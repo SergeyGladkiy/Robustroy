@@ -32,9 +32,9 @@ class MainScreenViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
-        
+        settingNavigationAndTabBarItems()
         settingLayoutCollectionView()
+        
         viewModel.state.bind { [weak self] (state) in
             guard let self = self else {
                 print("MainScreenViewController deinited")
@@ -57,6 +57,10 @@ class MainScreenViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    private func settingNavigationAndTabBarItems() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
     
     private func settingLayoutCollectionView() {
@@ -146,21 +150,21 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height: CGFloat = indexPath.row == 2 ? 220 : 210
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return .init(width: view.frame.width, height: height + 50)
         }
         return .init(width: view.frame.width, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return .init(width: view.frame.width, height: 500)
         }
         return .init(width: view.frame.width, height: 260)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return 40
         }
         return 20

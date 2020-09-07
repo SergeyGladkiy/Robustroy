@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return true
             }
             self.window = appCoordinator.prepareWindow()
+            if window!.traitCollection.horizontalSizeClass == .regular {
+                let systemFontAttributesForIPad = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+                UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributesForIPad, for: .normal)
+            }
         }
         return true
     }

@@ -12,9 +12,16 @@
 		821FDCDD24F1579B00B7AFCD /* TitlesNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCDC24F1579B00B7AFCD /* TitlesNavigationItem.swift */; };
 		821FDCDF24F15ACF00B7AFCD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCDE24F15ACF00B7AFCD /* API.swift */; };
 		821FDCE224F1611200B7AFCD /* ItemAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE124F1611200B7AFCD /* ItemAssignmentScreen.swift */; };
-		821FDCE524F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE424F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift */; };
+		821FDCE524F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE424F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift */; };
 		821FDCE824F1644500B7AFCD /* MapperModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE724F1644500B7AFCD /* MapperModelAssignmentScreen.swift */; };
 		821FDCEA24F1656D00B7AFCD /* NetworkAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCE924F1656D00B7AFCD /* NetworkAssambly.swift */; };
+		8220B84C24FCF30200DF530A /* ViewModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B84B24FCF30200DF530A /* ViewModelProductScreen.swift */; };
+		8220B84F24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B84E24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift */; };
+		8220B85124FCF36200DF530A /* ModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B85024FCF36200DF530A /* ModelProductScreen.swift */; };
+		8220B85424FCF38900DF530A /* ModelProductScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B85324FCF38900DF530A /* ModelProductScreenProtocol.swift */; };
+		8220B85624FCF3F000DF530A /* ProductScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B85524FCF3F000DF530A /* ProductScreenRouterInput.swift */; };
+		8220B85824FCF6F800DF530A /* NetworkProtocolPruductModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B85724FCF6F800DF530A /* NetworkProtocolPruductModule.swift */; };
+		8220B85A24FCF84B00DF530A /* ProductScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8220B85924FCF84B00DF530A /* ProductScreenAssembly.swift */; };
 		8257D12524F7C49000F2A6B4 /* TestModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12424F7C49000F2A6B4 /* TestModelAssignmentScreen.swift */; };
 		8257D12724F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12624F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift */; };
 		8257D12B24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257D12A24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift */; };
@@ -56,7 +63,22 @@
 		8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */; };
 		8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */; };
 		8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */; };
-		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScree.swift */; };
+		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */; };
+		82B669982502340E00A208D7 /* ProductCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669972502340E00A208D7 /* ProductCredential.swift */; };
+		82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669992502358200A208D7 /* ItemCredential.swift */; };
+		82B6699D2502463500A208D7 /* CellViewModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6699C2502463500A208D7 /* CellViewModelProductScreen.swift */; };
+		82B669AC25024BAE00A208D7 /* ProductScreenCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669AB25024BAE00A208D7 /* ProductScreenCellProtocol.swift */; };
+		82B669B4250266F000A208D7 /* ItemInforamation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669B3250266F000A208D7 /* ItemInforamation.swift */; };
+		82B669B6250267AE00A208D7 /* ItemProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669B5250267AE00A208D7 /* ItemProductScreen.swift */; };
+		82B669B82502680F00A208D7 /* DescriptionProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669B72502680F00A208D7 /* DescriptionProduct.swift */; };
+		82B669BA25029C3C00A208D7 /* MapperModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669B925029C3C00A208D7 /* MapperModelProductScreen.swift */; };
+		82B669BE25029C8700A208D7 /* MapperModelProtocolProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669BD25029C8700A208D7 /* MapperModelProtocolProductScreen.swift */; };
+		82B669C125038F5000A208D7 /* CredentialProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669BF25038F5000A208D7 /* CredentialProductCell.swift */; };
+		82B669C225038F5000A208D7 /* CredentialProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B669C025038F5000A208D7 /* CredentialProductCell.xib */; };
+		82B669C52503989700A208D7 /* CharacteristicsProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669C32503989700A208D7 /* CharacteristicsProductCell.swift */; };
+		82B669C62503989700A208D7 /* CharacteristicsProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B669C42503989700A208D7 /* CharacteristicsProductCell.xib */; };
+		82B669C925039B3000A208D7 /* AboutProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669C725039B3000A208D7 /* AboutProductCell.swift */; };
+		82B669CA25039B3000A208D7 /* AboutProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B669C825039B3000A208D7 /* AboutProductCell.xib */; };
 		82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */; };
 		82DFDAE024EBF047005877B7 /* AppCoordinatorAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */; };
 		82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */; };
@@ -73,9 +95,11 @@
 		82DFDB0224ED6754005877B7 /* AssignmentScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0124ED6754005877B7 /* AssignmentScreenRouterInput.swift */; };
 		82DFDB0424ED6C9D005877B7 /* AssignmentScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0324ED6C9D005877B7 /* AssignmentScreenAssembly.swift */; };
 		82DFDB0624EE637C005877B7 /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0524EE637C005877B7 /* Timing.swift */; };
-		82DFDB0A24F006CB005877B7 /* NewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0924F006CB005877B7 /* NewVC.swift */; };
+		82DFDB0A24F006CB005877B7 /* ProductScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */; };
 		82DFDB0C24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0B24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift */; };
 		82EBC80E24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */; };
+		82F7CB5A2504091900E1657C /* OrderManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7CB592504091900E1657C /* OrderManeger.swift */; };
+		82F7CB5D2504093A00E1657C /* OrderingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */; };
 		BE60427F40382C6B57A35AC0 /* Pods_TrubaPND77.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C47AD068A8ECDF97A9B2C7 /* Pods_TrubaPND77.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,9 +120,16 @@
 		821FDCDC24F1579B00B7AFCD /* TitlesNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesNavigationItem.swift; sourceTree = "<group>"; };
 		821FDCDE24F15ACF00B7AFCD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		821FDCE124F1611200B7AFCD /* ItemAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAssignmentScreen.swift; sourceTree = "<group>"; };
-		821FDCE424F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperProtocolModelAssignmentScreen.swift; sourceTree = "<group>"; };
+		821FDCE424F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperModelProtocolAssignmentScreen.swift; sourceTree = "<group>"; };
 		821FDCE724F1644500B7AFCD /* MapperModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		821FDCE924F1656D00B7AFCD /* NetworkAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssambly.swift; sourceTree = "<group>"; };
+		8220B84B24FCF30200DF530A /* ViewModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProductScreen.swift; sourceTree = "<group>"; };
+		8220B84E24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProductScreenProtocol.swift; sourceTree = "<group>"; };
+		8220B85024FCF36200DF530A /* ModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProductScreen.swift; sourceTree = "<group>"; };
+		8220B85324FCF38900DF530A /* ModelProductScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProductScreenProtocol.swift; sourceTree = "<group>"; };
+		8220B85524FCF3F000DF530A /* ProductScreenRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenRouterInput.swift; sourceTree = "<group>"; };
+		8220B85724FCF6F800DF530A /* NetworkProtocolPruductModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocolPruductModule.swift; sourceTree = "<group>"; };
+		8220B85924FCF84B00DF530A /* ProductScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenAssembly.swift; sourceTree = "<group>"; };
 		8257D12424F7C49000F2A6B4 /* TestModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		8257D12624F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssignmentScreenMock.swift; sourceTree = "<group>"; };
 		8257D12A24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerAssignmentScreen.swift; sourceTree = "<group>"; };
@@ -144,7 +175,22 @@
 		8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCellMainScreen.swift; sourceTree = "<group>"; };
 		8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchor.swift; sourceTree = "<group>"; };
 		8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCell.swift; sourceTree = "<group>"; };
-		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScree.swift; sourceTree = "<group>"; };
+		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
+		82B669972502340E00A208D7 /* ProductCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCredential.swift; sourceTree = "<group>"; };
+		82B669992502358200A208D7 /* ItemCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCredential.swift; sourceTree = "<group>"; };
+		82B6699C2502463500A208D7 /* CellViewModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProductScreen.swift; sourceTree = "<group>"; };
+		82B669AB25024BAE00A208D7 /* ProductScreenCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenCellProtocol.swift; sourceTree = "<group>"; };
+		82B669B3250266F000A208D7 /* ItemInforamation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInforamation.swift; sourceTree = "<group>"; };
+		82B669B5250267AE00A208D7 /* ItemProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProductScreen.swift; sourceTree = "<group>"; };
+		82B669B72502680F00A208D7 /* DescriptionProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProduct.swift; sourceTree = "<group>"; };
+		82B669B925029C3C00A208D7 /* MapperModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperModelProductScreen.swift; sourceTree = "<group>"; };
+		82B669BD25029C8700A208D7 /* MapperModelProtocolProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperModelProtocolProductScreen.swift; sourceTree = "<group>"; };
+		82B669BF25038F5000A208D7 /* CredentialProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProductCell.swift; sourceTree = "<group>"; };
+		82B669C025038F5000A208D7 /* CredentialProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CredentialProductCell.xib; sourceTree = "<group>"; };
+		82B669C32503989700A208D7 /* CharacteristicsProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsProductCell.swift; sourceTree = "<group>"; };
+		82B669C42503989700A208D7 /* CharacteristicsProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicsProductCell.xib; sourceTree = "<group>"; };
+		82B669C725039B3000A208D7 /* AboutProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProductCell.swift; sourceTree = "<group>"; };
+		82B669C825039B3000A208D7 /* AboutProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutProductCell.xib; sourceTree = "<group>"; };
 		82DFDADA24EBEC45005877B7 /* DependenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
 		82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssambly.swift; sourceTree = "<group>"; };
 		82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -161,9 +207,11 @@
 		82DFDB0124ED6754005877B7 /* AssignmentScreenRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentScreenRouterInput.swift; sourceTree = "<group>"; };
 		82DFDB0324ED6C9D005877B7 /* AssignmentScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentScreenAssembly.swift; sourceTree = "<group>"; };
 		82DFDB0524EE637C005877B7 /* Timing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
-		82DFDB0924F006CB005877B7 /* NewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVC.swift; sourceTree = "<group>"; };
+		82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenViewController.swift; sourceTree = "<group>"; };
 		82DFDB0B24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		82F7CB592504091900E1657C /* OrderManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManeger.swift; sourceTree = "<group>"; };
+		82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingProtocol.swift; sourceTree = "<group>"; };
 		83C6A187829F6148F28D2C27 /* Pods_TrubaPND77Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrubaPND77Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				821FDCDA24F13E0B00B7AFCD /* RepresentativableItem.swift */,
+				82B669B3250266F000A208D7 /* ItemInforamation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				821FDCE124F1611200B7AFCD /* ItemAssignmentScreen.swift */,
+				82B669992502358200A208D7 /* ItemCredential.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -229,7 +279,64 @@
 		821FDCE624F1642A00B7AFCD /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				821FDCE424F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift */,
+				821FDCE424F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8220B84724FCF24200DF530A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82F7CB582504084300E1657C /* OrderManager */,
+				82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */,
+				82B669A62502494100A208D7 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8220B84824FCF25000DF530A /* ModuleProductScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8220B84724FCF24200DF530A /* View */,
+				8220B84A24FCF2E300DF530A /* ViewModel */,
+				8220B84924FCF2D500DF530A /* Model */,
+			);
+			path = ModuleProductScreen;
+			sourceTree = "<group>";
+		};
+		8220B84924FCF2D500DF530A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82B669BB25029C4200A208D7 /* Mapper */,
+				82B66996250233BC00A208D7 /* Entities */,
+				8220B85224FCF37500DF530A /* Interface */,
+				8220B85024FCF36200DF530A /* ModelProductScreen.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8220B84A24FCF2E300DF530A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8220B84D24FCF30900DF530A /* Interface */,
+				8220B84B24FCF30200DF530A /* ViewModelProductScreen.swift */,
+				82B6699B250245A600A208D7 /* CellViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8220B84D24FCF30900DF530A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8220B84E24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8220B85224FCF37500DF530A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8220B85324FCF38900DF530A /* ModelProductScreenProtocol.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -366,6 +473,7 @@
 				82DFDAE124EBF904005877B7 /* AppCoordinator */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				82DFDAF124ED5E5B005877B7 /* ModuleAssignmentScreen */,
+				8220B84824FCF25000DF530A /* ModuleProductScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
 			);
@@ -549,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				8284A65124D433B100EB33CD /* NetworkProtocolAssignmentModule.swift */,
+				8220B85724FCF6F800DF530A /* NetworkProtocolPruductModule.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -582,7 +691,7 @@
 		82A724C324F4066700C0D055 /* CellViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScree.swift */,
+				82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */,
 			);
 			path = CellViewModel;
 			sourceTree = "<group>";
@@ -639,6 +748,63 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		82B66996250233BC00A208D7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				82B669B5250267AE00A208D7 /* ItemProductScreen.swift */,
+				82B669972502340E00A208D7 /* ProductCredential.swift */,
+				82B669B72502680F00A208D7 /* DescriptionProduct.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		82B6699B250245A600A208D7 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82B6699C2502463500A208D7 /* CellViewModelProductScreen.swift */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		82B669A62502494100A208D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82B669AD25024BB300A208D7 /* Interface */,
+				82B669BF25038F5000A208D7 /* CredentialProductCell.swift */,
+				82B669C025038F5000A208D7 /* CredentialProductCell.xib */,
+				82B669C32503989700A208D7 /* CharacteristicsProductCell.swift */,
+				82B669C42503989700A208D7 /* CharacteristicsProductCell.xib */,
+				82B669C725039B3000A208D7 /* AboutProductCell.swift */,
+				82B669C825039B3000A208D7 /* AboutProductCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		82B669AD25024BB300A208D7 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82B669AB25024BAE00A208D7 /* ProductScreenCellProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		82B669BB25029C4200A208D7 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				82B669BC25029C4F00A208D7 /* Interface */,
+				82B669B925029C3C00A208D7 /* MapperModelProductScreen.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		82B669BC25029C4F00A208D7 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82B669BD25029C8700A208D7 /* MapperModelProtocolProductScreen.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		82DFDAD924EBEB3A005877B7 /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +837,7 @@
 				82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */,
 				82DFDAE724EC02F6005877B7 /* MainScreenAssembly.swift */,
 				82DFDB0324ED6C9D005877B7 /* AssignmentScreenAssembly.swift */,
+				8220B85924FCF84B00DF530A /* ProductScreenAssembly.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -708,6 +875,7 @@
 			children = (
 				82DFDAEF24EC0C4F005877B7 /* MainScreenRouterInput.swift */,
 				82DFDB0124ED6754005877B7 /* AssignmentScreenRouterInput.swift */,
+				8220B85524FCF3F000DF530A /* ProductScreenRouterInput.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -748,7 +916,6 @@
 			children = (
 				82DFDAF524ED5F5B005877B7 /* AssignmentScreenViewController.swift */,
 				82A724C224F4061900C0D055 /* Cell */,
-				82DFDB0924F006CB005877B7 /* NewVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -765,6 +932,23 @@
 			isa = PBXGroup;
 			children = (
 				82DFDAFE24ED61AE005877B7 /* ModelAssignmentScreenProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		82F7CB582504084300E1657C /* OrderManager */ = {
+			isa = PBXGroup;
+			children = (
+				82F7CB5B2504092100E1657C /* Interface */,
+				82F7CB592504091900E1657C /* OrderManeger.swift */,
+			);
+			path = OrderManager;
+			sourceTree = "<group>";
+		};
+		82F7CB5B2504092100E1657C /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -863,7 +1047,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8284A5F724D0290C00EB33CD /* LaunchScreen.storyboard in Resources */,
+				82B669CA25039B3000A208D7 /* AboutProductCell.xib in Resources */,
+				82B669C225038F5000A208D7 /* CredentialProductCell.xib in Resources */,
 				8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */,
+				82B669C62503989700A208D7 /* CharacteristicsProductCell.xib in Resources */,
 				8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,17 +1133,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82DFDB0A24F006CB005877B7 /* NewVC.swift in Sources */,
+				82DFDB0A24F006CB005877B7 /* ProductScreenViewController.swift in Sources */,
 				821FDCE824F1644500B7AFCD /* MapperModelAssignmentScreen.swift in Sources */,
+				82B669B82502680F00A208D7 /* DescriptionProduct.swift in Sources */,
 				8284A65224D433B100EB33CD /* NetworkProtocolAssignmentModule.swift in Sources */,
 				82DFDAE624EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift in Sources */,
 				8284A62524D1810D00EB33CD /* Observable.swift in Sources */,
 				82DFDAE024EBF047005877B7 /* AppCoordinatorAssambly.swift in Sources */,
 				821FDCDB24F13E0B00B7AFCD /* RepresentativableItem.swift in Sources */,
 				82DFDAFD24ED618B005877B7 /* ModelAssignmentScreen.swift in Sources */,
+				8220B85824FCF6F800DF530A /* NetworkProtocolPruductModule.swift in Sources */,
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
 				8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */,
+				82B669AC25024BAE00A208D7 /* ProductScreenCellProtocol.swift in Sources */,
 				82DFDB0424ED6C9D005877B7 /* AssignmentScreenAssembly.swift in Sources */,
+				8220B85A24FCF84B00DF530A /* ProductScreenAssembly.swift in Sources */,
+				82B669B6250267AE00A208D7 /* ItemProductScreen.swift in Sources */,
 				82DFDAE824EC02F6005877B7 /* MainScreenAssembly.swift in Sources */,
 				8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */,
 				8284A65624D4393B00EB33CD /* MapperNetworkProtocol.swift in Sources */,
@@ -964,26 +1156,41 @@
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
 				8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */,
+				82B6699D2502463500A208D7 /* CellViewModelProductScreen.swift in Sources */,
+				82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */,
+				8220B85124FCF36200DF530A /* ModelProductScreen.swift in Sources */,
 				8284A65824D4397200EB33CD /* MapperNetwork.swift in Sources */,
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
+				8220B84F24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift in Sources */,
 				82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
-				821FDCE524F163F100B7AFCD /* MapperProtocolModelAssignmentScreen.swift in Sources */,
+				8220B85624FCF3F000DF530A /* ProductScreenRouterInput.swift in Sources */,
+				821FDCE524F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift in Sources */,
+				82B669982502340E00A208D7 /* ProductCredential.swift in Sources */,
+				82B669C925039B3000A208D7 /* AboutProductCell.swift in Sources */,
 				821FDCE224F1611200B7AFCD /* ItemAssignmentScreen.swift in Sources */,
 				82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */,
 				8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */,
 				821FDCEA24F1656D00B7AFCD /* NetworkAssambly.swift in Sources */,
 				821FDCDD24F1579B00B7AFCD /* TitlesNavigationItem.swift in Sources */,
-				82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScree.swift in Sources */,
+				82B669B4250266F000A208D7 /* ItemInforamation.swift in Sources */,
+				82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */,
 				82DFDB0224ED6754005877B7 /* AssignmentScreenRouterInput.swift in Sources */,
 				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
+				82F7CB5A2504091900E1657C /* OrderManeger.swift in Sources */,
 				82DFDAEC24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift in Sources */,
+				82B669C52503989700A208D7 /* CharacteristicsProductCell.swift in Sources */,
+				8220B84C24FCF30200DF530A /* ViewModelProductScreen.swift in Sources */,
+				82B669C125038F5000A208D7 /* CredentialProductCell.swift in Sources */,
 				82DFDAFF24ED61AE005877B7 /* ModelAssignmentScreenProtocol.swift in Sources */,
 				82DFDAF624ED5F5B005877B7 /* AssignmentScreenViewController.swift in Sources */,
+				82B669BA25029C3C00A208D7 /* MapperModelProductScreen.swift in Sources */,
+				82F7CB5D2504093A00E1657C /* OrderingProtocol.swift in Sources */,
 				82DFDAEA24EC07F4005877B7 /* MainTabCoordinator.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
+				82B669BE25029C8700A208D7 /* MapperModelProtocolProductScreen.swift in Sources */,
 				82DFDAFB24ED60AB005877B7 /* ViewModelAssignmentScreenProtocol.swift in Sources */,
 				821FDCDF24F15ACF00B7AFCD /* API.swift in Sources */,
 				82DFDB0624EE637C005877B7 /* Timing.swift in Sources */,
@@ -993,6 +1200,7 @@
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
 				8284A64C24D4301500EB33CD /* Networking.swift in Sources */,
 				8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */,
+				8220B85424FCF38900DF530A /* ModelProductScreenProtocol.swift in Sources */,
 				82EBC80E24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift in Sources */,
 				8284A65D24D7290600EB33CD /* StretchyHeaderLayout.swift in Sources */,
 				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,
@@ -1165,7 +1373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1185,7 +1393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

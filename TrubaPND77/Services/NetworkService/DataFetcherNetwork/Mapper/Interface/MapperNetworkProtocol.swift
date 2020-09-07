@@ -10,5 +10,6 @@ import Foundation
 
 protocol MapperNetworkProtocol {
     func parsingError(error: NSError) -> NSURLError
-    func parseHtml(_ data: Data, complition: RepresentItemsCompletion)
+    func parseHtmlForRepresentItems(_ data: Data, completion: RepresentItemsCompletion)
+    func parseHtmlForItemInformation(_ data: Data, completion: ItemInfoCompletion)
 }

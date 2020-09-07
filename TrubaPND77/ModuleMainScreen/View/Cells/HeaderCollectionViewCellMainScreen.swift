@@ -18,6 +18,9 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     private weak var imageView: UIImageView!
     private weak var stackGradientLayer: CAGradientLayer!
     
+    private weak var nameTitle: UILabel!
+    private weak var telephone: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         //MARK: Shadow
@@ -36,7 +39,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     
     private func settingLayout() {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "titulMainNew")
+        iv.image = #imageLiteral(resourceName: "headerImage")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         self.imageView = iv
@@ -60,9 +63,15 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
     }
     
+    override func updateConstraints() {
+        super.updateConstraints()
+        if traitCollection.horizontalSizeClass == .regular {
+            nameTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 45)
+            telephone.titleLabel?.font = .systemFont(ofSize: 30, weight: .bold)
+        }
+    }
+    
     private func settingGradientLayer() {
-        let sizeiPad = traitCollection.horizontalSizeClass == .regular
-        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.5, 1]
@@ -77,11 +86,11 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         gradientLayer.frame.origin.y -= bounds.height
         
         let headerTitle = UILabel()
-        let sizeForHeaderTitle: CGFloat = sizeiPad ? 45 : 25
-        headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: sizeForHeaderTitle)
+        headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 25)
         headerTitle.text = "ТРУБА ПНД 77"
         headerTitle.numberOfLines = 0
         headerTitle.textColor = .white
+        self.nameTitle = headerTitle
         
         let imagePhone = UIImageView(image: UIImage(named: "telephone"))
         imagePhone.contentMode = .scaleAspectFit
@@ -90,10 +99,10 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         let buttonTelephone = UIButton()
         buttonTelephone.setTitle("+7(495)645-13-06", for: .normal)
-        let sizeTitleTelephone: CGFloat = sizeiPad ? 30 : 20
-        buttonTelephone.titleLabel?.font = .systemFont(ofSize: sizeTitleTelephone, weight: .bold)
+        buttonTelephone.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         buttonTelephone.contentHorizontalAlignment = .leading
         buttonTelephone.setTitleColor(.white, for: .normal)
+        self.telephone = buttonTelephone
         
         //MARK: processing call
         let selector = NSSelectorFromString("phoneNumberWasPressedWithSender:")

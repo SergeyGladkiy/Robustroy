@@ -25,11 +25,11 @@ class AssignmentScreenAssembly: Assembly {
         
         container.register(ModelAssignmentScreenProtocol.self) { r in
             let network = r.resolve(NetworkProtocolAssignmentModule.self)!
-            let mapper = r.resolve(MapperProtocolModelAssignmentScreen.self)!
+            let mapper = r.resolve(MapperModelProtocolAssignmentScreen.self)!
             return ModelAssignmentScreen(networking: network, mapper: mapper)
         }
         
-        container.register(MapperProtocolModelAssignmentScreen.self) { _ in
+        container.register(MapperModelProtocolAssignmentScreen.self) { _ in
             MapperModelAssignmentScreen()
         }
     }

@@ -10,6 +10,7 @@ import Foundation
 
 struct RepresentativableItem {
     let name: String
+    let title: String
     let price: String
     let urlImage: String
     let linkToDescription: String

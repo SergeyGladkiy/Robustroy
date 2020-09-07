@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 class DependenceProvider {
-    private static let assembler = Assembler([AppCoordinatorAssambly(), MainScreenAssembly(), AssignmentScreenAssembly(), NetworkAssembly()])
+    private static let assembler = Assembler([AppCoordinatorAssambly(), MainScreenAssembly(), AssignmentScreenAssembly(), NetworkAssembly(), ProductScreenAssembly()])
     
     static func resolve<T>() -> T? {
         return DependenceProvider.assembler.resolver.resolve(T.self)

@@ -13,9 +13,9 @@ class ModelAssignmentScreen {
     var errorOccured = Observable<CustomError>(observable: .initial)
     
     private let networking: NetworkProtocolAssignmentModule
-    private let mapper: MapperProtocolModelAssignmentScreen
+    private let mapper: MapperModelProtocolAssignmentScreen
     
-    init(networking: NetworkProtocolAssignmentModule, mapper: MapperProtocolModelAssignmentScreen) {
+    init(networking: NetworkProtocolAssignmentModule, mapper: MapperModelProtocolAssignmentScreen) {
         self.networking = networking
         self.mapper = mapper
     }

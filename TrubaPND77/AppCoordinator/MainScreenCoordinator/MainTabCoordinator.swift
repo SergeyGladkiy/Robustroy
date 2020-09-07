@@ -12,6 +12,7 @@ import UIKit
 class MainTabCoordinator {
     private weak var mainScreenViewController: MainScreenViewController!
     private weak var assignmentScreenViewController: AssignmentScreenViewController!
+    private weak var productScreenViewController: ProductScreenViewController!
 }
 
 extension MainTabCoordinator: BasicRoutingCoordinatorProtocol {
@@ -43,10 +44,20 @@ extension MainTabCoordinator: MainScreenRouterInput {
 }
 
 extension MainTabCoordinator: AssignmentScreenRouterInput {
-    func transitionToProductScreen() {
-        let nvc = NewVC()
-        assignmentScreenViewController.navigationController?.pushViewController(nvc, animated: true)
+    func transitionToProductScreen(with info: ItemCredential) {
+        API.path = info.link
+        guard
+            let productController: ProductScreenViewController = DependenceProvider.resolve() else {
+                objectDescription(self, function: #function)
+                return }
+        ItemProductScreen.productCredential = ProductCredential(from: info)
+        //????
+        productController.navigationItem.title = info.titleItem
+        self.productScreenViewController = productController
+        assignmentScreenViewController.navigationController?.pushViewController(productController, animated: true)
     }
-    
+}
+
+extension MainTabCoordinator: ProductScreenRouterInput {
     
 }

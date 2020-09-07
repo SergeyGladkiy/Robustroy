@@ -61,13 +61,14 @@ class ViewModelAssignmentScreen {
 }
 
 extension ViewModelAssignmentScreen: ViewModelAssignmentScreenProtocol {
+    
     func numberOfRows() -> Int {
         readyAssignmentItems.count
     }
     
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelAssignmentScree {
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelAssignmentScreen {
         let model = readyAssignmentItems[indexPath.row]
-        return CellViewModelAssignmentScree(model:  model)
+        return CellViewModelAssignmentScreen(model:  model)
     }
     
     func getInformation() {
@@ -75,5 +76,9 @@ extension ViewModelAssignmentScreen: ViewModelAssignmentScreenProtocol {
         model.fetchingInformation()
     }
     
+    func getCredentialFor(item: IndexPath) -> ItemCredential {
+        let item = readyAssignmentItems[item.row]
+        return ItemCredential(from: item)
+    }
     
 }

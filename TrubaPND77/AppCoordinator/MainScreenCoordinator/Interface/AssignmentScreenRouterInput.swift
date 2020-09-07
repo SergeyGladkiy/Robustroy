@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AssignmentScreenRouterInput {
-    func transitionToProductScreen()
+    func transitionToProductScreen(with info: ItemCredential)
 }

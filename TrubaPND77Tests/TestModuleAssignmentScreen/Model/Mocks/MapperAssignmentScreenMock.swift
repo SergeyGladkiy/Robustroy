@@ -12,7 +12,7 @@ class MapperAssignmentScreenMock {
     
 }
 
-extension MapperAssignmentScreenMock: MapperProtocolModelAssignmentScreen {
+extension MapperAssignmentScreenMock: MapperModelProtocolAssignmentScreen {
     
     func parse(items: [RepresentativableItem]) -> [ItemAssignmentScreen] {
         let item = EntityMockerAssignmentScreen.generateItemsAssignment()

@@ -30,7 +30,7 @@ class ApplicationCoordinator {
         
         let array = [
             createNavController(viewController: mainTabController, title: "Главная", imageName: "house", nav: true),
-            createNavController(viewController: vc2, title: "Today", imageName: "folder.circle", nav: true),
+            createNavController(viewController: vc2, title: "Каталог", imageName: "catalog", nav: true),
             createNavController(viewController: vc3, title: "О компании", imageName: "info.circle", nav: true),
             createNavController(viewController: vc4, title: "Контакты", imageName: "location", nav: true)
             
@@ -38,26 +38,22 @@ class ApplicationCoordinator {
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = array
-        //tabBarController.tabBar.tintColor = .red
-        //tabBarController.tabBar.barTintColor = .white
+        
+        if tabBarController.traitCollection.horizontalSizeClass == .regular {
+            let systemFontAttributesForIPad = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+            UITabBarItem.appearance().setTitleTextAttributes(systemFontAttributesForIPad, for: .normal)
+        }
         
         return tabBarController
     }
     
     fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String, nav: Bool) -> UIViewController {
-        var image: UIImage?
-        var selectedImage: UIImage?
         
-        if #available(iOS 13.0, *) {
-            image = UIImage(systemName: imageName)
-            selectedImage = UIImage(systemName: imageName + ".fill")
-        } else {
-            //MARK: export custom symbol template
-            
-        }
-        
+        let image = UIImage(named: imageName)
+        let selectedImage = UIImage(named: imageName + ".fill")
         viewController.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         viewController.navigationItem.title = title
+        
         
         let navigationController = nav ? UINavigationController(rootViewController: viewController) : viewController
         return navigationController

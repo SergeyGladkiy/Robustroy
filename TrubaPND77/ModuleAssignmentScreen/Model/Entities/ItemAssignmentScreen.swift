@@ -9,6 +9,7 @@
 import Foundation
 
 struct ItemAssignmentScreen {
+    let name: String
     let title: String
     let price: String
     let urlImage: String
@@ -18,6 +19,7 @@ struct ItemAssignmentScreen {
 extension ItemAssignmentScreen: Equatable {
     static func == (lhs: ItemAssignmentScreen, rhs: ItemAssignmentScreen) -> Bool {
         if
+            lhs.name == rhs.name,
             lhs.title == rhs.title,
             lhs.price == rhs.price,
             lhs.urlImage == rhs.urlImage,

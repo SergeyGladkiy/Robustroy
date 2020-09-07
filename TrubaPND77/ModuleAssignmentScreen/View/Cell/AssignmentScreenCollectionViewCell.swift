@@ -17,18 +17,15 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
     private weak var priceLabel: UILabel!
     private weak var measureLabel: UILabel!
     
-    //??????!!!!!!
-    private var link = ""
-    
     private let padding: CGFloat = 10
     
-    weak var viewModel: CellViewModelAssignmentScree! {
+    weak var viewModel: CellViewModelAssignmentScreen! {
         didSet {
             let url = URL(string: API.scheme + API.host + viewModel.imageUrl)
+            self.imageView.kf.indicatorType = .activity
             self.imageView.kf.setImage(with: url)
-            self.titleLabel.text = viewModel.titleProduct
+            self.titleLabel.text = viewModel.nameProduct
             self.priceLabel.text = viewModel.priceProduct
-            self.link = viewModel.linkToDescriptionProduct
         }
     }
     
@@ -46,17 +43,13 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if traitCollection.horizontalSizeClass == .regular {
-            titleLabel.font = .systemFont(ofSize: 17)
-            priceLabel.font = .boldSystemFont(ofSize: 20)
-            measureLabel.font = .systemFont(ofSize: 15)
-        }
-    }
-    
     override func updateConstraints() {
         super.updateConstraints()
+        if traitCollection.horizontalSizeClass == .regular {
+            titleLabel.font = .systemFont(ofSize: 19)
+            priceLabel.font = .boldSystemFont(ofSize: 23)
+            measureLabel.font = .systemFont(ofSize: 17)
+        }
         imageView.setContentCompressionResistancePriority(.init(rawValue: 749), for: .vertical)
     }
 
@@ -75,7 +68,7 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
         let title = UILabel()
         title.text = "Труба 16т (стенка: 2)"
         //title.text = "Труба SDR26 PN 6,3 (DN 90) стенка: 3,5 газ"
-        title.font = .systemFont(ofSize: 14)
+        title.font = .systemFont(ofSize: 16)
         title.textColor = .black
         title.numberOfLines = 0
         self.titleLabel = title
@@ -85,7 +78,7 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
         let price = UILabel()
         price.text = "8.6 руб. "
         //price.text = "27203.75 руб. м.п."
-        price.font = .boldSystemFont(ofSize: 16)
+        price.font = .boldSystemFont(ofSize: 18)
         price.textColor = .black
         price.numberOfLines = 0
         self.priceLabel = price
@@ -95,7 +88,7 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
         let measure = UILabel()
         measure.text = "м.п."
         measure.textColor = .black
-        measure.font = .systemFont(ofSize: 12)
+        measure.font = .systemFont(ofSize: 14)
         self.measureLabel = measure
         addSubview(measureLabel)
         measureLabel.anchor(top: priceLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: padding, bottom: padding/2, right: padding))

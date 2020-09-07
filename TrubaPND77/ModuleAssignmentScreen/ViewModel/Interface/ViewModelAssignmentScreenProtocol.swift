@@ -10,7 +10,9 @@ import Foundation
 
 protocol ViewModelAssignmentScreenProtocol {
     var state: Observable<ViewModelAssignmentScreenState> { get }
+    
     func getInformation()
     func numberOfRows() -> Int
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelAssignmentScree
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelAssignmentScreen
+    func getCredentialFor(item: IndexPath) -> ItemCredential 
 }
