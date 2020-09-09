@@ -74,8 +74,4 @@ extension ViewModelProductScreen: ViewModelProductScreenProtocol {
         let cellViewModel = description?[indexPath.row]
         return cellViewModel
     }
-    
-    func cellViewModelForHeader() -> ProductCredential? {
-        return ItemProductScreen.productCredential
-    }
 }

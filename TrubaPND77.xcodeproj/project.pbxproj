@@ -63,6 +63,9 @@
 		8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */; };
 		8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */; };
 		8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */; };
+		82892D5D25065FA0008F18E7 /* OrderScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82892D5B25065FA0008F18E7 /* OrderScreenViewController.swift */; };
+		82892D5E25065FA0008F18E7 /* OrderScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82892D5C25065FA0008F18E7 /* OrderScreenViewController.xib */; };
+		828FD5332508B4B0001C0835 /* FooterViewProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD5322508B4B0001C0835 /* FooterViewProductScreen.swift */; };
 		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */; };
 		82B669982502340E00A208D7 /* ProductCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669972502340E00A208D7 /* ProductCredential.swift */; };
 		82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669992502358200A208D7 /* ItemCredential.swift */; };
@@ -98,8 +101,6 @@
 		82DFDB0A24F006CB005877B7 /* ProductScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */; };
 		82DFDB0C24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFDB0B24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift */; };
 		82EBC80E24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */; };
-		82F7CB5A2504091900E1657C /* OrderManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7CB592504091900E1657C /* OrderManeger.swift */; };
-		82F7CB5D2504093A00E1657C /* OrderingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */; };
 		BE60427F40382C6B57A35AC0 /* Pods_TrubaPND77.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C47AD068A8ECDF97A9B2C7 /* Pods_TrubaPND77.framework */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +176,9 @@
 		8284A65E24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCellMainScreen.swift; sourceTree = "<group>"; };
 		8284A66024D72C1E00EB33CD /* AutoLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutAnchor.swift; sourceTree = "<group>"; };
 		8284A66224DB081000EB33CD /* MainScreenGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCell.swift; sourceTree = "<group>"; };
+		82892D5B25065FA0008F18E7 /* OrderScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreenViewController.swift; sourceTree = "<group>"; };
+		82892D5C25065FA0008F18E7 /* OrderScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderScreenViewController.xib; sourceTree = "<group>"; };
+		828FD5322508B4B0001C0835 /* FooterViewProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewProductScreen.swift; sourceTree = "<group>"; };
 		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		82B669972502340E00A208D7 /* ProductCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCredential.swift; sourceTree = "<group>"; };
 		82B669992502358200A208D7 /* ItemCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCredential.swift; sourceTree = "<group>"; };
@@ -210,8 +214,6 @@
 		82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreenViewController.swift; sourceTree = "<group>"; };
 		82DFDB0B24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCollectionViewCell.swift; sourceTree = "<group>"; };
-		82F7CB592504091900E1657C /* OrderManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManeger.swift; sourceTree = "<group>"; };
-		82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingProtocol.swift; sourceTree = "<group>"; };
 		83C6A187829F6148F28D2C27 /* Pods_TrubaPND77Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrubaPND77Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,8 +289,9 @@
 		8220B84724FCF24200DF530A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82F7CB582504084300E1657C /* OrderManager */,
 				82DFDB0924F006CB005877B7 /* ProductScreenViewController.swift */,
+				828FD5342508BB6B001C0835 /* FooterIndicatorableView */,
+				828FD53125077E0B001C0835 /* OrderScreen */,
 				82B669A62502494100A208D7 /* Cells */,
 			);
 			path = View;
@@ -670,6 +673,23 @@
 			path = CustomFlowLayout;
 			sourceTree = "<group>";
 		};
+		828FD53125077E0B001C0835 /* OrderScreen */ = {
+			isa = PBXGroup;
+			children = (
+				82892D5B25065FA0008F18E7 /* OrderScreenViewController.swift */,
+				82892D5C25065FA0008F18E7 /* OrderScreenViewController.xib */,
+			);
+			path = OrderScreen;
+			sourceTree = "<group>";
+		};
+		828FD5342508BB6B001C0835 /* FooterIndicatorableView */ = {
+			isa = PBXGroup;
+			children = (
+				828FD5322508B4B0001C0835 /* FooterViewProductScreen.swift */,
+			);
+			path = FooterIndicatorableView;
+			sourceTree = "<group>";
+		};
 		82A724C124F405F900C0D055 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -936,23 +956,6 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		82F7CB582504084300E1657C /* OrderManager */ = {
-			isa = PBXGroup;
-			children = (
-				82F7CB5B2504092100E1657C /* Interface */,
-				82F7CB592504091900E1657C /* OrderManeger.swift */,
-			);
-			path = OrderManager;
-			sourceTree = "<group>";
-		};
-		82F7CB5B2504092100E1657C /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				82F7CB5C2504093A00E1657C /* OrderingProtocol.swift */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
 		E0A903A51D4798C7832FC918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1053,7 @@
 				82B669CA25039B3000A208D7 /* AboutProductCell.xib in Resources */,
 				82B669C225038F5000A208D7 /* CredentialProductCell.xib in Resources */,
 				8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */,
+				82892D5E25065FA0008F18E7 /* OrderScreenViewController.xib in Resources */,
 				82B669C62503989700A208D7 /* CharacteristicsProductCell.xib in Resources */,
 				8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */,
 			);
@@ -1179,7 +1183,6 @@
 				82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */,
 				82DFDB0224ED6754005877B7 /* AssignmentScreenRouterInput.swift in Sources */,
 				8284A65424D433C100EB33CD /* NetworkDataFetcher.swift in Sources */,
-				82F7CB5A2504091900E1657C /* OrderManeger.swift in Sources */,
 				82DFDAEC24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift in Sources */,
 				82B669C52503989700A208D7 /* CharacteristicsProductCell.swift in Sources */,
 				8220B84C24FCF30200DF530A /* ViewModelProductScreen.swift in Sources */,
@@ -1187,7 +1190,6 @@
 				82DFDAFF24ED61AE005877B7 /* ModelAssignmentScreenProtocol.swift in Sources */,
 				82DFDAF624ED5F5B005877B7 /* AssignmentScreenViewController.swift in Sources */,
 				82B669BA25029C3C00A208D7 /* MapperModelProductScreen.swift in Sources */,
-				82F7CB5D2504093A00E1657C /* OrderingProtocol.swift in Sources */,
 				82DFDAEA24EC07F4005877B7 /* MainTabCoordinator.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 				82B669BE25029C8700A208D7 /* MapperModelProtocolProductScreen.swift in Sources */,
@@ -1198,11 +1200,13 @@
 				8284A65024D4335A00EB33CD /* NetworkingProtocol.swift in Sources */,
 				82DFDAF824ED5FB1005877B7 /* ViewModelAssignmentScreen.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
+				828FD5332508B4B0001C0835 /* FooterViewProductScreen.swift in Sources */,
 				8284A64C24D4301500EB33CD /* Networking.swift in Sources */,
 				8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */,
 				8220B85424FCF38900DF530A /* ModelProductScreenProtocol.swift in Sources */,
 				82EBC80E24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift in Sources */,
 				8284A65D24D7290600EB33CD /* StretchyHeaderLayout.swift in Sources */,
+				82892D5D25065FA0008F18E7 /* OrderScreenViewController.swift in Sources */,
 				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1301,7 +1305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1355,7 +1359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1373,7 +1377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1393,7 +1397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

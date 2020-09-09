@@ -14,5 +14,4 @@ protocol ViewModelProductScreenProtocol {
     func getInformation()
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelProductScreen?
-    func cellViewModelForHeader() -> ProductCredential?
 }

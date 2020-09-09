@@ -14,8 +14,7 @@ class ProductScreenAssembly: Assembly {
         container.register(ProductScreenViewController.self) { r in
             let viewModel = r.resolve(ViewModelProductScreenProtocol.self)!
             let router = r.resolve(ProductScreenRouterInput.self)!
-            let ordering = r.resolve(OrderingProtocol.self)!
-            return ProductScreenViewController(viewModel: viewModel, router: router, ordering: ordering)
+            return ProductScreenViewController(viewModel: viewModel, router: router)
         }
         
         container.register(ViewModelProductScreenProtocol.self) { r in
@@ -31,10 +30,6 @@ class ProductScreenAssembly: Assembly {
         
         container.register(MapperModelProtocolProductScreen.self) { _ in
             MapperModelProductScreen()
-        }
-        
-        container.register(OrderingProtocol.self) { _ in
-            OrderManeger()
         }
     }
 }

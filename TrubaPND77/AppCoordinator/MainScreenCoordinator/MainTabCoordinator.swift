@@ -13,6 +13,7 @@ class MainTabCoordinator {
     private weak var mainScreenViewController: MainScreenViewController!
     private weak var assignmentScreenViewController: AssignmentScreenViewController!
     private weak var productScreenViewController: ProductScreenViewController!
+    private var titleProduct = ""
 }
 
 extension MainTabCoordinator: BasicRoutingCoordinatorProtocol {
@@ -51,7 +52,7 @@ extension MainTabCoordinator: AssignmentScreenRouterInput {
                 objectDescription(self, function: #function)
                 return }
         ItemProductScreen.productCredential = ProductCredential(from: info)
-        //????
+        self.titleProduct = info.titleItem
         productController.navigationItem.title = info.titleItem
         self.productScreenViewController = productController
         assignmentScreenViewController.navigationController?.pushViewController(productController, animated: true)
@@ -59,5 +60,9 @@ extension MainTabCoordinator: AssignmentScreenRouterInput {
 }
 
 extension MainTabCoordinator: ProductScreenRouterInput {
-    
+    func transitionToOrderScreen() {
+        let vc = OrderScreenViewController(nibName: "OrderScreenViewController", bundle: Bundle(for: OrderScreenViewController.self))
+        vc.productDescription = self.titleProduct
+        assignmentScreenViewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+    }
 }

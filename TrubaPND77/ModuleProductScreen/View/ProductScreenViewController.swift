@@ -13,12 +13,12 @@ class ProductScreenViewController: UITableViewController {
     
     private let viewModel: ViewModelProductScreenProtocol
     private let router: ProductScreenRouterInput
-    private let ordering: OrderingProtocol
     
-    init(viewModel: ViewModelProductScreenProtocol, router: ProductScreenRouterInput, ordering: OrderingProtocol) {
+    private weak var footerView: FooterIndicatorableProtocol!
+    
+    init(viewModel: ViewModelProductScreenProtocol, router: ProductScreenRouterInput) {
         self.viewModel = viewModel
         self.router = router
-        self.ordering = ordering
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,20 +26,14 @@ class ProductScreenViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        print("Deinit - \(String(describing: self))")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         settingLayoutCollectionView()
         registerCells()
-        ordering.settingCustomLayout(with: self.tableView)
         
         viewModel.state.bind { [weak self] (state) in
             guard let self = self else {
-                print("AssignmentScreenViewController deinited")
+                print("ProductScreenViewController is deinitialized")
                 return
             }
             
@@ -53,7 +47,7 @@ class ProductScreenViewController: UITableViewController {
                 self.cancelLoader()
             case .errorOccured(let error):
                 self.cancelLoader()
-                self.showError(description: error)
+                self.showInfoAlert(description: error)
             }
         }
         getInformationOfProduct()
@@ -70,10 +64,12 @@ class ProductScreenViewController: UITableViewController {
             tableView.backgroundColor = .white
         }
         
+        let footer = FooterViewProductScreen()
+        footer.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
+        self.footerView = footer
+        tableView.tableFooterView = footer
         tableView.allowsSelection = false
         tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        let refreshControl = UIRefreshControl()
-        tableView.refreshControl = refreshControl
     }
     
     private func registerCells() {
@@ -88,16 +84,15 @@ class ProductScreenViewController: UITableViewController {
     }
     
     private func showLoader() {
-        tableView.refreshControl?.beginRefreshing()
+        footerView.startAnimating()
     }
     
     private func cancelLoader() {
-        tableView.refreshControl?.endRefreshing()
-        tableView.refreshControl = nil
+        footerView.stopAnimating()
     }
     
-    private func showError(description: String) {
-        settingAlert(title: "Error", message: description)
+    private func showInfoAlert(description: String) {
+        settingAlert(title: "Информация", message: description)
     }
     
     private func settingAlert(title: String, message: String) {
@@ -105,6 +100,11 @@ class ProductScreenViewController: UITableViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    //MARK: ordering
+    @objc private func orderButtonIsPressed() {
+        router.transitionToOrderScreen()
     }
     
     //MARK: UITableViewDataSource
@@ -121,17 +121,5 @@ class ProductScreenViewController: UITableViewController {
         }
         cell.viewModel = cellViewModel
         return cell
-    }
-    
-    //MARK: UITableViewDelegate
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
-}
-
-//MARK: ordering menu
-extension ProductScreenViewController {
-    @objc private func orderButtonIsPressed() {
-        ordering.openOrderInfoList()
     }
 }

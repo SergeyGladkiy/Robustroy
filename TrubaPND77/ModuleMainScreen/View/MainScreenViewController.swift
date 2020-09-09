@@ -37,7 +37,7 @@ class MainScreenViewController: UICollectionViewController {
         
         viewModel.state.bind { [weak self] (state) in
             guard let self = self else {
-                print("MainScreenViewController deinited")
+                print("MainScreenViewController is deinitialized")
                 return
             }
 
@@ -47,7 +47,7 @@ class MainScreenViewController: UICollectionViewController {
             case .readyToShowItems:
                 self.collectionView.reloadData()
             case .errorOccured(let unknownError):
-                self.showError(description: unknownError)
+                self.showInfoAlert(description: unknownError)
             }
         }
         
@@ -77,8 +77,8 @@ class MainScreenViewController: UICollectionViewController {
         collectionView.register(HeaderCollectionViewCellMainScreen.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionViewCellMainScreen.reuseIdentifier)
     }
     
-    private func showError(description: String) {
-        settingAlert(title: "Error", message: description)
+    private func showInfoAlert(description: String) {
+        settingAlert(title: "Информация", message: description)
     }
     
     private func settingAlert(title: String, message: String) {
