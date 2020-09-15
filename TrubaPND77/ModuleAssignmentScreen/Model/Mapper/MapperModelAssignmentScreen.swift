@@ -12,9 +12,9 @@ class MapperModelAssignmentScreen {
     
 }
 
-extension MapperModelAssignmentScreen: MapperProtocolModelAssignmentScreen {
+extension MapperModelAssignmentScreen: MapperModelProtocolAssignmentScreen {
     func parse(items: [RepresentativableItem]) -> [ItemAssignmentScreen] {
-        return items.map { ItemAssignmentScreen(title: $0.name, price: $0.price, urlImage: $0.urlImage, link: $0.linkToDescription)
+        return items.map { ItemAssignmentScreen(name: $0.name, title: $0.title, price: $0.price, urlImage: $0.urlImage, link: $0.linkToDescription)
         }
     }
     
@@ -26,6 +26,4 @@ extension MapperModelAssignmentScreen: MapperProtocolModelAssignmentScreen {
         print(error)
         return false
     }
-    
-    
 }

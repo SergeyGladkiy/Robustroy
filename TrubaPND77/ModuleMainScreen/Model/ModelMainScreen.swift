@@ -10,7 +10,7 @@ import Foundation
 
 class ModelMainScreen {
     var staticInfо = Observable<[Int: ItemMainScreen]>(observable: [:])
-    var errorOccure = Observable<CustomError>(observable: .initial)
+    var errorOccured = Observable<CustomError>(observable: .initial)
 }
 
 extension ModelMainScreen: ModelMainScreenProtocol {
@@ -18,7 +18,7 @@ extension ModelMainScreen: ModelMainScreenProtocol {
     func processingStaticInformation() {
         guard let path = Bundle.main.path(forResource: "DataMainScreen", ofType: "plist") else {
             objectDescription(self, function: #function)
-            errorOccure.observable = .wrongFilePath
+            errorOccured.observable = .wrongFilePath
             return
         }
         
@@ -31,7 +31,7 @@ extension ModelMainScreen: ModelMainScreenProtocol {
             staticInfо.observable = dict
         } catch {
             objectDescription(self, function: #function)
-            errorOccure.observable = .decodingError
+            errorOccured.observable = .decodingError
         }
     }
 }

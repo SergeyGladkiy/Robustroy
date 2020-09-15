@@ -9,8 +9,23 @@
 import Foundation
 
 struct ItemAssignmentScreen {
+    let name: String
     let title: String
     let price: String
     let urlImage: String
     let link: String
+}
+
+extension ItemAssignmentScreen: Equatable {
+    static func == (lhs: ItemAssignmentScreen, rhs: ItemAssignmentScreen) -> Bool {
+        if
+            lhs.name == rhs.name,
+            lhs.title == rhs.title,
+            lhs.price == rhs.price,
+            lhs.urlImage == rhs.urlImage,
+            lhs.link == rhs.link {
+            return true
+        }
+        return false
+    }
 }

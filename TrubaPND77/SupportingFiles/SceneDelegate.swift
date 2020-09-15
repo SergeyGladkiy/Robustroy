@@ -16,13 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard
             let windowScene = (scene as? UIWindowScene),
-            let appCoordinator: ApplicationCoordinatorProtocol? = DependenceProvider.resolve()
+            let appCoordinator: ApplicationCoordinatorProtocol = DependenceProvider.resolve()
             else {
                 objectDescription(self, function: #function)
                 return
         }
         
-        window = appCoordinator?.prepareWindow(with: windowScene)
+        window = appCoordinator.prepareWindow(with: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -43,7 +43,7 @@ class TestViewModelMainScreen: XCTestCase {
    
     func testGeneratingItemsIsSuccessfulAndNumberOfRowsIsNotEmptyAndStateIsReadyToShowItems() {
         //given
-        let itemsCount = EntityMocker.generateItem().count
+        let itemsCount = EntityMockerMainScreen.generateItems().count
         
         //when
         sut.generateItems()
@@ -64,7 +64,7 @@ class TestViewModelMainScreen: XCTestCase {
     
     func testCellViewModelIsCreated() {
         //given
-        guard let mockCellViewModel = EntityMocker.generateItem().first else {
+        guard let mockCellViewModel = EntityMockerMainScreen.generateItems().first else {
             XCTFail()
             return
         }
@@ -78,10 +78,10 @@ class TestViewModelMainScreen: XCTestCase {
         XCTAssertNotNil(result, "cellViewModel is nil")
     }
     
-    func testStateIsErrorOccureAndDescriptionOfError() {
+    func testStateIsErrorOccuredAndDescriptionOfError() {
         //given
         var descriptionError = ""
-        let number = EntityMocker.wrongNumberOfItemsInDataBase()
+        let number = EntityMockerMainScreen.wrongNumberOfItemsInDataBase()
         
         
         //when
@@ -90,7 +90,7 @@ class TestViewModelMainScreen: XCTestCase {
         settingFunctionalityOfTestingViewModel()
         
         switch state {
-        case .errorOccure(let error):
+        case .errorOccured(let error):
             resutlCheckState = true
             descriptionError = error
         default:
@@ -102,17 +102,17 @@ class TestViewModelMainScreen: XCTestCase {
         XCTAssert(descriptionError == unknownError, "error description is not correct")
     }
     
-    func testTwoWayDataBindingMockModelErrorOccureAndChangeStateViewModel() {
+    func testTwoWayDataBindingMockModelErrorOccuredAndChangeStateViewModel() {
         //given
         let decodingError = CustomError.decodingError
         
         //when
-        sut.twoWayDataBinding()
-        mockModel.errorOccure.observable = decodingError
+        //MARK: func twoWayDataBinding is call in init of viewModel
+        mockModel.errorOccured.observable = decodingError
         settingFunctionalityOfTestingViewModel()
         
         switch state {
-        case .errorOccure(_):
+        case .errorOccured(_):
             resutlCheckState = true
         default:
             break
@@ -124,10 +124,10 @@ class TestViewModelMainScreen: XCTestCase {
     
     func testTwoWayDataBindingMockModelStaticInformationAndChangeStateViewModelAndQuantityOfDictionaryOfItemsIsNotZero() {
         //given
-        let item = EntityMocker.generateItem()
+        let item = EntityMockerMainScreen.generateItems()
         
         //when
-        sut.twoWayDataBinding()
+        //MARK: func twoWayDataBinding is call in init of viewModel
         mockModel.staticInfо.observable = item
         settingFunctionalityOfTestingViewModel()
         
@@ -146,14 +146,14 @@ class TestViewModelMainScreen: XCTestCase {
     func testTwoWayDataBindingAfterDeinitializationViewModelStateIsNotChanged() {
         //given
         let error = CustomError.decodingError
-        let item = EntityMocker.generateItem()
+        let item = EntityMockerMainScreen.generateItems()
         
         //when
-        sut.twoWayDataBinding()
+        //MARK: func twoWayDataBinding is call in init of viewModel
         settingFunctionalityOfTestingViewModel()
         sut = nil
         mockModel.staticInfо.observable = item
-        mockModel.errorOccure.observable = error
+        mockModel.errorOccured.observable = error
         
         switch state {
         case .initial:

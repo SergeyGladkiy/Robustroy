@@ -32,12 +32,12 @@ class MainScreenViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
-        
+        settingNavigationAndTabBarItems()
         settingLayoutCollectionView()
+        
         viewModel.state.bind { [weak self] (state) in
             guard let self = self else {
-                print("MainScreenViewController deinited")
+                print("MainScreenViewController is deinitialized")
                 return
             }
 
@@ -46,17 +46,21 @@ class MainScreenViewController: UICollectionViewController {
                 return
             case .readyToShowItems:
                 self.collectionView.reloadData()
-            case .errorOccure(let unknownError):
-                self.showError(description: unknownError)
+            case .errorOccured(let unknownError):
+                self.showInfoAlert(description: unknownError)
             }
         }
         
-        viewModel.generateItems()
+        viewModel.getShowableInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    private func settingNavigationAndTabBarItems() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
     
     private func settingLayoutCollectionView() {
@@ -73,8 +77,8 @@ class MainScreenViewController: UICollectionViewController {
         collectionView.register(HeaderCollectionViewCellMainScreen.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionViewCellMainScreen.reuseIdentifier)
     }
     
-    private func showError(description: String) {
-        settingAlert(title: "Error", message: description)
+    private func showInfoAlert(description: String) {
+        settingAlert(title: "Информация", message: description)
     }
     
     private func settingAlert(title: String, message: String) {
@@ -146,32 +150,32 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height: CGFloat = indexPath.row == 2 ? 220 : 210
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return .init(width: view.frame.width, height: height + 50)
         }
         return .init(width: view.frame.width, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return .init(width: view.frame.width, height: 500)
         }
         return .init(width: view.frame.width, height: 260)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if view.traitCollection.horizontalSizeClass == .regular {
+        if traitCollection.horizontalSizeClass == .regular {
             return 40
         }
         return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-
-        let heighTabBar = self.tabBarController?.tabBar.frame.height ?? 49
-        let index: CGFloat = heighTabBar == 49 ? 4 : 6
-
-        return .init(top: padding, left: 0, bottom: index*padding, right: 0)
+        guard let heightTabBar = tabBarController?.tabBar.frame.height else {
+            objectDescription(self, function: #function)
+            return .zero
+        }
+        return .init(top: padding, left: 0, bottom: padding + heightTabBar, right: 0)
     }
 }
 

@@ -27,6 +27,8 @@ class MainScreenGroupCell: UICollectionViewCell {
             titleLabel.text = viewModel.titleGroup
             descriptionLabel.text = viewModel.descriptionGroup
             attachments = viewModel.attachmentsGroup
+            
+            //MARK: for attributedString Каталог... по назначению
         }
     }
     

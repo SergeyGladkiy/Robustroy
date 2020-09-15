@@ -11,33 +11,50 @@ import XCTest
 
 class TrubaPND77Tests: XCTestCase {
     
+    var sut: UIViewController!
 
-    override func setUpWithError() throws {
-       
+    override func setUp() {
+        super.setUp()
+        obtainViewControllerFromUIAplicationWindow()
     }
 
-    override func tearDownWithError() throws {
-        
-    }
-
-    func testRootViewControllerIsMainScreenViewController() {
-        guard let sut = UIApplication.shared.windows.first else {
-            XCTFail()
-            return
-        }
-        
-        let rootViewController = sut.rootViewController
-        XCTAssertTrue(rootViewController is MainScreenViewController)
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
     }
     
-    func testLayoutRootControllerIsFlowLayout() {
-        guard let sut = UIApplication.shared.windows.first else {
+    private func obtainViewControllerFromUIAplicationWindow() {
+        guard let keyWindow = UIApplication.shared.windows.first else {
             XCTFail()
             return
         }
-        
-        let rootViewController = sut.rootViewController as! MainScreenViewController
-        XCTAssertTrue(rootViewController.collectionViewLayout is UICollectionViewFlowLayout)
+        self.sut = keyWindow.rootViewController
     }
+    
+    func testRootViewControllerIsTabBarController() {
+        //then
+        XCTAssertTrue(sut is UITabBarController, "RootViewController is not UITabBarController")
+    }
+    
+//    func testMainScreenViewControllerIsFirstViewControllerOfStackTabBarController() {
+//        //when
+//        guard let tabBarController = sut as? UITabBarController else {
+//            XCTFail()
+//            return
+//        }
+//        
+//        //then
+//        XCTAssertTrue(tabBarController.viewControllers?.first is UINavigationController, "MainScreenViewController is not first view controller of stack UITabBarController")
+//    }
+//    
+//    func testLayoutRootControllerIsFlowLayout() {
+//        guard let sut = UIApplication.shared.windows.first else {
+//            XCTFail()
+//            return
+//        }
+//        
+//        let rootViewController = sut.rootViewController as! MainScreenViewController
+//        XCTAssertTrue(rootViewController.collectionViewLayout is UICollectionViewFlowLayout)
+//    }
 
 }

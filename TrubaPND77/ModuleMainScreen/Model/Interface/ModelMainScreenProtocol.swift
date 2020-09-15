@@ -10,6 +10,6 @@ import Foundation
 
 protocol ModelMainScreenProtocol {
     var staticInfо: Observable<[Int: ItemMainScreen]> { get }
-    var errorOccure: Observable<CustomError> { get }
+    var errorOccured: Observable<CustomError> { get }
     func processingStaticInformation()
 }

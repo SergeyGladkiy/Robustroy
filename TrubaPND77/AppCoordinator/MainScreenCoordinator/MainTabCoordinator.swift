@@ -12,6 +12,8 @@ import UIKit
 class MainTabCoordinator {
     private weak var mainScreenViewController: MainScreenViewController!
     private weak var assignmentScreenViewController: AssignmentScreenViewController!
+    private weak var productScreenViewController: ProductScreenViewController!
+    private var titleProduct = ""
 }
 
 extension MainTabCoordinator: BasicRoutingCoordinatorProtocol {
@@ -31,7 +33,7 @@ extension MainTabCoordinator: MainScreenRouterInput {
         //MARK: change url path for network request
         API.path = link
         guard
-            let assignmentController: AssignmentScreenViewController = DependenceProvider.resolve(),
+            let assignmentController: AssignmentScreenViewController = DependenceProvider.resolveWith(arg: "main"),
             let nav = mainScreenViewController.navigationController else {
             //MARK: ??? atempt setting a parameter in func objDesc for optional
             objectDescription(self, function: #function)
@@ -43,10 +45,24 @@ extension MainTabCoordinator: MainScreenRouterInput {
 }
 
 extension MainTabCoordinator: AssignmentScreenRouterInput {
-    func transitionToProductScreen() {
-        let nvc = NewVC()
-        assignmentScreenViewController.navigationController?.pushViewController(nvc, animated: true)
+    func transitionToProductScreen(with info: ItemCredential) {
+        API.path = info.link
+        guard
+            let productController: ProductScreenViewController = DependenceProvider.resolveWith(arg: "main") else {
+                objectDescription(self, function: #function)
+                return }
+        ItemProductScreen.productCredential = ProductCredential(from: info)
+        self.titleProduct = info.titleItem
+        productController.navigationItem.title = info.titleItem
+        self.productScreenViewController = productController
+        assignmentScreenViewController.navigationController?.pushViewController(productController, animated: true)
     }
-    
-    
+}
+
+extension MainTabCoordinator: ProductScreenRouterInput {
+    func transitionToOrderScreen() {
+        let vc = OrderScreenViewController(nibName: "OrderScreenViewController", bundle: Bundle(for: OrderScreenViewController.self))
+        vc.productDescription = self.titleProduct
+        assignmentScreenViewController.navigationController?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+    }
 }
