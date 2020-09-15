@@ -10,13 +10,13 @@ import Foundation
 @testable import TrubaPND77
 
 class ModelMainScreenMock {
-    var errorOccure = Observable<CustomError>(observable: .initial)
+    var errorOccured = Observable<CustomError>(observable: .initial)
     var staticInfо = Observable<[Int : ItemMainScreen]>(observable: [:])
 }
 
 extension ModelMainScreenMock: ModelMainScreenProtocol {
     func processingStaticInformation() {
-        staticInfо.observable = EntityMocker.generateItem()
+        staticInfо.observable = EntityMockerMainScreen.generateItems()
     }
     
 }

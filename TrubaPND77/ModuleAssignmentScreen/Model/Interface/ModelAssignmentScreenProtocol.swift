@@ -10,6 +10,6 @@ import Foundation
 
 protocol ModelAssignmentScreenProtocol {
     var dataSource: Observable<[ItemAssignmentScreen]> { get }
-    var errorOccure: Observable<CustomError> { get }
+    var errorOccured: Observable<CustomError> { get }
     func fetchingInformation()
 }

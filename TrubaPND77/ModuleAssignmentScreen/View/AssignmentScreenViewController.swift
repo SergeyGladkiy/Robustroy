@@ -14,6 +14,7 @@ class AssignmentScreenViewController: UICollectionViewController {
     private let viewModel: ViewModelAssignmentScreenProtocol
     private let router: AssignmentScreenRouterInput
     
+    private weak var indicatorView: UIActivityIndicatorView!
     private let padding: CGFloat = 16
     
     init(viewModel: ViewModelAssignmentScreenProtocol, router: AssignmentScreenRouterInput, layout: UICollectionViewLayout) {
@@ -34,11 +35,11 @@ class AssignmentScreenViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
         settingLayoutCollectionView()
+        
         viewModel.state.bind { [weak self] (state) in
             guard let self = self else {
-                print("AssignmentScreenViewController deinited")
+                print("AssignmentScreenViewController is deinitialized")
                 return
             }
             
@@ -48,44 +49,51 @@ class AssignmentScreenViewController: UICollectionViewController {
             case .showLoader:
                 self.showLoader()
             case .readyToShowItems:
+                self.cancelLoader()
                 self.collectionView.reloadData()
+            case .errorOccured(let error):
                 self.cancelLoader()
-            case .errorOccure(let error):
-                self.cancelLoader()
-                self.showError(description: error)
+                self.showInfoAlert(description: error)
             }
         }
         getListOfItems()
     }
     
     fileprivate func settingLayoutCollectionView() {
+        let indicator: UIActivityIndicatorView
         if #available(iOS 13.0, *) {
             collectionView.backgroundColor = .secondarySystemBackground
+            indicator = UIActivityIndicatorView(style: .large)
         } else {
             collectionView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
+            indicator = UIActivityIndicatorView(style: .gray)
         }
+        
         collectionView.register(AssignmentScreenCollectionViewCell.self, forCellWithReuseIdentifier: AssignmentScreenCollectionViewCell.reuseIdentifier)
         
-        let refreshControl = UIRefreshControl()
-        collectionView.refreshControl = refreshControl
+        self.indicatorView = indicator
+        collectionView.addSubview(indicatorView)
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            indicatorView.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: indicatorView.centerYAnchor, constant: 70)
+        ])
     }
     
     private func showLoader() {
-        collectionView.refreshControl?.beginRefreshing()
+        indicatorView.startAnimating()
     }
     
     private func cancelLoader() {
-        collectionView.refreshControl?.endRefreshing()
-        //MARK: !!!!!?????? in terminal appear a message
-        collectionView.refreshControl = nil
+        indicatorView.stopAnimating()
     }
     
     private func getListOfItems() {
         viewModel.getInformation()
     }
     
-    private func showError(description: String) {
-        settingAlert(title: "Error", message: description)
+    private func showInfoAlert(description: String) {
+        settingAlert(title: "Информация", message: description)
     }
     
     private func settingAlert(title: String, message: String) {
@@ -99,6 +107,7 @@ class AssignmentScreenViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRows()
     }
+    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AssignmentScreenCollectionViewCell.reuseIdentifier, for: indexPath) as? AssignmentScreenCollectionViewCell else {
@@ -112,7 +121,8 @@ class AssignmentScreenViewController: UICollectionViewController {
     
     //MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router.transitionToProductScreen()
+        let data = viewModel.getCredentialFor(item: indexPath)
+        router.transitionToProductScreen(with: data)
     }
 }
 

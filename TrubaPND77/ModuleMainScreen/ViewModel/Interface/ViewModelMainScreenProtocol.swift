@@ -11,12 +11,12 @@ import Foundation
 enum ViewModelMainScreenState {
     case initial
     case readyToShowItems
-    case errorOccure(String)
+    case errorOccured(String)
 }
 
 protocol ViewModelMainScreenProtocol {
     var state: Observable<ViewModelMainScreenState> { get }
-    func generateItems()
+    func getShowableInfo()
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen?
 }
