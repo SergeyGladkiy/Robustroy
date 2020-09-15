@@ -25,7 +25,6 @@ class OrderScreenViewController: UIViewController {
         settingLayout()
         customizingNavigation()
         addObserversForKeyBoard()
-        //setupToHideKeyboardOnTapOnView()
     }
     
     deinit {
@@ -67,7 +66,7 @@ class OrderScreenViewController: UIViewController {
             
             let isKeyboardShowing = notification.name == UIResponder.keyboardWillShowNotification
             
-            bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height + 15 : 30
+            bottomConstraint.constant = isKeyboardShowing ? keyboardFrame.height + 10 : 30
             
             UIView.animate(withDuration: 0.5, animations: { () -> Void in
                 self.view.layoutIfNeeded()

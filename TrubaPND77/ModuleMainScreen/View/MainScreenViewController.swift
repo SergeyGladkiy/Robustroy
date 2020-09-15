@@ -51,7 +51,7 @@ class MainScreenViewController: UICollectionViewController {
             }
         }
         
-        viewModel.generateItems()
+        viewModel.getShowableInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -171,11 +171,11 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-
-        let heighTabBar = self.tabBarController?.tabBar.frame.height ?? 49
-        let index: CGFloat = heighTabBar == 49 ? 4 : 6
-
-        return .init(top: padding, left: 0, bottom: index*padding, right: 0)
+        guard let heightTabBar = tabBarController?.tabBar.frame.height else {
+            objectDescription(self, function: #function)
+            return .zero
+        }
+        return .init(top: padding, left: 0, bottom: padding + heightTabBar, right: 0)
     }
 }
 

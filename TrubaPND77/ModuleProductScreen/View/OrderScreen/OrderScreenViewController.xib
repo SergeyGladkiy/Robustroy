@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-bm-OWt">
-                    <rect key="frame" x="16" y="52" width="382" height="121.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4vr-bm-OWt">
+                    <rect key="frame" x="16" y="52" width="382" height="136.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оставьте заявку и мы вам перезвоним" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-RF-97z">
                             <rect key="frame" x="36" y="0.0" width="310.5" height="20.5"/>
@@ -35,7 +35,7 @@
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warnLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5u-Fm-Ptd">
-                            <rect key="frame" x="147" y="25.5" width="88" height="23"/>
+                            <rect key="frame" x="147" y="30.5" width="88" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             </variation>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CO1-VB-jwk">
-                            <rect key="frame" x="10" y="53.5" width="362" height="31.5"/>
+                            <rect key="frame" x="10" y="63.5" width="362" height="31.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderPerson" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-4i-HyT">
                                     <rect key="frame" x="0.0" y="1.5" width="40" height="29"/>
@@ -80,7 +80,7 @@
                             <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Riy-Bd-dfR">
-                            <rect key="frame" x="10" y="90" width="362" height="31.5"/>
+                            <rect key="frame" x="10" y="105" width="362" height="31.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderPhone" translatesAutoresizingMaskIntoConstraints="NO" id="SNV-5Q-VfH">
                                     <rect key="frame" x="0.0" y="1.5" width="40" height="29"/>
@@ -122,7 +122,7 @@
                         <constraint firstItem="Riy-Bd-dfR" firstAttribute="centerX" secondItem="4vr-bm-OWt" secondAttribute="centerX" id="jBc-rj-BQu"/>
                         <constraint firstItem="CO1-VB-jwk" firstAttribute="leading" secondItem="4vr-bm-OWt" secondAttribute="leading" constant="10" id="nN6-a9-cDt"/>
                     </constraints>
-                    <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
+                    <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtf-0T-XMm">
                     <rect key="frame" x="142" y="796" width="130" height="36"/>

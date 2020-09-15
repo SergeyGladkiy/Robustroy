@@ -66,6 +66,22 @@
 		82892D5D25065FA0008F18E7 /* OrderScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82892D5B25065FA0008F18E7 /* OrderScreenViewController.swift */; };
 		82892D5E25065FA0008F18E7 /* OrderScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82892D5C25065FA0008F18E7 /* OrderScreenViewController.xib */; };
 		828FD5332508B4B0001C0835 /* FooterViewProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD5322508B4B0001C0835 /* FooterViewProductScreen.swift */; };
+		828FD565250A1E0A001C0835 /* ModelCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD564250A1E0A001C0835 /* ModelCatalogScreen.swift */; };
+		828FD567250A1E37001C0835 /* ModelCatalogScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD566250A1E37001C0835 /* ModelCatalogScreenProtocol.swift */; };
+		828FD56A250A1E87001C0835 /* ViewModelCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD569250A1E87001C0835 /* ViewModelCatalogScreen.swift */; };
+		828FD56D250A1EA8001C0835 /* ViewModelCatalogScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD56C250A1EA8001C0835 /* ViewModelCatalogScreenProtocol.swift */; };
+		828FD570250A1ED2001C0835 /* CatalogScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD56F250A1ED2001C0835 /* CatalogScreenViewController.swift */; };
+		828FD573250A2473001C0835 /* MenuCellCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD572250A2473001C0835 /* MenuCellCatalogScreen.swift */; };
+		828FD576250A24B4001C0835 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD575250A24B4001C0835 /* MenuView.swift */; };
+		828FD579250A24EF001C0835 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD578250A24EF001C0835 /* MenuViewCell.swift */; };
+		828FD57C250A49CE001C0835 /* ItemCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD57B250A49CE001C0835 /* ItemCatalogScreen.swift */; };
+		828FD57E250A4ABE001C0835 /* DataCatalogScreen.plist in Resources */ = {isa = PBXBuildFile; fileRef = 828FD57D250A4ABE001C0835 /* DataCatalogScreen.plist */; };
+		828FD582250A5572001C0835 /* AttachmentItemCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD581250A5572001C0835 /* AttachmentItemCatalogScreen.swift */; };
+		828FD584250A9A6D001C0835 /* TypeItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD583250A9A6D001C0835 /* TypeItemGroup.swift */; };
+		828FD587250A9D7A001C0835 /* CellViewModelCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD586250A9D7A001C0835 /* CellViewModelCatalogScreen.swift */; };
+		828FD58B250AA689001C0835 /* CatalogTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD58A250AA689001C0835 /* CatalogTabCoordinator.swift */; };
+		828FD58E250AA6B6001C0835 /* CatalogScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */; };
+		828FD593250AB117001C0835 /* CatalogScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD592250AB117001C0835 /* CatalogScreenAssembly.swift */; };
 		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */; };
 		82B669982502340E00A208D7 /* ProductCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669972502340E00A208D7 /* ProductCredential.swift */; };
 		82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669992502358200A208D7 /* ItemCredential.swift */; };
@@ -179,6 +195,22 @@
 		82892D5B25065FA0008F18E7 /* OrderScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreenViewController.swift; sourceTree = "<group>"; };
 		82892D5C25065FA0008F18E7 /* OrderScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderScreenViewController.xib; sourceTree = "<group>"; };
 		828FD5322508B4B0001C0835 /* FooterViewProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewProductScreen.swift; sourceTree = "<group>"; };
+		828FD564250A1E0A001C0835 /* ModelCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD566250A1E37001C0835 /* ModelCatalogScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogScreenProtocol.swift; sourceTree = "<group>"; };
+		828FD569250A1E87001C0835 /* ViewModelCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD56C250A1EA8001C0835 /* ViewModelCatalogScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCatalogScreenProtocol.swift; sourceTree = "<group>"; };
+		828FD56F250A1ED2001C0835 /* CatalogScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenViewController.swift; sourceTree = "<group>"; };
+		828FD572250A2473001C0835 /* MenuCellCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD575250A24B4001C0835 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		828FD578250A24EF001C0835 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
+		828FD57B250A49CE001C0835 /* ItemCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD57D250A4ABE001C0835 /* DataCatalogScreen.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataCatalogScreen.plist; sourceTree = "<group>"; };
+		828FD581250A5572001C0835 /* AttachmentItemCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentItemCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD583250A9A6D001C0835 /* TypeItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeItemGroup.swift; sourceTree = "<group>"; };
+		828FD586250A9D7A001C0835 /* CellViewModelCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelCatalogScreen.swift; sourceTree = "<group>"; };
+		828FD58A250AA689001C0835 /* CatalogTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTabCoordinator.swift; sourceTree = "<group>"; };
+		828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenRouterInput.swift; sourceTree = "<group>"; };
+		828FD592250AB117001C0835 /* CatalogScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembly.swift; sourceTree = "<group>"; };
 		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		82B669972502340E00A208D7 /* ProductCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCredential.swift; sourceTree = "<group>"; };
 		82B669992502358200A208D7 /* ItemCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCredential.swift; sourceTree = "<group>"; };
@@ -477,6 +509,7 @@
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
 				82DFDAF124ED5E5B005877B7 /* ModuleAssignmentScreen */,
 				8220B84824FCF25000DF530A /* ModuleProductScreen */,
+				828FD561250A1DBA001C0835 /* ModuleCatalogScreen */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
 			);
@@ -690,6 +723,124 @@
 			path = FooterIndicatorableView;
 			sourceTree = "<group>";
 		};
+		828FD561250A1DBA001C0835 /* ModuleCatalogScreen */ = {
+			isa = PBXGroup;
+			children = (
+				828FD56E250A1EB3001C0835 /* View */,
+				828FD568250A1E6A001C0835 /* ViewModel */,
+				828FD562250A1DE8001C0835 /* Model */,
+			);
+			path = ModuleCatalogScreen;
+			sourceTree = "<group>";
+		};
+		828FD562250A1DE8001C0835 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				828FD57A250A3D46001C0835 /* Entities */,
+				828FD563250A1DF2001C0835 /* Interface */,
+				828FD564250A1E0A001C0835 /* ModelCatalogScreen.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		828FD563250A1DF2001C0835 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				828FD566250A1E37001C0835 /* ModelCatalogScreenProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		828FD568250A1E6A001C0835 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				828FD56B250A1E8A001C0835 /* Interface */,
+				828FD569250A1E87001C0835 /* ViewModelCatalogScreen.swift */,
+				828FD585250A9D65001C0835 /* CellViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		828FD56B250A1E8A001C0835 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				828FD56C250A1EA8001C0835 /* ViewModelCatalogScreenProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		828FD56E250A1EB3001C0835 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				828FD56F250A1ED2001C0835 /* CatalogScreenViewController.swift */,
+				828FD574250A2493001C0835 /* CustomMenuViewBar */,
+				828FD571250A2448001C0835 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		828FD571250A2448001C0835 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				828FD572250A2473001C0835 /* MenuCellCatalogScreen.swift */,
+				828FD578250A24EF001C0835 /* MenuViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		828FD574250A2493001C0835 /* CustomMenuViewBar */ = {
+			isa = PBXGroup;
+			children = (
+				828FD575250A24B4001C0835 /* MenuView.swift */,
+			);
+			path = CustomMenuViewBar;
+			sourceTree = "<group>";
+		};
+		828FD57A250A3D46001C0835 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				828FD57D250A4ABE001C0835 /* DataCatalogScreen.plist */,
+				828FD57B250A49CE001C0835 /* ItemCatalogScreen.swift */,
+				828FD583250A9A6D001C0835 /* TypeItemGroup.swift */,
+				828FD581250A5572001C0835 /* AttachmentItemCatalogScreen.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		828FD585250A9D65001C0835 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				828FD586250A9D7A001C0835 /* CellViewModelCatalogScreen.swift */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		828FD588250AA627001C0835 /* BasicScreenInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				82DFDB0124ED6754005877B7 /* AssignmentScreenRouterInput.swift */,
+				8220B85524FCF3F000DF530A /* ProductScreenRouterInput.swift */,
+			);
+			path = BasicScreenInterfaces;
+			sourceTree = "<group>";
+		};
+		828FD589250AA662001C0835 /* CatalogScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				828FD58C250AA68F001C0835 /* Interface */,
+				828FD58A250AA689001C0835 /* CatalogTabCoordinator.swift */,
+			);
+			path = CatalogScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		828FD58C250AA68F001C0835 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		82A724C124F405F900C0D055 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +1007,7 @@
 			children = (
 				82DFDADF24EBF047005877B7 /* AppCoordinatorAssambly.swift */,
 				82DFDAE724EC02F6005877B7 /* MainScreenAssembly.swift */,
+				828FD592250AB117001C0835 /* CatalogScreenAssembly.swift */,
 				82DFDB0324ED6C9D005877B7 /* AssignmentScreenAssembly.swift */,
 				8220B85924FCF84B00DF530A /* ProductScreenAssembly.swift */,
 			);
@@ -868,6 +1020,7 @@
 				82DFDAE424EBF96E005877B7 /* Interfaces */,
 				82DFDAE224EBF953005877B7 /* ApplicationCoordinator.swift */,
 				82DFDAED24EC0C17005877B7 /* MainScreenCoordinator */,
+				828FD589250AA662001C0835 /* CatalogScreenCoordinator */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -877,6 +1030,7 @@
 			children = (
 				82DFDAE524EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift */,
 				82DFDAEB24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift */,
+				828FD588250AA627001C0835 /* BasicScreenInterfaces */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -894,8 +1048,6 @@
 			isa = PBXGroup;
 			children = (
 				82DFDAEF24EC0C4F005877B7 /* MainScreenRouterInput.swift */,
-				82DFDB0124ED6754005877B7 /* AssignmentScreenRouterInput.swift */,
-				8220B85524FCF3F000DF530A /* ProductScreenRouterInput.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -1055,6 +1207,7 @@
 				8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */,
 				82892D5E25065FA0008F18E7 /* OrderScreenViewController.xib in Resources */,
 				82B669C62503989700A208D7 /* CharacteristicsProductCell.xib in Resources */,
+				828FD57E250A4ABE001C0835 /* DataCatalogScreen.plist in Resources */,
 				8284A5F424D0290C00EB33CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,11 +1290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828FD56A250A1E87001C0835 /* ViewModelCatalogScreen.swift in Sources */,
 				82DFDB0A24F006CB005877B7 /* ProductScreenViewController.swift in Sources */,
 				821FDCE824F1644500B7AFCD /* MapperModelAssignmentScreen.swift in Sources */,
 				82B669B82502680F00A208D7 /* DescriptionProduct.swift in Sources */,
 				8284A65224D433B100EB33CD /* NetworkProtocolAssignmentModule.swift in Sources */,
 				82DFDAE624EBF9F4005877B7 /* ApplicationCoordinatorProtocol.swift in Sources */,
+				828FD570250A1ED2001C0835 /* CatalogScreenViewController.swift in Sources */,
+				828FD576250A24B4001C0835 /* MenuView.swift in Sources */,
 				8284A62524D1810D00EB33CD /* Observable.swift in Sources */,
 				82DFDAE024EBF047005877B7 /* AppCoordinatorAssambly.swift in Sources */,
 				821FDCDB24F13E0B00B7AFCD /* RepresentativableItem.swift in Sources */,
@@ -1150,24 +1306,30 @@
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
 				8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */,
 				82B669AC25024BAE00A208D7 /* ProductScreenCellProtocol.swift in Sources */,
+				828FD579250A24EF001C0835 /* MenuViewCell.swift in Sources */,
 				82DFDB0424ED6C9D005877B7 /* AssignmentScreenAssembly.swift in Sources */,
 				8220B85A24FCF84B00DF530A /* ProductScreenAssembly.swift in Sources */,
 				82B669B6250267AE00A208D7 /* ItemProductScreen.swift in Sources */,
 				82DFDAE824EC02F6005877B7 /* MainScreenAssembly.swift in Sources */,
 				8284A61B24D1801000EB33CD /* ViewModelMainScreen.swift in Sources */,
+				828FD573250A2473001C0835 /* MenuCellCatalogScreen.swift in Sources */,
 				8284A65624D4393B00EB33CD /* MapperNetworkProtocol.swift in Sources */,
 				82DFDAF024EC0C4F005877B7 /* MainScreenRouterInput.swift in Sources */,
 				8284A61E24D1805400EB33CD /* ViewModelMainScreenProtocol.swift in Sources */,
 				8284A5EB24D0290800EB33CD /* AppDelegate.swift in Sources */,
+				828FD567250A1E37001C0835 /* ModelCatalogScreenProtocol.swift in Sources */,
 				8284A65A24D48A3000EB33CD /* CustomError.swift in Sources */,
 				82B6699D2502463500A208D7 /* CellViewModelProductScreen.swift in Sources */,
 				82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */,
 				8220B85124FCF36200DF530A /* ModelProductScreen.swift in Sources */,
+				828FD58E250AA6B6001C0835 /* CatalogScreenRouterInput.swift in Sources */,
 				8284A65824D4397200EB33CD /* MapperNetwork.swift in Sources */,
 				8284A62024D180A100EB33CD /* ModelMainScreen.swift in Sources */,
 				8284A64324D2EB7D00EB33CD /* AttachmentItemMainScreen.swift in Sources */,
+				828FD582250A5572001C0835 /* AttachmentItemCatalogScreen.swift in Sources */,
 				8284A62324D180D900EB33CD /* ModelMainScreenProtocol.swift in Sources */,
 				8220B84F24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift in Sources */,
+				828FD565250A1E0A001C0835 /* ModelCatalogScreen.swift in Sources */,
 				82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
 				8220B85624FCF3F000DF530A /* ProductScreenRouterInput.swift in Sources */,
@@ -1177,6 +1339,7 @@
 				821FDCE224F1611200B7AFCD /* ItemAssignmentScreen.swift in Sources */,
 				82DFDADB24EBEC45005877B7 /* DependenceProvider.swift in Sources */,
 				8284A66324DB081000EB33CD /* MainScreenGroupCell.swift in Sources */,
+				828FD587250A9D7A001C0835 /* CellViewModelCatalogScreen.swift in Sources */,
 				821FDCEA24F1656D00B7AFCD /* NetworkAssambly.swift in Sources */,
 				821FDCDD24F1579B00B7AFCD /* TitlesNavigationItem.swift in Sources */,
 				82B669B4250266F000A208D7 /* ItemInforamation.swift in Sources */,
@@ -1186,6 +1349,8 @@
 				82DFDAEC24EC0AB3005877B7 /* BasicRoutingCoordinatorProtocol.swift in Sources */,
 				82B669C52503989700A208D7 /* CharacteristicsProductCell.swift in Sources */,
 				8220B84C24FCF30200DF530A /* ViewModelProductScreen.swift in Sources */,
+				828FD593250AB117001C0835 /* CatalogScreenAssembly.swift in Sources */,
+				828FD58B250AA689001C0835 /* CatalogTabCoordinator.swift in Sources */,
 				82B669C125038F5000A208D7 /* CredentialProductCell.swift in Sources */,
 				82DFDAFF24ED61AE005877B7 /* ModelAssignmentScreenProtocol.swift in Sources */,
 				82DFDAF624ED5F5B005877B7 /* AssignmentScreenViewController.swift in Sources */,
@@ -1193,9 +1358,11 @@
 				82DFDAEA24EC07F4005877B7 /* MainTabCoordinator.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
 				82B669BE25029C8700A208D7 /* MapperModelProtocolProductScreen.swift in Sources */,
+				828FD584250A9A6D001C0835 /* TypeItemGroup.swift in Sources */,
 				82DFDAFB24ED60AB005877B7 /* ViewModelAssignmentScreenProtocol.swift in Sources */,
 				821FDCDF24F15ACF00B7AFCD /* API.swift in Sources */,
 				82DFDB0624EE637C005877B7 /* Timing.swift in Sources */,
+				828FD56D250A1EA8001C0835 /* ViewModelCatalogScreenProtocol.swift in Sources */,
 				82DFDB0C24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift in Sources */,
 				8284A65024D4335A00EB33CD /* NetworkingProtocol.swift in Sources */,
 				82DFDAF824ED5FB1005877B7 /* ViewModelAssignmentScreen.swift in Sources */,
@@ -1205,6 +1372,7 @@
 				8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */,
 				8220B85424FCF38900DF530A /* ModelProductScreenProtocol.swift in Sources */,
 				82EBC80E24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift in Sources */,
+				828FD57C250A49CE001C0835 /* ItemCatalogScreen.swift in Sources */,
 				8284A65D24D7290600EB33CD /* StretchyHeaderLayout.swift in Sources */,
 				82892D5D25065FA0008F18E7 /* OrderScreenViewController.swift in Sources */,
 				8284A63024D19D4A00EB33CD /* CellViewModelMainScreen.swift in Sources */,

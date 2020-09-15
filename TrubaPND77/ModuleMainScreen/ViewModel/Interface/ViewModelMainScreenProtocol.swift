@@ -16,7 +16,7 @@ enum ViewModelMainScreenState {
 
 protocol ViewModelMainScreenProtocol {
     var state: Observable<ViewModelMainScreenState> { get }
-    func generateItems()
+    func getShowableInfo()
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen?
 }

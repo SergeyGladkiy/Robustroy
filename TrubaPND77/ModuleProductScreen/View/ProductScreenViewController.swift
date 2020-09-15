@@ -65,7 +65,7 @@ class ProductScreenViewController: UITableViewController {
         }
         
         let footer = FooterViewProductScreen()
-        footer.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
+        footer.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40)
         self.footerView = footer
         tableView.tableFooterView = footer
         tableView.allowsSelection = false

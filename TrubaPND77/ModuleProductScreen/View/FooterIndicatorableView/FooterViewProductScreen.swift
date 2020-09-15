@@ -28,7 +28,12 @@ class FooterViewProductScreen: UIView {
     }
     
     private func customLayout() {
-        let indicator = UIActivityIndicatorView(style: .large)
+        let indicator: UIActivityIndicatorView
+        if #available(iOS 13.0, *) {
+            indicator = UIActivityIndicatorView(style: .large)
+        } else {
+            indicator = UIActivityIndicatorView(style: .gray)
+        }
         self.activityIndicator = indicator
         addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false

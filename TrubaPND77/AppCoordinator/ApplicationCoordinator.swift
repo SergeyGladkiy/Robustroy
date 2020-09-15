@@ -19,8 +19,12 @@ class ApplicationCoordinator {
             return nil
         }
         
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .yellow
+        let catalogCoordinator: CatalogScreenRouterInput? = DependenceProvider.resolve()
+        
+        guard let catalogTabController = (catalogCoordinator as? BasicRoutingCoordinatorProtocol)?.start() else {
+            objectDescription(self, function: #function)
+            return nil
+        }
         
         let vc3 = UIViewController()
         vc3.view.backgroundColor = .red
@@ -30,7 +34,7 @@ class ApplicationCoordinator {
         
         let array = [
             createNavController(viewController: mainTabController, title: "Главная", imageName: "house", nav: true),
-            createNavController(viewController: vc2, title: "Каталог", imageName: "catalog", nav: true),
+            createNavController(viewController: catalogTabController, title: "Каталог", imageName: "catalog", nav: true),
             createNavController(viewController: vc3, title: "О компании", imageName: "info.circle", nav: true),
             createNavController(viewController: vc4, title: "Контакты", imageName: "location", nav: true)
             
@@ -38,6 +42,8 @@ class ApplicationCoordinator {
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = array
+        //MARK: ????
+        //tabBarController.tabBar.isTranslucent = false
         
         if tabBarController.traitCollection.horizontalSizeClass == .regular {
             let systemFontAttributesForIPad = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]

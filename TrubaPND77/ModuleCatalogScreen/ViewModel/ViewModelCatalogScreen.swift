@@ -1,19 +1,19 @@
 //
-//  ViewModelMainScreen.swift
+//  ViewModelCatalogScreen.swift
 //  TrubaPND77
 //
-//  Created by Serg on 29.07.2020.
+//  Created by Serg on 10.09.2020.
 //  Copyright © 2020 Sergey Gladkiy. All rights reserved.
 //
 
 import Foundation
 
-class ViewModelMainScreen {
-    private var model: ModelMainScreenProtocol
-    var state: Observable<ViewModelMainScreenState>
-    private var dictionaryOfItems = [Int: ItemMainScreen]()
+class ViewModelCatalogScreen {
+    private var model: ModelCatalogScreenProtocol
+    var state: Observable<ViewModelCatalogScreenState>
+    private var dictionaryOfItems = [Int: ItemCatalogScreen]()
     
-    init(state: Observable<ViewModelMainScreenState>, model: ModelMainScreenProtocol) {
+    init(state: Observable<ViewModelCatalogScreenState>, model: ModelCatalogScreenProtocol) {
         self.state = state
         self.model = model
         twoWayDataBinding()
@@ -36,7 +36,7 @@ class ViewModelMainScreen {
             }
         }
         
-        model.staticInfо.bind { [weak self] (dict) in
+        model.staticInfoCatalog.bind { [weak self] (dict) in
             guard let self = self else {
                 print("ViewModelMainScreen is deinitialized")
                 return
@@ -49,22 +49,33 @@ class ViewModelMainScreen {
     }
 }
 
-extension ViewModelMainScreen: ViewModelMainScreenProtocol {
-    func getShowableInfo() {
-        model.processingStaticInformation()
+extension ViewModelCatalogScreen: ViewModelCatalogScreenProtocol {
+    func getInfoBarMenuView() -> [String] {
+        let count = dictionaryOfItems.count
+        let info = (0..<count).map {
+            dictionaryOfItems[$0]!.groupTitle
+        }
+        return info
+    }
+    
+    func getCatalogInfo() {
+        model.processingStaticData()
     }
     
     func numberOfRows() -> Int {
         return dictionaryOfItems.count
     }
     
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelMainScreen? {
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelCatalogScreen? {
         let data = dictionaryOfItems[indexPath.row]
         guard let model = data else {
             objectDescription(self, function: #function)
             state.observable = .errorOccured(unknownError)
             return nil
         }
-        return CellViewModelMainScreen(model: model)
+        let info = model.typesGroup
+        return CellViewModelCatalogScreen(infoTypesGroup: info)
     }
+    
+    
 }

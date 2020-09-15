@@ -11,9 +11,9 @@ import Swinject
 
 class AssignmentScreenAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(AssignmentScreenViewController.self) { r in
+        container.register(AssignmentScreenViewController.self) { (r, arg: String?) in
             let viewModel = r.resolve(ViewModelAssignmentScreenProtocol.self)!
-            let router = r.resolve(AssignmentScreenRouterInput.self)!
+            let router = r.resolve(AssignmentScreenRouterInput.self, name: arg)!
             let layout = UICollectionViewFlowLayout()
             return AssignmentScreenViewController(viewModel: viewModel, router: router, layout: layout)
         }

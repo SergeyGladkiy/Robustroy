@@ -60,15 +60,17 @@ class AssignmentScreenViewController: UICollectionViewController {
     }
     
     fileprivate func settingLayoutCollectionView() {
+        let indicator: UIActivityIndicatorView
         if #available(iOS 13.0, *) {
             collectionView.backgroundColor = .secondarySystemBackground
+            indicator = UIActivityIndicatorView(style: .large)
         } else {
             collectionView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
+            indicator = UIActivityIndicatorView(style: .gray)
         }
         
         collectionView.register(AssignmentScreenCollectionViewCell.self, forCellWithReuseIdentifier: AssignmentScreenCollectionViewCell.reuseIdentifier)
         
-        let indicator = UIActivityIndicatorView(style: .large)
         self.indicatorView = indicator
         collectionView.addSubview(indicatorView)
         indicatorView.translatesAutoresizingMaskIntoConstraints = false

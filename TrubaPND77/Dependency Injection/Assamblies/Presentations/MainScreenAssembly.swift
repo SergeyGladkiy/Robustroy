@@ -31,9 +31,9 @@ class MainScreenAssembly: Assembly {
         container.register(MainScreenRouterInput.self) { _ in
             MainTabCoordinator()
         }
-        .implements(BasicRoutingCoordinatorProtocol.self,
-                    AssignmentScreenRouterInput.self,
-                    ProductScreenRouterInput.self)
+        .implements(BasicRoutingCoordinatorProtocol.self)
+        .implements(AssignmentScreenRouterInput.self, name: "main")
+        .implements(ProductScreenRouterInput.self, name: "main")
         .inObjectScope(.container)
     }
 }

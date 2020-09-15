@@ -10,9 +10,13 @@ import Foundation
 import Swinject
 
 class DependenceProvider {
-    private static let assembler = Assembler([AppCoordinatorAssambly(), MainScreenAssembly(), AssignmentScreenAssembly(), NetworkAssembly(), ProductScreenAssembly()])
+    private static let assembler = Assembler([AppCoordinatorAssambly(), MainScreenAssembly(), CatalogScreenAssembly(), AssignmentScreenAssembly(), ProductScreenAssembly(), NetworkAssembly()])
     
-    static func resolve<T>() -> T? {
-        return DependenceProvider.assembler.resolver.resolve(T.self)
+    static func resolve<T>(name: String? = nil) -> T? {
+        return DependenceProvider.assembler.resolver.resolve(T.self, name: name)
+    }
+    
+    static func resolveWith<T>(arg: String? = nil) -> T? {
+        return DependenceProvider.assembler.resolver.resolve(T.self, argument: arg)
     }
 }

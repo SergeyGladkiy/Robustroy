@@ -11,9 +11,9 @@ import Swinject
 
 class ProductScreenAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(ProductScreenViewController.self) { r in
+        container.register(ProductScreenViewController.self) { (r, arg: String?) in
             let viewModel = r.resolve(ViewModelProductScreenProtocol.self)!
-            let router = r.resolve(ProductScreenRouterInput.self)!
+            let router = r.resolve(ProductScreenRouterInput.self, name: arg)!
             return ProductScreenViewController(viewModel: viewModel, router: router)
         }
         
