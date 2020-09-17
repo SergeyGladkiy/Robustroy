@@ -20,7 +20,7 @@ class MenuCellCatalogScreen: UICollectionViewCell {
             infoTypes = viewModel.infoTypesGroup
         }
     }
-    
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         settingLayout()
@@ -42,8 +42,8 @@ class MenuCellCatalogScreen: UICollectionViewCell {
         table.delegate = self
         self.tableView = table
         addSubview(tableView)
-        tableView.fillSuperview(padding: .init(top: 20, left: 0, bottom: 0, right: 0))
-        
+        tableView.fillSuperview()
+        tableView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
     }
 }

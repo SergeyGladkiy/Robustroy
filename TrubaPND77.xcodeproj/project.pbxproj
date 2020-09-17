@@ -82,6 +82,11 @@
 		828FD58B250AA689001C0835 /* CatalogTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD58A250AA689001C0835 /* CatalogTabCoordinator.swift */; };
 		828FD58E250AA6B6001C0835 /* CatalogScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */; };
 		828FD593250AB117001C0835 /* CatalogScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD592250AB117001C0835 /* CatalogScreenAssembly.swift */; };
+		829B9F602510D02B00495F71 /* AboutCompanyScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829B9F5F2510D02B00495F71 /* AboutCompanyScreenController.swift */; };
+		829B9F642510D11400495F71 /* AboutCompanyCellDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829B9F632510D11400495F71 /* AboutCompanyCellDescription.swift */; };
+		829B9F6A25136FFB00495F71 /* InfoContactScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829B9F6825136FFB00495F71 /* InfoContactScreenController.swift */; };
+		829B9F6B25136FFB00495F71 /* InfoContactScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829B9F6925136FFB00495F71 /* InfoContactScreenController.xib */; };
+		829B9F6E2513AFF000495F71 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829B9F6D2513AFF000495F71 /* MapPin.swift */; };
 		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */; };
 		82B669982502340E00A208D7 /* ProductCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669972502340E00A208D7 /* ProductCredential.swift */; };
 		82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669992502358200A208D7 /* ItemCredential.swift */; };
@@ -211,6 +216,11 @@
 		828FD58A250AA689001C0835 /* CatalogTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTabCoordinator.swift; sourceTree = "<group>"; };
 		828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenRouterInput.swift; sourceTree = "<group>"; };
 		828FD592250AB117001C0835 /* CatalogScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenAssembly.swift; sourceTree = "<group>"; };
+		829B9F5F2510D02B00495F71 /* AboutCompanyScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyScreenController.swift; sourceTree = "<group>"; };
+		829B9F632510D11400495F71 /* AboutCompanyCellDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCompanyCellDescription.swift; sourceTree = "<group>"; };
+		829B9F6825136FFB00495F71 /* InfoContactScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContactScreenController.swift; sourceTree = "<group>"; };
+		829B9F6925136FFB00495F71 /* InfoContactScreenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoContactScreenController.xib; sourceTree = "<group>"; };
+		829B9F6D2513AFF000495F71 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
 		82B669972502340E00A208D7 /* ProductCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCredential.swift; sourceTree = "<group>"; };
 		82B669992502358200A208D7 /* ItemCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCredential.swift; sourceTree = "<group>"; };
@@ -510,6 +520,7 @@
 				82DFDAF124ED5E5B005877B7 /* ModuleAssignmentScreen */,
 				8220B84824FCF25000DF530A /* ModuleProductScreen */,
 				828FD561250A1DBA001C0835 /* ModuleCatalogScreen */,
+				829B9F5E2510CE3400495F71 /* ViewControllersTabBar */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
 			);
@@ -839,6 +850,50 @@
 				828FD58D250AA6B6001C0835 /* CatalogScreenRouterInput.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		829B9F5E2510CE3400495F71 /* ViewControllersTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				829B9F612510D0E700495F71 /* AboutCompany */,
+				829B9F6525136EC100495F71 /* InfoContact */,
+			);
+			path = ViewControllersTabBar;
+			sourceTree = "<group>";
+		};
+		829B9F612510D0E700495F71 /* AboutCompany */ = {
+			isa = PBXGroup;
+			children = (
+				829B9F5F2510D02B00495F71 /* AboutCompanyScreenController.swift */,
+				829B9F622510D0F300495F71 /* Cell */,
+			);
+			path = AboutCompany;
+			sourceTree = "<group>";
+		};
+		829B9F622510D0F300495F71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				829B9F632510D11400495F71 /* AboutCompanyCellDescription.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		829B9F6525136EC100495F71 /* InfoContact */ = {
+			isa = PBXGroup;
+			children = (
+				829B9F6C2513AFCF00495F71 /* Annotation */,
+				829B9F6825136FFB00495F71 /* InfoContactScreenController.swift */,
+				829B9F6925136FFB00495F71 /* InfoContactScreenController.xib */,
+			);
+			path = InfoContact;
+			sourceTree = "<group>";
+		};
+		829B9F6C2513AFCF00495F71 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				829B9F6D2513AFF000495F71 /* MapPin.swift */,
+			);
+			path = Annotation;
 			sourceTree = "<group>";
 		};
 		82A724C124F405F900C0D055 /* Cells */ = {
@@ -1204,6 +1259,7 @@
 				8284A5F724D0290C00EB33CD /* LaunchScreen.storyboard in Resources */,
 				82B669CA25039B3000A208D7 /* AboutProductCell.xib in Resources */,
 				82B669C225038F5000A208D7 /* CredentialProductCell.xib in Resources */,
+				829B9F6B25136FFB00495F71 /* InfoContactScreenController.xib in Resources */,
 				8284A64524D2FB7300EB33CD /* DataMainScreen.plist in Resources */,
 				82892D5E25065FA0008F18E7 /* OrderScreenViewController.xib in Resources */,
 				82B669C62503989700A208D7 /* CharacteristicsProductCell.xib in Resources */,
@@ -1304,6 +1360,7 @@
 				82DFDAFD24ED618B005877B7 /* ModelAssignmentScreen.swift in Sources */,
 				8220B85824FCF6F800DF530A /* NetworkProtocolPruductModule.swift in Sources */,
 				8284A5EF24D0290800EB33CD /* MainScreenViewController.swift in Sources */,
+				829B9F642510D11400495F71 /* AboutCompanyCellDescription.swift in Sources */,
 				8284A65F24D72B6200EB33CD /* HeaderCollectionViewCellMainScreen.swift in Sources */,
 				82B669AC25024BAE00A208D7 /* ProductScreenCellProtocol.swift in Sources */,
 				828FD579250A24EF001C0835 /* MenuViewCell.swift in Sources */,
@@ -1331,6 +1388,7 @@
 				8220B84F24FCF32B00DF530A /* ViewModelProductScreenProtocol.swift in Sources */,
 				828FD565250A1E0A001C0835 /* ModelCatalogScreen.swift in Sources */,
 				82DFDAE324EBF953005877B7 /* ApplicationCoordinator.swift in Sources */,
+				829B9F6A25136FFB00495F71 /* InfoContactScreenController.swift in Sources */,
 				8284A62E24D19C7F00EB33CD /* CellReusableIdentifier.swift in Sources */,
 				8220B85624FCF3F000DF530A /* ProductScreenRouterInput.swift in Sources */,
 				821FDCE524F163F100B7AFCD /* MapperModelProtocolAssignmentScreen.swift in Sources */,
@@ -1357,6 +1415,7 @@
 				82B669BA25029C3C00A208D7 /* MapperModelProductScreen.swift in Sources */,
 				82DFDAEA24EC07F4005877B7 /* MainTabCoordinator.swift in Sources */,
 				8284A5ED24D0290800EB33CD /* SceneDelegate.swift in Sources */,
+				829B9F602510D02B00495F71 /* AboutCompanyScreenController.swift in Sources */,
 				82B669BE25029C8700A208D7 /* MapperModelProtocolProductScreen.swift in Sources */,
 				828FD584250A9A6D001C0835 /* TypeItemGroup.swift in Sources */,
 				82DFDAFB24ED60AB005877B7 /* ViewModelAssignmentScreenProtocol.swift in Sources */,
@@ -1368,6 +1427,7 @@
 				82DFDAF824ED5FB1005877B7 /* ViewModelAssignmentScreen.swift in Sources */,
 				8284A62724D181D400EB33CD /* ItemMainScreen.swift in Sources */,
 				828FD5332508B4B0001C0835 /* FooterViewProductScreen.swift in Sources */,
+				829B9F6E2513AFF000495F71 /* MapPin.swift in Sources */,
 				8284A64C24D4301500EB33CD /* Networking.swift in Sources */,
 				8284A66124D72C1E00EB33CD /* AutoLayoutAnchor.swift in Sources */,
 				8220B85424FCF38900DF530A /* ModelProductScreenProtocol.swift in Sources */,

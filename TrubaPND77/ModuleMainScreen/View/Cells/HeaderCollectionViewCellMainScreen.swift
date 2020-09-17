@@ -64,11 +64,11 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     }
     
     override func updateConstraints() {
-        super.updateConstraints()
         if traitCollection.horizontalSizeClass == .regular {
             nameTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 45)
             telephone.titleLabel?.font = .systemFont(ofSize: 30, weight: .bold)
         }
+        super.updateConstraints()
     }
     
     private func settingGradientLayer() {
@@ -95,7 +95,6 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         let imagePhone = UIImageView(image: UIImage(named: "telephone"))
         imagePhone.contentMode = .scaleAspectFit
         imagePhone.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        imagePhone.clipsToBounds = true
         
         let buttonTelephone = UIButton()
         buttonTelephone.setTitle("+7(495)645-13-06", for: .normal)

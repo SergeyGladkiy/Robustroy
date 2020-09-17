@@ -57,7 +57,6 @@ class CharacteristicsProductCell: UITableViewCell {
 
 
     override func updateConstraints() {
-        super.updateConstraints()
         if traitCollection.horizontalSizeClass == .regular {
             type.font = .systemFont(ofSize: 23)
             assignment.font = .systemFont(ofSize: 23)
@@ -65,6 +64,7 @@ class CharacteristicsProductCell: UITableViewCell {
             diameter.font = .systemFont(ofSize: 23)
             weight.font = .systemFont(ofSize: 23)
         }
+        super.updateConstraints()
     }
     
 }

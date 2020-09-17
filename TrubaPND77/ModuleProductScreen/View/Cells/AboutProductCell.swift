@@ -59,7 +59,6 @@ class AboutProductCell: UITableViewCell {
     }
 
     override func updateConstraints() {
-        super.updateConstraints()
         if traitCollection.horizontalSizeClass == .regular {
             _ = stackView.subviews.map {
                 guard let label = $0 as? UILabel else {
@@ -69,6 +68,7 @@ class AboutProductCell: UITableViewCell {
                 label.font = .systemFont(ofSize: 23)
             }
         }
+        super.updateConstraints()
     }
     
 }
