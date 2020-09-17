@@ -44,13 +44,13 @@ class AssignmentScreenCollectionViewCell: UICollectionViewCell {
     }
     
     override func updateConstraints() {
-        super.updateConstraints()
         if traitCollection.horizontalSizeClass == .regular {
             titleLabel.font = .systemFont(ofSize: 19)
             priceLabel.font = .boldSystemFont(ofSize: 23)
             measureLabel.font = .systemFont(ofSize: 17)
         }
         imageView.setContentCompressionResistancePriority(.init(rawValue: 749), for: .vertical)
+        super.updateConstraints()
     }
 
     private func settingLayout() {

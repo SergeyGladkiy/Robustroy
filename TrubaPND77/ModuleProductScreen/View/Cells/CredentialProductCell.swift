@@ -36,11 +36,11 @@ class CredentialProductCell: UITableViewCell {
     }
 
     override func updateConstraints() {
-        super.updateConstraints()
         if traitCollection.horizontalSizeClass == .regular {
             buyButton.titleLabel?.font = .boldSystemFont(ofSize: 26)
             priceLabel.font = .boldSystemFont(ofSize: 26)
         }
+        super.updateConstraints()
     }
     
 }
