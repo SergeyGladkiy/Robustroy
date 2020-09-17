@@ -125,6 +125,7 @@ extension OrderScreenViewController: MFMailComposeViewControllerDelegate {
     private func sendEmail(with name: String, and phone: String) {
         let body = "Имя: \(name), т. \(phone), товар: \(productDescription)"
         let mailComposeViewController = configureMailComposer(with: body)
+        
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewController, animated: true)
         } else {
