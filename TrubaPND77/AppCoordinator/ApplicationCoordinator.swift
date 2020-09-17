@@ -26,24 +26,20 @@ class ApplicationCoordinator {
             return nil
         }
         
-        let vc3 = UIViewController()
-        vc3.view.backgroundColor = .red
+        let aboutCompanyTabController = AboutCompanyScreenController()
         
-        let vc4 = UIViewController()
-        vc4.view.backgroundColor = .green
-        
+        let infoContactTabController = InfoContactScreenController(nibName: "InfoContactScreenController", bundle: Bundle(for: InfoContactScreenController.self))
+       
         let array = [
             createNavController(viewController: mainTabController, title: "Главная", imageName: "house", nav: true),
             createNavController(viewController: catalogTabController, title: "Каталог", imageName: "catalog", nav: true),
-            createNavController(viewController: vc3, title: "О компании", imageName: "info.circle", nav: true),
-            createNavController(viewController: vc4, title: "Контакты", imageName: "location", nav: true)
+            createNavController(viewController: aboutCompanyTabController, title: "О компании", imageName: "info.circle", nav: true),
+            createNavController(viewController: infoContactTabController, title: "Контакты", imageName: "location", nav: true)
             
         ]
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = array
-        //MARK: ????
-        //tabBarController.tabBar.isTranslucent = false
         
         if tabBarController.traitCollection.horizontalSizeClass == .regular {
             let systemFontAttributesForIPad = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
