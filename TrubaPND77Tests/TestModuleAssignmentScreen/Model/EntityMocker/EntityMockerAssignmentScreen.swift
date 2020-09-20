@@ -16,10 +16,10 @@ class EntityMockerAssignmentScreen {
     static let correctIndex = 0
     
     static func generateRepresentItems() -> [RepresentativableItem] {
-        return [RepresentativableItem(name: "ProductName", price: "ProductPrice", urlImage: "ProductImageUrl", linkToDescription: "ProductLinkToDescription")]
+        return [RepresentativableItem(name: "ProductName", title: "ProductTitle", price: "ProductPrice", urlImage: "ProductImageUrl", linkToDescription: "ProductLinkToDescription")]
     }
     
     static func generateItemsAssignment() -> [ItemAssignmentScreen] {
-        return [ItemAssignmentScreen(title: "ProductName", price: "ProductPrice", urlImage: "ProductImageUrl", link: "ProductLinkToDescription")]
+        return [ItemAssignmentScreen(name: "ProductName", title: "ProductName", price: "ProductPrice", urlImage: "ProductImageUrl", link: "ProductLinkToDescription")]
     }
 }

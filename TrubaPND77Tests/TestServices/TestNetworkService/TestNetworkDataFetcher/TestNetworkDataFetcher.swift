@@ -33,7 +33,7 @@ class TestNetworkDataFetcher: XCTestCase {
     private func settingCompletionHandlerAndCustomizingByEntityMocker(with setting: (Bool, Bool)) {
         let (networkRequestWithData, parseHtmlWithRepresentItems) = setting
         EntityMockerNetworkService.isNetworkingRequestCompletionWithData = networkRequestWithData
-        EntityMockerNetworkService.isMapperParseHtmlCompletionWithRepresentItems = parseHtmlWithRepresentItems
+        EntityMockerNetworkService.isMapperParseHtmlCompletionWithItems = parseHtmlWithRepresentItems
         
         sut.fetchRepresentItems { [weak self] (response) in
             guard let self = self else { return }

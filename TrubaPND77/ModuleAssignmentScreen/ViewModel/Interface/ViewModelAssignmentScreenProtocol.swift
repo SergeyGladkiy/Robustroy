@@ -14,5 +14,5 @@ protocol ViewModelAssignmentScreenProtocol {
     func getInformation()
     func numberOfRows() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModelAssignmentScreen
-    func getCredentialFor(item: IndexPath) -> ItemCredential 
+    func getCredentialFor(index: IndexPath) -> ItemCredential 
 }

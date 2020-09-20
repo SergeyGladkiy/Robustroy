@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "titulMain.png",
+      "filename" : "headerImage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "headerImage@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "headerImage@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

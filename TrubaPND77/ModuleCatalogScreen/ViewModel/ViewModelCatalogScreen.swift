@@ -22,7 +22,7 @@ class ViewModelCatalogScreen {
     private func twoWayDataBinding() {
         model.errorOccured.bind { [weak self] (error) in
             guard let self = self else {
-                print("ViewModelMainScreen is deinitialized")
+                print("ViewModelCatalogScreen is deinitialized")
                 return
             }
             
@@ -38,7 +38,7 @@ class ViewModelCatalogScreen {
         
         model.staticInfoCatalog.bind { [weak self] (dict) in
             guard let self = self else {
-                print("ViewModelMainScreen is deinitialized")
+                print("ViewModelCatalogScreen is deinitialized")
                 return
             }
             

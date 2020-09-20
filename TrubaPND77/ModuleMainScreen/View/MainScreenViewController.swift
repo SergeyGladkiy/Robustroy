@@ -16,8 +16,6 @@ class MainScreenViewController: UICollectionViewController {
     //MARK: for blur effect
     private weak var animatedView: AnimatedViewMainScreenInterface!
     
-    //private var animator: UIViewPropertyAnimator!
-    
     private let padding: CGFloat = 16
     
     init(viewModel: ViewModelMainScreenProtocol, router: MainScreenRouterInput, layout: UICollectionViewLayout) {

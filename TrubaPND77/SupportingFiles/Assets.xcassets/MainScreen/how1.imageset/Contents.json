@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "kak1.png",
+      "filename" : "how1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "how1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "how1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

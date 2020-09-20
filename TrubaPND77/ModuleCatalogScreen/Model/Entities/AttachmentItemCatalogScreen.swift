@@ -12,3 +12,13 @@ struct AttachmentItemCatalogScreen: Decodable {
     let attachmentTitle: String
     let linkHref: String
 }
+
+extension AttachmentItemCatalogScreen: Equatable {
+    static func == (lhs: AttachmentItemCatalogScreen, rhs: AttachmentItemCatalogScreen) -> Bool {
+        if lhs.attachmentTitle == rhs.attachmentTitle,
+            lhs.linkHref == rhs.linkHref {
+            return true
+        }
+        return false
+    }
+}

@@ -14,17 +14,27 @@ class MapperNetworkMock {
 }
 
 extension MapperNetworkMock: MapperNetworkProtocol {
+    func parseHtmlForItemInformation(_ data: Data, completion: (Result<ItemInformation, NSURLError>) -> Void) {
+        if EntityMockerNetworkService.isMapperParseHtmlCompletionWithItems {
+            let items = EntityMockerNetworkService.generateItemInformation()
+            completion(.success(items))
+        } else {
+            let error = EntityMockerNetworkService.nsUrlErrorParseHtml
+            completion(.failure(error))
+        }
+    }
+    
     func parsingError(error: NSError) -> NSURLError {
         return .unknown
     }
     
-    func parseHtmlForRepresentItems(_ data: Data, complition: (Result<[RepresentativableItem], NSURLError>) -> Void) {
-        if EntityMockerNetworkService.isMapperParseHtmlCompletionWithRepresentItems {
+    func parseHtmlForRepresentItems(_ data: Data, completion: (Result<[RepresentativableItem], NSURLError>) -> Void) {
+        if EntityMockerNetworkService.isMapperParseHtmlCompletionWithItems {
             let items = EntityMockerNetworkService.generateRepresentItems()
-            complition(.success(items))
+            completion(.success(items))
         } else {
             let error = EntityMockerNetworkService.nsUrlErrorParseHtml
-            complition(.failure(error))
+            completion(.failure(error))
         }
     }
     

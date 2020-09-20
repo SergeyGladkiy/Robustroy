@@ -46,6 +46,14 @@ class MenuView: UIView {
         collection.dataSource = self
         collection.delegate = self
         self.collectionView = collection
+        
+        if #available(iOS 13.0, *) {
+            collectionView.backgroundColor = .systemBackground
+
+        } else {
+            collectionView.backgroundColor = .white
+        }
+        
         addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.fillSuperview()

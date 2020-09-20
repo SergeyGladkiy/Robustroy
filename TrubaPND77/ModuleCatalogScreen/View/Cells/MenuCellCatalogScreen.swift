@@ -43,7 +43,12 @@ class MenuCellCatalogScreen: UICollectionViewCell {
         self.tableView = table
         addSubview(tableView)
         tableView.fillSuperview()
+        
         tableView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
+        
+        //MARK: ????? when use small screen device, scrollable cell doesn't use contentInset wihtout this contentOffset
+        tableView.contentOffset = CGPoint(x: 0, y: -20)
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
     }
 }
@@ -59,19 +64,19 @@ extension MenuCellCatalogScreen: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
-        //custominzingCellAppearance(cell)
+        customizingCellAppearance(cell)
         cell.backgroundColor = .clear
         let sectionInfo = infoTypes[indexPath.section]
         cell.textLabel?.text = sectionInfo.attachments[indexPath.row].attachmentTitle
         return cell
     }
     
-    private func custominzingCellAppearance(_ cell: UITableViewCell) {
-        if #available(iOS 13.0, *) {
-            cell.backgroundColor = .secondarySystemBackground
-        } else {
-            cell.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
+    private func customizingCellAppearance(_ cell: UITableViewCell) {
+        var size: CGFloat = 17
+        if traitCollection.horizontalSizeClass == .regular {
+            size = 24
         }
+        cell.textLabel?.font = .systemFont(ofSize: size)
     }
 }
 
@@ -90,7 +95,11 @@ extension MenuCellCatalogScreen: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 20)
+        var size: CGFloat = 20
+        if traitCollection.horizontalSizeClass == .regular {
+            size = 27
+        }
+        label.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: size)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.text = infoTypes[section].titleType
@@ -104,6 +113,4 @@ extension MenuCellCatalogScreen: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-    
-    
 }

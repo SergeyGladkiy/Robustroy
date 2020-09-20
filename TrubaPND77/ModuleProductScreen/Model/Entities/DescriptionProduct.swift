@@ -9,17 +9,27 @@
 import Foundation
 
 struct DescriptionProduct {
-    let characteristics: Charateristics
+    let characteristics: Characteristics
     let aboutProduct: About
 }
 
-struct Charateristics {
+struct Characteristics {
     let info: [String: String]
 }
 
-extension Charateristics: CellViewModelProductScreen {
+extension Characteristics: CellViewModelProductScreen {
     var reuseIdentifier: String {
         return CharacteristicsProductCell.reuseIdentifier
+    }
+}
+
+extension Characteristics: Equatable {
+    static func == (lhs: Characteristics, rhs: Characteristics) -> Bool {
+        if
+            lhs.info == rhs.info {
+            return true
+        }
+        return false
     }
 }
 
@@ -31,5 +41,16 @@ struct About {
 extension About: CellViewModelProductScreen {
     var reuseIdentifier: String {
         return AboutProductCell.reuseIdentifier
+    }
+}
+
+extension About: Equatable {
+    static func == (lhs: About, rhs: About) -> Bool {
+        if
+            lhs.paragraphs == rhs.paragraphs,
+            lhs.lists == rhs.lists {
+            return true
+        }
+        return false
     }
 }

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "gazTruba.png",
+      "filename" : "vodoprovodnaya.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "vodoprovodnaya@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "vodoprovodnaya@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
