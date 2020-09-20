@@ -88,6 +88,16 @@
 		829B9F6B25136FFB00495F71 /* InfoContactScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829B9F6925136FFB00495F71 /* InfoContactScreenController.xib */; };
 		829B9F6E2513AFF000495F71 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829B9F6D2513AFF000495F71 /* MapPin.swift */; };
 		82A724C024F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */; };
+		82AC5B5C2514E673007A4483 /* TestModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B5B2514E673007A4483 /* TestModelProductScreen.swift */; };
+		82AC5B5F2514E6BB007A4483 /* NetworkProductScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B5E2514E6BB007A4483 /* NetworkProductScreenMock.swift */; };
+		82AC5B612514E721007A4483 /* MapperProductScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B602514E721007A4483 /* MapperProductScreenMock.swift */; };
+		82AC5B632514E73A007A4483 /* EntityMockerProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B622514E73A007A4483 /* EntityMockerProductScreen.swift */; };
+		82AC5B672514F521007A4483 /* ModelProductScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B662514F521007A4483 /* ModelProductScreenMock.swift */; };
+		82AC5B692514F539007A4483 /* TestViewModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B682514F539007A4483 /* TestViewModelProductScreen.swift */; };
+		82AC5B6D2514F95D007A4483 /* EntityMockerCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B6C2514F95D007A4483 /* EntityMockerCatalogScreen.swift */; };
+		82AC5B702514FD02007A4483 /* TestModelCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B6F2514FD02007A4483 /* TestModelCatalogScreen.swift */; };
+		82AC5B7325150566007A4483 /* TestViewModelCatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B7225150566007A4483 /* TestViewModelCatalogScreen.swift */; };
+		82AC5B762515058D007A4483 /* ModelCatalogScreenMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AC5B752515058D007A4483 /* ModelCatalogScreenMock.swift */; };
 		82B669982502340E00A208D7 /* ProductCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669972502340E00A208D7 /* ProductCredential.swift */; };
 		82B6699A2502358200A208D7 /* ItemCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B669992502358200A208D7 /* ItemCredential.swift */; };
 		82B6699D2502463500A208D7 /* CellViewModelProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6699C2502463500A208D7 /* CellViewModelProductScreen.swift */; };
@@ -222,6 +232,16 @@
 		829B9F6925136FFB00495F71 /* InfoContactScreenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoContactScreenController.xib; sourceTree = "<group>"; };
 		829B9F6D2513AFF000495F71 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		82A724BF24F3DCD100C0D055 /* CellViewModelAssignmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelAssignmentScreen.swift; sourceTree = "<group>"; };
+		82AC5B5B2514E673007A4483 /* TestModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelProductScreen.swift; sourceTree = "<group>"; };
+		82AC5B5E2514E6BB007A4483 /* NetworkProductScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProductScreenMock.swift; sourceTree = "<group>"; };
+		82AC5B602514E721007A4483 /* MapperProductScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperProductScreenMock.swift; sourceTree = "<group>"; };
+		82AC5B622514E73A007A4483 /* EntityMockerProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerProductScreen.swift; sourceTree = "<group>"; };
+		82AC5B662514F521007A4483 /* ModelProductScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProductScreenMock.swift; sourceTree = "<group>"; };
+		82AC5B682514F539007A4483 /* TestViewModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelProductScreen.swift; sourceTree = "<group>"; };
+		82AC5B6C2514F95D007A4483 /* EntityMockerCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockerCatalogScreen.swift; sourceTree = "<group>"; };
+		82AC5B6F2514FD02007A4483 /* TestModelCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModelCatalogScreen.swift; sourceTree = "<group>"; };
+		82AC5B7225150566007A4483 /* TestViewModelCatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModelCatalogScreen.swift; sourceTree = "<group>"; };
+		82AC5B752515058D007A4483 /* ModelCatalogScreenMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogScreenMock.swift; sourceTree = "<group>"; };
 		82B669972502340E00A208D7 /* ProductCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCredential.swift; sourceTree = "<group>"; };
 		82B669992502358200A208D7 /* ItemCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCredential.swift; sourceTree = "<group>"; };
 		82B6699C2502463500A208D7 /* CellViewModelProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProductScreen.swift; sourceTree = "<group>"; };
@@ -517,9 +537,9 @@
 				8257D12224F7C43E00F2A6B4 /* Services */,
 				82DFDAE124EBF904005877B7 /* AppCoordinator */,
 				8284A61324D0470200EB33CD /* ModuleMainScreen */,
+				828FD561250A1DBA001C0835 /* ModuleCatalogScreen */,
 				82DFDAF124ED5E5B005877B7 /* ModuleAssignmentScreen */,
 				8220B84824FCF25000DF530A /* ModuleProductScreen */,
-				828FD561250A1DBA001C0835 /* ModuleCatalogScreen */,
 				829B9F5E2510CE3400495F71 /* ViewControllersTabBar */,
 				8284A60C24D029D200EB33CD /* SupportingFiles */,
 				8284A62C24D19BCB00EB33CD /* Helpers */,
@@ -532,7 +552,9 @@
 			children = (
 				8257D13524F9381B00F2A6B4 /* TestServices */,
 				8284A61724D16F0F00EB33CD /* TestModuleMainScreen */,
+				82AC5B6A2514F90A007A4483 /* TestModuleCatalogScreen */,
 				8257D12124F7C1CE00F2A6B4 /* TestModuleAssignmentScreen */,
+				82AC5B582514E5D4007A4483 /* TestModuleProductScreen */,
 				8284A61224D0464C00EB33CD /* SupportingFilesTests */,
 				8284A60324D0290D00EB33CD /* Info.plist */,
 			);
@@ -972,6 +994,102 @@
 				8284A65524D4393B00EB33CD /* MapperNetworkProtocol.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		82AC5B582514E5D4007A4483 /* TestModuleProductScreen */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B642514F4A6007A4483 /* ViewModel */,
+				82AC5B592514E5F9007A4483 /* Model */,
+			);
+			path = TestModuleProductScreen;
+			sourceTree = "<group>";
+		};
+		82AC5B592514E5F9007A4483 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B5D2514E685007A4483 /* Mocks */,
+				82AC5B5B2514E673007A4483 /* TestModelProductScreen.swift */,
+				82AC5B5A2514E64B007A4483 /* EntityMocker */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82AC5B5A2514E64B007A4483 /* EntityMocker */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B622514E73A007A4483 /* EntityMockerProductScreen.swift */,
+			);
+			path = EntityMocker;
+			sourceTree = "<group>";
+		};
+		82AC5B5D2514E685007A4483 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B5E2514E6BB007A4483 /* NetworkProductScreenMock.swift */,
+				82AC5B602514E721007A4483 /* MapperProductScreenMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		82AC5B642514F4A6007A4483 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B652514F508007A4483 /* Mocks */,
+				82AC5B682514F539007A4483 /* TestViewModelProductScreen.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		82AC5B652514F508007A4483 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B662514F521007A4483 /* ModelProductScreenMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		82AC5B6A2514F90A007A4483 /* TestModuleCatalogScreen */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B712515054B007A4483 /* ViewModel */,
+				82AC5B6E2514FCED007A4483 /* Model */,
+				82AC5B6B2514F929007A4483 /* EntityMocker */,
+			);
+			path = TestModuleCatalogScreen;
+			sourceTree = "<group>";
+		};
+		82AC5B6B2514F929007A4483 /* EntityMocker */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B6C2514F95D007A4483 /* EntityMockerCatalogScreen.swift */,
+			);
+			path = EntityMocker;
+			sourceTree = "<group>";
+		};
+		82AC5B6E2514FCED007A4483 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B6F2514FD02007A4483 /* TestModelCatalogScreen.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82AC5B712515054B007A4483 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B742515056B007A4483 /* Mocks */,
+				82AC5B7225150566007A4483 /* TestViewModelCatalogScreen.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		82AC5B742515056B007A4483 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				82AC5B752515058D007A4483 /* ModelCatalogScreenMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		82B66996250233BC00A208D7 /* Entities */ = {
@@ -1450,13 +1568,23 @@
 				8284A62B24D18C3B00EB33CD /* TestModelMainScreen.swift in Sources */,
 				8257D12724F7C65000F2A6B4 /* NetworkAssignmentScreenMock.swift in Sources */,
 				8257D13124F810AB00F2A6B4 /* TestViewModelAssignmentScreen.swift in Sources */,
+				82AC5B5F2514E6BB007A4483 /* NetworkProductScreenMock.swift in Sources */,
+				82AC5B692514F539007A4483 /* TestViewModelProductScreen.swift in Sources */,
+				82AC5B762515058D007A4483 /* ModelCatalogScreenMock.swift in Sources */,
 				8284A63A24D1A91000EB33CD /* EntityMockerMainScreen.swift in Sources */,
 				8257D12B24F7C90100F2A6B4 /* EntityMockerAssignmentScreen.swift in Sources */,
+				82AC5B612514E721007A4483 /* MapperProductScreenMock.swift in Sources */,
+				82AC5B7325150566007A4483 /* TestViewModelCatalogScreen.swift in Sources */,
+				82AC5B672514F521007A4483 /* ModelProductScreenMock.swift in Sources */,
+				82AC5B5C2514E673007A4483 /* TestModelProductScreen.swift in Sources */,
 				8257D12D24F7C97800F2A6B4 /* MapperAssignmentScreenMock.swift in Sources */,
 				8257D14024F939E100F2A6B4 /* NetworkingMock.swift in Sources */,
+				82AC5B632514E73A007A4483 /* EntityMockerProductScreen.swift in Sources */,
 				8284A63424D1A5DE00EB33CD /* TestViewModelMainScreen.swift in Sources */,
 				8257D12524F7C49000F2A6B4 /* TestModelAssignmentScreen.swift in Sources */,
+				82AC5B6D2514F95D007A4483 /* EntityMockerCatalogScreen.swift in Sources */,
 				8257D13D24F939CB00F2A6B4 /* EntityMockerNetworkService.swift in Sources */,
+				82AC5B702514FD02007A4483 /* TestModelCatalogScreen.swift in Sources */,
 				8284A61624D0479F00EB33CD /* TrubaPND77Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1533,7 +1661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1587,7 +1715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1605,7 +1733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1625,7 +1753,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = "$(SRCROOT)/TrubaPND77/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1646,7 +1774,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1669,7 +1797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = TrubaPND77Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

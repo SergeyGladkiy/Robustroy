@@ -46,7 +46,7 @@ class TestViewModelMainScreen: XCTestCase {
         let itemsCount = EntityMockerMainScreen.generateItems().count
         
         //when
-        sut.generateItems()
+        sut.getShowableInfo()
         settingFunctionalityOfTestingViewModel()
 
         switch state {
@@ -71,7 +71,7 @@ class TestViewModelMainScreen: XCTestCase {
         let indexPath = IndexPath(row: mockCellViewModel.key, section: 0)
         
         //when
-        sut.generateItems()
+        sut.getShowableInfo()
         let result = sut.cellViewModel(forIndexPath: indexPath)
         
         //then
@@ -85,7 +85,7 @@ class TestViewModelMainScreen: XCTestCase {
         
         
         //when
-        sut.generateItems()
+        sut.getShowableInfo()
         _ = sut.cellViewModel(forIndexPath: IndexPath(row: number, section: 0))
         settingFunctionalityOfTestingViewModel()
         

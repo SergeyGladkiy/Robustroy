@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SF_xmark_square_fill.png",
+      "filename" : "backButton.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SF_xmark_square_fill@2x.png",
+      "filename" : "backButton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SF_xmark_square_fill@3x.png",
+      "filename" : "backButton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

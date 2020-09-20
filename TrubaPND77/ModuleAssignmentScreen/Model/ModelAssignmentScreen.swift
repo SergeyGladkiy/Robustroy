@@ -33,7 +33,6 @@ extension ModelAssignmentScreen: ModelAssignmentScreenProtocol {
             case .success(let data):
                 let array = self.mapper.parse(items: data)
                 self.dataSource.observable = array
-                print(array.count)
             case .failure(let error):
                 let resultCheck = self.mapper.errorCheckingForInternetConnection(error)
                 self.errorOccured.observable = resultCheck ? .notConnectedToInternet : .unknown

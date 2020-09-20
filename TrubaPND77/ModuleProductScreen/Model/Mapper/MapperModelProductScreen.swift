@@ -20,7 +20,7 @@ extension MapperModelProductScreen: MapperModelProtocolProductScreen {
         }
         return ItemProductScreen(descriptionProduct: [
             0: credentials,
-            1: Charateristics(info: item.characteristiks),
+            1: Characteristics(info: item.characteristiks),
             2: About(paragraphs: item.infoAboutItem.paragraphs, lists: item.infoAboutItem.lists)])
     }
     

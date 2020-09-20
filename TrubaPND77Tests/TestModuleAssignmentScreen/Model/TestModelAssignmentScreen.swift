@@ -44,7 +44,7 @@ class TestModelAssignmentScreen: XCTestCase {
     
     func testDataSourceIsGotAndBindingDataSourceWorks() {
         //given
-        var resultCheckDataSource = EntityMockerAssignmentScreen.generateItemsAssignment()
+        var resultCheckDataSource: [ItemAssignmentScreen]?
         
         //when
         EntityMockerAssignmentScreen.isFailureComplition = false

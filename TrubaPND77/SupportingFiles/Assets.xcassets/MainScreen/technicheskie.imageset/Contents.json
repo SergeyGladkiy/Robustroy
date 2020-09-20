@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "technicalTruba.png",
+      "filename" : "technicheskie.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "technicheskie@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "technicheskie@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

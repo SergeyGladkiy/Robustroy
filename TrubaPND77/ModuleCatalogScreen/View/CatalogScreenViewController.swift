@@ -86,7 +86,7 @@ class CatalogScreenViewController: UICollectionViewController {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         let imageForTitle = UIImageView()
-        imageForTitle.image = #imageLiteral(resourceName: "miniLogo")
+        imageForTitle.image = UIImage(named: "miniLogo")
         navigationItem.titleView = imageForTitle
     }
     

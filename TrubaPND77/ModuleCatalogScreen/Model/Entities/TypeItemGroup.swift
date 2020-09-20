@@ -13,3 +13,15 @@ struct TypeItemGroup: Decodable {
     let titleType: String
     let attachments: [AttachmentItemCatalogScreen]
 }
+
+extension TypeItemGroup: Equatable {
+    static func == (lhs: TypeItemGroup, rhs: TypeItemGroup) -> Bool {
+        if lhs.indexType == rhs.indexType,
+            lhs.titleType == rhs.titleType,
+            lhs.attachments == rhs.attachments {
+            return true
+        }
+        return false
+    }
+}
+

@@ -14,7 +14,6 @@ class Networking {
 
 extension Networking: NetworkingProtocol {
     func request(with url: URL, completion: @escaping (Data?, Error?) -> Void) {
-        print(url)
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             DispatchQueue.main.async {
                 completion(data, error)

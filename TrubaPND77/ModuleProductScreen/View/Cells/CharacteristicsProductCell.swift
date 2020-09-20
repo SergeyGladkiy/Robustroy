@@ -21,7 +21,7 @@ class CharacteristicsProductCell: UITableViewCell {
     
     var viewModel: CellViewModelProductScreen? {
         didSet {
-            guard let data = viewModel as? Charateristics else {
+            guard let data = viewModel as? Characteristics else {
                 objectDescription(self, function: #function)
                 return
             }

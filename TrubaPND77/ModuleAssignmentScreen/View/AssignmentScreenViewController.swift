@@ -121,7 +121,7 @@ class AssignmentScreenViewController: UICollectionViewController {
     
     //MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let data = viewModel.getCredentialFor(item: indexPath)
+        let data = viewModel.getCredentialFor(index: indexPath)
         router.transitionToProductScreen(with: data)
     }
 }

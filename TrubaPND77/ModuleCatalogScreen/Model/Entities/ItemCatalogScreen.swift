@@ -12,3 +12,13 @@ struct ItemCatalogScreen: Decodable {
     let groupTitle: String
     let typesGroup: [TypeItemGroup]
 }
+
+extension ItemCatalogScreen: Equatable {
+    static func == (lhs: ItemCatalogScreen, rhs: ItemCatalogScreen) -> Bool {
+        if lhs.groupTitle == rhs.groupTitle,
+            lhs.typesGroup == rhs.typesGroup {
+            return true
+        }
+        return false
+    }
+}

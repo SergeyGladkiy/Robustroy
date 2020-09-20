@@ -23,6 +23,4 @@ class EntityMockerMainScreen {
                                   groupName: "Производители труб",
                               description: "Вы можете найти трубу по бренду", attachments: [AttachmentItemMainScreen(imageName: "photo", attachmentTitle: "HYDRO")])]
     }
-    
-    
 }

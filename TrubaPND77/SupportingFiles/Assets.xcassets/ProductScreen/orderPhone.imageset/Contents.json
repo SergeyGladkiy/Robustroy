@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SF_phone_down_fill.png",
+      "filename" : "orderPhone.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SF_phone_down_fill@2x.png",
+      "filename" : "orderPhone@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SF_phone_down_fill@3x.png",
+      "filename" : "orderPhone@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
