@@ -76,8 +76,8 @@ extension ViewModelAssignmentScreen: ViewModelAssignmentScreenProtocol {
         model.fetchingInformation()
     }
     
-    func getCredentialFor(item: IndexPath) -> ItemCredential {
-        let item = readyAssignmentItems[item.row]
+    func getCredentialFor(index: IndexPath) -> ItemCredential {
+        let item = readyAssignmentItems[index.row]
         return ItemCredential(from: item)
     }
     

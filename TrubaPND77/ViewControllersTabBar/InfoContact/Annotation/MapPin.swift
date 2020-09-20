@@ -20,14 +20,3 @@ class MapPin : NSObject, MKAnnotation {
         self.subtitle = subtitle
     }
 }
-
-
-//class CoordinatesCredential: NSObject {
-//
-//}
-//
-//extension CoordinatesCredential: MKAnnotation {
-//    var CoordinatesCredential: CLLocationCoordinate2D {
-//        return CLLocationCoordinate2D(latitude: 55.656626, longitude: 37.256198)
-//    }
-//}

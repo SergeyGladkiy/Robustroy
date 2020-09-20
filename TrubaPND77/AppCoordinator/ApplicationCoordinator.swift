@@ -33,8 +33,8 @@ class ApplicationCoordinator {
         let array = [
             createNavController(viewController: mainTabController, title: "Главная", imageName: "house", nav: true),
             createNavController(viewController: catalogTabController, title: "Каталог", imageName: "catalog", nav: true),
-            createNavController(viewController: aboutCompanyTabController, title: "О компании", imageName: "info.circle", nav: true),
-            createNavController(viewController: infoContactTabController, title: "Контакты", imageName: "location", nav: true)
+            createNavController(viewController: aboutCompanyTabController, title: "О компании", imageName: "info", nav: true),
+            createNavController(viewController: infoContactTabController, title: "Контакты", imageName: "placemark", nav: true)
             
         ]
         

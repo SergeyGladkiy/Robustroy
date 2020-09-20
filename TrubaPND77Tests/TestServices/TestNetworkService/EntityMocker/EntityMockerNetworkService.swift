@@ -11,12 +11,16 @@ import Foundation
 
 class EntityMockerNetworkService {
     static var isNetworkingRequestCompletionWithData = false
-    static var isMapperParseHtmlCompletionWithRepresentItems = false
+    static var isMapperParseHtmlCompletionWithItems = false
     static let someError: Error = SomeError()
     static let nsUrlErrorParseHtml = NSURLError.parseHtml
     
     static func generateRepresentItems() -> [RepresentativableItem] {
-        return [RepresentativableItem(name: "ProductName", price: "ProductPrice", urlImage: "ProductImageUrl", linkToDescription: "ProductLinkToDescription")]
+        return [RepresentativableItem(name: "ProductName", title: "ProductTitle", price: "ProductPrice", urlImage: "ProductImageUrl", linkToDescription: "ProductLinkToDescription")]
+    }
+    
+    static func generateItemInformation() -> ItemInformation {
+        return ItemInformation(characteristiks: ["characterKey": "characterValue"], infoAboutItem: InfoAboutItem(paragraphs: ["infoParagraph"], lists: ["infoList"]))
     }
 }
 

@@ -1,0 +1,30 @@
+{
+  "images" : [
+    {
+<<<<<<< HEAD:TrubaPND77/SupportingFiles/Assets.xcassets/TabBarItem/Catalog.imageset/Contents.json
+      "filename" : "apps@3x.png",
+=======
+      "filename" : "logotype.png",
+>>>>>>> development:TrubaPND77/SupportingFiles/Assets.xcassets/LaunchScreen/launch.imageset/Contents.json
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "logotype@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+<<<<<<< HEAD:TrubaPND77/SupportingFiles/Assets.xcassets/TabBarItem/Catalog.imageset/Contents.json
+=======
+      "filename" : "logotype@3x.png",
+>>>>>>> development:TrubaPND77/SupportingFiles/Assets.xcassets/LaunchScreen/launch.imageset/Contents.json
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -35,7 +35,6 @@ extension MainTabCoordinator: MainScreenRouterInput {
         guard
             let assignmentController: AssignmentScreenViewController = DependenceProvider.resolveWith(arg: "main"),
             let nav = mainScreenViewController.navigationController else {
-            //MARK: ??? atempt setting a parameter in func objDesc for optional
             objectDescription(self, function: #function)
             return }
         self.assignmentScreenViewController = assignmentController

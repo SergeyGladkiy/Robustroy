@@ -12,6 +12,9 @@ struct ProductCredential {
     let price: String
     let urlImage: String
     
+}
+
+extension ProductCredential {
     init(from item: ItemCredential) {
         self.price = item.priceItem
         self.urlImage = item.urlItemImage
@@ -21,5 +24,16 @@ struct ProductCredential {
 extension ProductCredential: CellViewModelProductScreen {
     var reuseIdentifier: String {
         CredentialProductCell.reuseIdentifier
+    }
+}
+
+extension ProductCredential: Equatable {
+    static func == (lhs: ProductCredential, rhs: ProductCredential) -> Bool {
+        if
+            lhs.price == rhs.price,
+            lhs.urlImage == rhs.urlImage {
+            return true
+        }
+        return false
     }
 }

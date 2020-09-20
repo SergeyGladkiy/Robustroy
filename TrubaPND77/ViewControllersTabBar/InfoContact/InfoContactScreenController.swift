@@ -15,18 +15,26 @@ class InfoContactScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+        if #available(iOS 13.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
         
+        settingMapView()
+        addCoordinateCompany()
+        settingMapRect()
+    }
+    
+    fileprivate func settingMapView() {
         mapView.delegate = self
         mapView.layer.cornerRadius = 5
         mapView.layer.masksToBounds = true
-        
+    }
+    
+    fileprivate func addCoordinateCompany() {
         let coordinates = CLLocationCoordinate2D(latitude: 55.656626, longitude: 37.256198)
         let mapPin = MapPin(coordinate: coordinates, title: "ТрубаПНД77", subtitle: nil)
         
         self.mapView.addAnnotation(mapPin)
-        
-        settingMapRect()
     }
     
     private func settingMapRect() {
@@ -35,7 +43,7 @@ class InfoContactScreenController: UIViewController {
         for annotation in mapView.annotations {
             let location = annotation.coordinate
             let center = MKMapPoint(location)
-            let delta: Double = 4000
+            let delta: Double = 2000
             let rect = MKMapRect(x: center.x - delta, y: center.y - delta, width: 2*delta, height: 2*delta)
             zoomRect = zoomRect.union(rect)
         }

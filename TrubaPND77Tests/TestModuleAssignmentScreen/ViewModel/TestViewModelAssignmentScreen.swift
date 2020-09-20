@@ -103,7 +103,7 @@ class TestViewModelAssignmentScreen: XCTestCase {
         XCTAssert(errorOccured == errorNotInternet, "The error is not .notConnectedToInternet")
     }
     
-    func testCellViewModelIsCreated() {
+    func testCellViewModelAndCredentialAreCreated() {
         //given
         let index = EntityMockerAssignmentScreen.correctIndex
         let indexPath = IndexPath(row: index, section: index)
@@ -117,8 +117,9 @@ class TestViewModelAssignmentScreen: XCTestCase {
         queue.async { [weak self] in
             guard let self = self else { return }
             XCTAssertNotNil(self.sut.cellViewModel(forIndexPath: indexPath), "cellViewModel was not created")
+            XCTAssertNotNil(self.sut.getCredentialFor(index: indexPath), "credential was not created")
             asyncProcessing.fulfill()
         }
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 3, handler: nil)
     }
 }

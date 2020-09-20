@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pr4.png",
+      "filename" : "korsys.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "korsys@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "korsys@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

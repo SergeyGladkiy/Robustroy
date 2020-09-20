@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class MenuViewCell: UICollectionViewCell {
-    private weak var titleLabel: UILabel!
+    private weak var imageView: UIImageView!
     
     var viewModel: String? {
         didSet {
-            titleLabel.text = viewModel
+            imageView.image = UIImage(named: viewModel!)
         }
     }
     
@@ -27,13 +27,6 @@ class MenuViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func updateConstraints() {
-        if traitCollection.horizontalSizeClass == .regular {
-            titleLabel.font = .systemFont(ofSize: 23)
-        }
-        super.updateConstraints()
-    }
-    
     private func settingLayout() {
         if #available(iOS 13.0, *) {
             backgroundColor = .systemBackground
@@ -41,14 +34,14 @@ class MenuViewCell: UICollectionViewCell {
             backgroundColor = .white
         }
         
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 20)
-        self.titleLabel = label
-        
-        let stackView = UIStackView(arrangedSubviews: [titleLabel])
+        let viewImage = UIImageView()
+        viewImage.contentMode = .scaleAspectFit
+        self.imageView = viewImage
+
+        let stackView = UIStackView(arrangedSubviews: [imageView])
         stackView.axis = .vertical
         stackView.alignment = .center
         addSubview(stackView)
-        stackView.fillSuperview()
+        stackView.fillSuperview(padding: .init(top: 4, left: 0, bottom: 10, right: 0))
     }
 }

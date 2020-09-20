@@ -95,13 +95,6 @@ extension MapperNetwork: MapperNetworkProtocol {
                             return
                     }
                     
-                    //print("title product = \(titleProduct)")
-//                    print(linkHref)
-//                    print(imageUrlString)
-//                    print(description)
-//                    print(price)
-                    
-//                    let м.п. = try element.getElementsByClass("pri").first()?.child(0).text()
                     let urlString = linkHrefPath
                     
                     let item = RepresentativableItem(name: nameProduct, title: titleProduct, price: price, urlImage: imageUrlString, linkToDescription: urlString)
@@ -147,8 +140,7 @@ extension MapperNetwork: MapperNetworkProtocol {
             guard
                 let catalog = try? doc.getElementsByClass("catalog").first(),
                 let haract = try? catalog.getElementsByClass("harakt").first()?.text(),
-                let oTovare = try? catalog.getElementsByClass("abou").first()?.text()//,
-                //let urlImage = try? catalog.getElementsByClass("big_img").first()?.select("img[src]").first()?.attr("src")
+                let oTovare = try? catalog.getElementsByClass("abou").first()?.text()
                 else {
                     print("Error parseBodyFragment")
                     completion(.failure(.parseHtml))
