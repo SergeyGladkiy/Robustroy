@@ -135,7 +135,7 @@ extension OrderScreenViewController: MFMailComposeViewControllerDelegate {
     func configureMailComposer(with body: String) -> MFMailComposeViewController{
         let mailComposeVC = MFMailComposeViewController()
         mailComposeVC.mailComposeDelegate = self
-        mailComposeVC.setToRecipients(["neofun10@mail.ru"])
+        mailComposeVC.setToRecipients(["info@trubapnd77.ru"])
         mailComposeVC.setSubject("Заказать звонок")
         mailComposeVC.setMessageBody(body, isHTML: false)
         return mailComposeVC

@@ -23,13 +23,8 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //MARK: Shadow
-//        layer.shadowOffset = CGSize(width: 0, height: 10)
-//        layer.shadowOpacity = 0.7
-//        layer.shadowRadius = 7
-        
-        
         settingLayout()
+        setupVisualEffectBlur()
         settingGradientLayer()
     }
     
@@ -44,23 +39,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         iv.clipsToBounds = true
         self.imageView = iv
         addSubview(imageView)
-        
-        //MARK: label for additing telephone number or something else
-        
-        /*
-        let label = UILabel()
-        label.text = "+7(495)645-13-06"
-        label.font = .boldSystemFont(ofSize: 19)
-        label.textColor = .white
-        self.blurLabel = label
-        addSubview(blurLabel)
-        
-        blurLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 20, left: 16, bottom: 0, right: 16))
-        */
-        
         imageView.fillSuperview()
-        setupVisualEffectBlur()
-        
     }
     
     override func updateConstraints() {
@@ -87,7 +66,7 @@ class HeaderCollectionViewCellMainScreen: UICollectionReusableView, AnimatedView
         
         let headerTitle = UILabel()
         headerTitle.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: 25)
-        headerTitle.text = "ТРУБА ПНД 77"
+        headerTitle.text = "Robustрой"
         headerTitle.numberOfLines = 0
         headerTitle.textColor = .white
         self.nameTitle = headerTitle

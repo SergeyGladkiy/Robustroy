@@ -49,7 +49,7 @@ class AboutCompanyCellDescription: UITableViewCell {
         stackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 20, left: 16, bottom: 0, right: 16))
         
         let label = UILabel()
-        let attributedText = NSMutableAttributedString(string: "\nКомпания «ТРУБАПНД 77» – лидер в производстве и продаже высококачественных трубопроводных, дренажных систем, геотекстиля, а также труб и фитингов.", attributes: [.foregroundColor: UIColor.gray])
+        let attributedText = NSMutableAttributedString(string: "\nКомпания «Robustрой» – лидер в производстве и продаже высококачественных трубопроводных, дренажных систем, геотекстиля, а также труб и фитингов.", attributes: [.foregroundColor: UIColor.gray])
         
         attributedText.append(NSAttributedString(string: "\n\nБольше 10 лет мы предлагаем качественные и безопасные решения в области систем водоснабжения. Наша продукция успешно эксплуатируется тысячами строительных площадок и объектов по всей России.", attributes: [.foregroundColor: UIColor.gray]))
         

@@ -56,8 +56,21 @@ class InfoContactScreenController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    @IBAction func tapOnLinkSecond(_ sender: UIButton) {
+        if let url = URL(string: (sender.titleLabel?.text)!) {
+            UIApplication.shared.open(url)
+        }
+    }
     
     @IBAction func tapOnTelephone(_ sender: UIButton) {
+        canOpenUrlTelephone(sender)
+    }
+    
+    @IBAction func tapOnTelephoneSecond(_ sender: UIButton) {
+        canOpenUrlTelephone(sender)
+    }
+    
+    private func canOpenUrlTelephone(_ sender: UIButton) {
         guard
             let phoneNumber = sender.titleLabel?.text,
             let url = URL(string: "tel://\(phoneNumber)"),
