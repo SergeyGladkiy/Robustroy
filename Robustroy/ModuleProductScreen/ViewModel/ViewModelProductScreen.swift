@@ -75,3 +75,4 @@ extension ViewModelProductScreen: ViewModelProductScreenProtocol {
         return cellViewModel
     }
 }
+
