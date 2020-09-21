@@ -146,7 +146,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B4C0AE71C977827CC334B10 /* Pods-TrubaPND77.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77.release.xcconfig"; sourceTree = "<group>"; };
 		73ECF75FD1F01B174B04A6E3 /* Pods-RobustroyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustroyTests.release.xcconfig"; path = "Target Support Files/Pods-RobustroyTests/Pods-RobustroyTests.release.xcconfig"; sourceTree = "<group>"; };
 		75C2B83784506F116C919EC9 /* Pods-Robustroy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robustroy.release.xcconfig"; path = "Target Support Files/Pods-Robustroy/Pods-Robustroy.release.xcconfig"; sourceTree = "<group>"; };
 		821FDCDA24F13E0B00B7AFCD /* RepresentativableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativableItem.swift; sourceTree = "<group>"; };
@@ -279,11 +278,8 @@
 		82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		9448DABE290313233429FF5E /* Pods_Robustroy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robustroy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECDAF6C765AC6AD63924A22 /* Pods-RobustroyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustroyTests.debug.xcconfig"; path = "Target Support Files/Pods-RobustroyTests/Pods-RobustroyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB41CA3FD366AF7648A9A565 /* Pods-Robustroy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robustroy.debug.xcconfig"; path = "Target Support Files/Pods-Robustroy/Pods-Robustroy.debug.xcconfig"; sourceTree = "<group>"; };
 		E3D80E4169629F5AE9CB7CC8 /* Pods_RobustroyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobustroyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77Tests.release.xcconfig"; path = "Target Support Files/Pods-TrubaPND77Tests/Pods-TrubaPND77Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FE9BD3F007F4C4DB7FB9BE6C /* Pods-TrubaPND77.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrubaPND77.debug.xcconfig"; path = "Target Support Files/Pods-TrubaPND77/Pods-TrubaPND77.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,10 +305,6 @@
 		3E4EB16F591427D89D7EB555 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FE9BD3F007F4C4DB7FB9BE6C /* Pods-TrubaPND77.debug.xcconfig */,
-				1B4C0AE71C977827CC334B10 /* Pods-TrubaPND77.release.xcconfig */,
-				D8110D48272071318ABF2A3E /* Pods-TrubaPND77Tests.debug.xcconfig */,
-				EE72263DE01FD55C41EBBDFE /* Pods-TrubaPND77Tests.release.xcconfig */,
 				DB41CA3FD366AF7648A9A565 /* Pods-Robustroy.debug.xcconfig */,
 				75C2B83784506F116C919EC9 /* Pods-Robustroy.release.xcconfig */,
 				AECDAF6C765AC6AD63924A22 /* Pods-RobustroyTests.debug.xcconfig */,
