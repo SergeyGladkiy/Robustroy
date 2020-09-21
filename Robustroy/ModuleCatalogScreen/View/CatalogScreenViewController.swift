@@ -110,8 +110,14 @@ class CatalogScreenViewController: UICollectionViewController {
     }
     
     private func scrollToMenuIndex(menuIndex: Int) {
-        let indexPath = IndexPath(item: menuIndex, section: 0)
-        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        /*
+         //MARK: on 14 ios does not work correctly
+         let indexPath = IndexPath(item: menuIndex, section: 0)
+         collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+         */
+        
+        let rect = self.collectionView.layoutAttributesForItem(at: IndexPath(row: menuIndex, section: 0))!.frame
+             self.collectionView.scrollRectToVisible(rect, animated: true)
     }
     
     private func showInfoAlert(description: String) {

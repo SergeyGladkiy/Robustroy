@@ -148,7 +148,7 @@ extension MenuView: MenuViewProtocol {
     
     func moveTo(item: Int) {
         let indexPath = IndexPath(item: item, section: 0)
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
 }
