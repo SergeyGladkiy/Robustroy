@@ -76,7 +76,7 @@ class TestViewModelAssignmentScreen: XCTestCase {
             
             asyncProcessing.fulfill()
         }
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 3, handler: nil)
     }
     
     func testStateIsErrorWhenErrorOccuresInModelAndModelErrorIsUnknown() {

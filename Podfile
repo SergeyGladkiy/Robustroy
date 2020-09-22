@@ -10,9 +10,9 @@ target 'Robustroy' do
   pod 'SwiftSoup'
   pod 'Kingfisher', '~> 5.0'
 
-  target 'RobustroyTests' do
-    inherit! :search_paths
+  #target 'RobustroyTests' do
+    #inherit! :search_paths
     # Pods for testing
-  end
+  #end
 
 end
