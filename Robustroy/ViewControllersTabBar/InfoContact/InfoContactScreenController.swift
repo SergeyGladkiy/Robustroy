@@ -15,10 +15,6 @@ class InfoContactScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 13.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
-        
         settingMapView()
         addCoordinateCompany(title: "Robustрой", lat: 55.659910, lon: 37.260872)
         addCoordinateCompany(title: "TрубаПНД77", lat: 55.657829, lon: 37.257575)

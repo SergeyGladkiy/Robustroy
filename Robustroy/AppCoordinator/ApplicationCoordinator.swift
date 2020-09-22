@@ -57,8 +57,8 @@ class ApplicationCoordinator {
         viewController.navigationItem.title = title
         
         
-        let navigationController = nav ? UINavigationController(rootViewController: viewController) : viewController
-        return navigationController
+        let controller = nav ? UINavigationController(rootViewController: viewController) : viewController
+        return controller
     }
 }
 
