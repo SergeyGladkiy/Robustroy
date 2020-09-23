@@ -17,3 +17,4 @@ struct InfoAboutItem {
     let paragraphs: [String]
     let lists: [String]
 }
+

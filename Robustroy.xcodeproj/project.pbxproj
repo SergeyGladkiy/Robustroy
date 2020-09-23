@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E736DD0669052BECEC7DD17 /* Pods_RobustroyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D80E4169629F5AE9CB7CC8 /* Pods_RobustroyTests.framework */; };
 		821FDCDB24F13E0B00B7AFCD /* RepresentativableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCDA24F13E0B00B7AFCD /* RepresentativableItem.swift */; };
 		821FDCDD24F1579B00B7AFCD /* TitlesNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCDC24F1579B00B7AFCD /* TitlesNavigationItem.swift */; };
 		821FDCDF24F15ACF00B7AFCD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FDCDE24F15ACF00B7AFCD /* API.swift */; };
@@ -146,7 +145,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		73ECF75FD1F01B174B04A6E3 /* Pods-RobustroyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustroyTests.release.xcconfig"; path = "Target Support Files/Pods-RobustroyTests/Pods-RobustroyTests.release.xcconfig"; sourceTree = "<group>"; };
 		75C2B83784506F116C919EC9 /* Pods-Robustroy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robustroy.release.xcconfig"; path = "Target Support Files/Pods-Robustroy/Pods-Robustroy.release.xcconfig"; sourceTree = "<group>"; };
 		821FDCDA24F13E0B00B7AFCD /* RepresentativableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativableItem.swift; sourceTree = "<group>"; };
 		821FDCDC24F1579B00B7AFCD /* TitlesNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesNavigationItem.swift; sourceTree = "<group>"; };
@@ -277,9 +275,7 @@
 		82DFDB0B24F05258005877B7 /* AssignmentScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		82EBC80D24E3043B00EB8D36 /* MainScreenGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		9448DABE290313233429FF5E /* Pods_Robustroy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robustroy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AECDAF6C765AC6AD63924A22 /* Pods-RobustroyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustroyTests.debug.xcconfig"; path = "Target Support Files/Pods-RobustroyTests/Pods-RobustroyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB41CA3FD366AF7648A9A565 /* Pods-Robustroy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robustroy.debug.xcconfig"; path = "Target Support Files/Pods-Robustroy/Pods-Robustroy.debug.xcconfig"; sourceTree = "<group>"; };
-		E3D80E4169629F5AE9CB7CC8 /* Pods_RobustroyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobustroyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +291,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E736DD0669052BECEC7DD17 /* Pods_RobustroyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,8 +302,6 @@
 			children = (
 				DB41CA3FD366AF7648A9A565 /* Pods-Robustroy.debug.xcconfig */,
 				75C2B83784506F116C919EC9 /* Pods-Robustroy.release.xcconfig */,
-				AECDAF6C765AC6AD63924A22 /* Pods-RobustroyTests.debug.xcconfig */,
-				73ECF75FD1F01B174B04A6E3 /* Pods-RobustroyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1285,7 +1278,6 @@
 			isa = PBXGroup;
 			children = (
 				9448DABE290313233429FF5E /* Pods_Robustroy.framework */,
-				E3D80E4169629F5AE9CB7CC8 /* Pods_RobustroyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1316,7 +1308,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8284A60924D0290D00EB33CD /* Build configuration list for PBXNativeTarget "RobustroyTests" */;
 			buildPhases = (
-				E70F22A15D1585F7E135B15B /* [CP] Check Pods Manifest.lock */,
 				8284A5F924D0290D00EB33CD /* Sources */,
 				8284A5FA24D0290D00EB33CD /* Frameworks */,
 				8284A5FB24D0290D00EB33CD /* Resources */,
@@ -1433,28 +1424,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Robustroy/Pods-Robustroy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E70F22A15D1585F7E135B15B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RobustroyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1769,14 +1738,13 @@
 		};
 		8284A60A24D0290D00EB33CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AECDAF6C765AC6AD63924A22 /* Pods-RobustroyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = RobustroyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1792,14 +1760,13 @@
 		};
 		8284A60B24D0290D00EB33CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73ECF75FD1F01B174B04A6E3 /* Pods-RobustroyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
 				INFOPLIST_FILE = RobustroyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

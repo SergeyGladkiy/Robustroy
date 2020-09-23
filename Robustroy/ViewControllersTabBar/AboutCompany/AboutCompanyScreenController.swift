@@ -13,8 +13,10 @@ class AboutCompanyScreenController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
         settingTableView()
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func settingTableView() {

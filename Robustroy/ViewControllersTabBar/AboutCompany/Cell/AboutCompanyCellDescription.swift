@@ -59,11 +59,11 @@ class AboutCompanyCellDescription: UITableViewCell {
         
         attributedText.append(NSAttributedString(string: "\n\nПрямое сотрудничество с множеством известных российских и зарубежных производителей комплектующих, позволяет нам оптимизировать коммерческие условия, гарантируя при этом высокое качество поставляемой продукции.", attributes: [.foregroundColor: UIColor.gray]))
         
-        attributedText.append(NSAttributedString(string: "\n\nКоманда «ТРУБАПНД 77» – это профессионалы отрасли, чьему опыту доверяют ведущие строительные компании страны. Мы готовы ответить на все Ваши вопросы, рассказать о новинках и оказать квалифицированную помощь в правильном выборе для Вашей системы водоснабжения.", attributes: [.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\n\nКоманда «Robustрой» – это профессионалы отрасли, чьему опыту доверяют ведущие строительные компании страны. Мы готовы ответить на все Ваши вопросы, рассказать о новинках и оказать квалифицированную помощь в правильном выборе для Вашей системы водоснабжения.", attributes: [.foregroundColor: UIColor.gray]))
         
         attributedText.append(NSAttributedString(string: "\n\nМы заботимся о наших клиентах, предлагая первоклассную продукцию, отличный сервис и различные программы лояльности.", attributes: [.foregroundColor: UIColor.gray]))
         
-        attributedText.append(NSAttributedString(string: "\n\nКомпания «ТРУБАПНД 77» – ответственный партнер на Вашей стройке!", attributes: [.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\n\nКомпания «Robustрой» – ответственный партнер на Вашей стройке!", attributes: [.foregroundColor: UIColor.gray]))
         
         
         
