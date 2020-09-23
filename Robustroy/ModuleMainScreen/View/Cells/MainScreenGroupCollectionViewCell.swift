@@ -21,7 +21,6 @@ class MainScreenGroupCollectionViewCell: UICollectionViewCell {
         didSet {
             imageViewCategory.image = UIImage(named: viewModel.imageName)
             titleCategory.text = viewModel.attachmentTitle
-            //print(viewModel.linkHref)
             guard let descriptionText = viewModel.attechmentDescription
                 else {
                 descriptionCategory.isHidden = true
@@ -31,6 +30,7 @@ class MainScreenGroupCollectionViewCell: UICollectionViewCell {
             //MARK: for 3th group
             imageViewCategory.backgroundColor = .clear
             heightAnchorImage.constant = self.frame.height/2 - 1*padding
+            titleCategory.heightAnchor.constraint(equalToConstant: 19).isActive = true
             descriptionCategory.text = descriptionText
         }
     }
@@ -110,8 +110,6 @@ class MainScreenGroupCollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [
             imageViewCategory, titleCategory, descriptionCategory
         ])
-        
-        descriptionCategory.heightAnchor.constraint(lessThanOrEqualToConstant: self.frame.height/2 + 30).isActive = true
         
         stackView.axis = .vertical
         addSubview(stackView)
