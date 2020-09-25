@@ -20,6 +20,5 @@ extension Networking: NetworkingProtocol {
             }
         }.resume()
     }
-    
 }
 
