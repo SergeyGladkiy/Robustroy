@@ -21,6 +21,5 @@ extension Networking: NetworkingProtocol {
         }.resume()
     }
     
-    
 }
 
